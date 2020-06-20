@@ -26,6 +26,6 @@ namespace PAC_1.ViewModels
         public string FirstName { get => _representedPatient.FirstName; }
         public string LastName { get => _representedPatient.LastName;  }
         public int Age { get => _representedPatient.Age; }
-        public string School { get => _representedPatient.School;  }
+        public string School { get => _representedPatient.School.Name;  }
     }
 }
