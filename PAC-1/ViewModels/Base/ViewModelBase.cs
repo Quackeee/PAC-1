@@ -2,12 +2,12 @@
 using System.ComponentModel;
 using System.Windows.Input;
 
-namespace PAC_1.ViewModels.ViewModelBase
+namespace PAC_1.ViewModels.VMBase
 {
     class ViewModelBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        protected void onPropertyChanged(params string[] namesOfProperties)
+        protected void OnPropertyChanged(params string[] namesOfProperties)
         {
             if (PropertyChanged != null)
             {
