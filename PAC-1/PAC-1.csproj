@@ -59,6 +59,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\Patient.cs" />
+    <Compile Include="Model\School.cs" />
+    <Compile Include="Model\Specialist.cs" />
     <Compile Include="ViewModels\Base\ViewModelBase.cs" />
     <Compile Include="ViewModels\PatientListVM.cs" />
     <Compile Include="ViewModels\PatientVM.cs" />

@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace PAC_1.Model
 {
-    
     class Patient
     {
         public string FirstName { get; }
         public string LastName { get; }
-        public string School { get; } //można stworzyć też klasę reprezentującą szkołę zamiast stringa  
+        public School School { get; }
         public int Age { get; }
         public string BirthPlace { get; }
         public int Iq { get; }
@@ -21,7 +20,9 @@ namespace PAC_1.Model
 
         // Pacjent będzie musiał mieć jeszcze swoje aktualne wyniki w formularzu, ale to jak będą opdowiednie klasy do tego
 
-        public Patient(string firstName, string lastName, string school, int age, string birthplace, int iq, string scale, string background, string other = null)
+        // Trzeba stworzyć pole na datę i czas badania, ale to później 
+
+        public Patient(string firstName, string lastName, School school, int age, string birthplace, int iq, string scale, string background, string other = null)
         {
             FirstName = firstName;
             LastName = lastName;
@@ -34,9 +35,26 @@ namespace PAC_1.Model
             Other = other;
         }
 
+        public Patient(Patient p)
+        {
+            FirstName = p.FirstName;
+            LastName = p.LastName;
+            School = p.School;
+            Age = p.Age;
+            BirthPlace = p.BirthPlace;
+            Iq = p.Iq;
+            Scale = p.Scale;
+            Background = p.Background;
+            Other = p.Other;
+        }
+
+        ~Patient() { }
+
         public override string ToString()
         {
-            return $"{FirstName} {LastName} {Age} {School}";
+            //Tu zmieniłam na skrótową nazwę szkoły
+
+            return string.Format($"{FirstName} {LastName} {Age} {School.ShortName}");
         }
     }
 }
