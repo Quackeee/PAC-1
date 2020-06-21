@@ -66,8 +66,10 @@
     <Compile Include="ViewModels\GroupFormVM.cs" />
     <Compile Include="ViewModels\IndividualFormVM.cs" />
     <Compile Include="ViewModels\MainWindowVM.cs" />
+    <Compile Include="ViewModels\PatientListFormVM.cs" />
     <Compile Include="ViewModels\PatientListVM.cs" />
     <Compile Include="ViewModels\PatientVM.cs" />
+    <Compile Include="ViewModels\SchoolFormVM.cs" />
     <Compile Include="Views\GroupForm.xaml.cs">
       <DependentUpon>GroupForm.xaml</DependentUpon>
     </Compile>
@@ -76,6 +78,9 @@
     </Compile>
     <Compile Include="Views\PatientListForm.xaml.cs">
       <DependentUpon>PatientListForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SchoolForm.xaml.cs">
+      <DependentUpon>SchoolForm.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -98,6 +103,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\PatientListForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SchoolForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

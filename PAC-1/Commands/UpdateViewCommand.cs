@@ -32,7 +32,7 @@ namespace PAC_1.Commands
             }
             else if(parameter.ToString() == "IndividualForm")
             {
-                mainWindowVM.SelectedViewModel = new IndividualFormVM();
+                mainWindowVM.SelectedViewModel = new SchoolFormVM();
             }
         }
     }

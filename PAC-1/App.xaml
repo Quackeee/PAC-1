@@ -12,5 +12,11 @@
         <DataTemplate DataType="{x:Type viewmodels:IndividualFormVM}">
             <views:IndividualForm/>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:PatientListFormVM}">
+            <views:PatientListForm/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:SchoolFormVM}">
+            <views:SchoolForm/>
+        </DataTemplate>
     </Application.Resources>
 </Application>

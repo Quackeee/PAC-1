@@ -14,8 +14,9 @@ namespace PAC_1.Model
         public string City { get; } //mozesz zrefaktorowac. Nie wiedzialam, jak zrobic ogolna nazwe
         public string Street { get; }
         public int? Number { get; }
+        public string SecondNumber { get;  }
 
-        public School(string name, string shortName, string zipCode, string city, string street, int? number)
+        public School(string name, string shortName, string zipCode, string city, string street, string secondNumber, int? number)
         {
             Name = name;
             ShortName = shortName;
@@ -23,6 +24,7 @@ namespace PAC_1.Model
             City = city;
             Street = street;
             Number = number;
+            SecondNumber = secondNumber;
         }
 
         public School(School s)
@@ -33,6 +35,7 @@ namespace PAC_1.Model
             City = s.City;
             Street = s.Street;
             Number = s.Number;
+            SecondNumber = s.SecondNumber;
         }
 
         ~School() { }
