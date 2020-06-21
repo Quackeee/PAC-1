@@ -3,6 +3,7 @@ using PAC_1.ViewModels.VMBase;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -22,11 +23,11 @@ namespace PAC_1.ViewModels
 				OnPropertyChanged(nameof(SelectedViewModel));
 			}
 		}
-		public ICommand UpdateViewCommand { get; set; }
 
 		public MainWindowVM()
 		{
-			UpdateViewCommand = new UpdateViewCommand(this);
+            mainWindow = this;
+			_selectedViewModel = new IndividualFormVM();
 		}
 
 		

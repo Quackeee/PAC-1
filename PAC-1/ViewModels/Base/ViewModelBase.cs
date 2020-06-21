@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PAC_1.Commands;
+using System;
 using System.ComponentModel;
 using System.Windows.Input;
 
@@ -6,6 +7,8 @@ namespace PAC_1.ViewModels.VMBase
 {
     public class ViewModelBase : INotifyPropertyChanged
     {
+        public static MainWindowVM mainWindow;
+
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(params string[] namesOfProperties)
         {
@@ -16,7 +19,16 @@ namespace PAC_1.ViewModels.VMBase
             }
         }
 
-        
+        private static ICommand _updateViewCommand;
+        public static ICommand UpdateViewCommand
+        {
+            get
+            {
+                if (_updateViewCommand == null) _updateViewCommand = new UpdateViewCommand(mainWindow);
+                return _updateViewCommand;
+            }
+        }
+
     }
 
     class RelayCommand : ICommand

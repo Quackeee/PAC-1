@@ -19,8 +19,8 @@
         <ContentControl Content="{Binding SelectedViewModel}"/>
         <StackPanel Grid.Row="1">
 
-            <Button Content="Zajęcia indywidualne" Width="200" Height="30" HorizontalAlignment="Left" Margin="10" Command="{Binding UpdateViewCommand}" CommandParameter="IndividualForm"/>
-            <Button Content="Zajęcia grupowe" Width="200" Height="30" HorizontalAlignment="Left" Margin="10" Command="{Binding UpdateViewCommand}" CommandParameter="GroupForm"/>
+            
+            
         </StackPanel>
 
     </Grid>
