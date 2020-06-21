@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="PAC_1.Views.SchoolForm"
+﻿<UserControl x:Class="PAC_1.Views.AddEditPatientForm"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -15,7 +15,7 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="0.12*"/>
-            <RowDefinition Height="0.65*"/>
+            <RowDefinition Height="0.60*"/>
             <RowDefinition Height="0.12*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Grid.ColumnSpan="3">
@@ -31,18 +31,19 @@
         </StackPanel>
 
 
-        <StackPanel  HorizontalAlignment="Left" Margin="50,30,0,30" Grid.Row="1">
+        <StackPanel  HorizontalAlignment="Left" Margin="50,30.2,0,45.6" Grid.Row="1" Grid.RowSpan="2">
 
-            <Label Content="Placówka:" Margin="30,0,0,0" FontFamily="Charlesworth" FontWeight="SemiBold" FontSize="18" HorizontalAlignment="Right"/>
-            <Label Content="Skrót placówki:" Margin="10,7,0,0" FontFamily="Charlesworth" FontWeight="SemiBold" FontSize="18" HorizontalAlignment="Right"/>
-            <Label Content="Kod pocztowy:" Margin="10,8,0,0" FontFamily="Charlesworth" FontWeight="SemiBold" FontSize="18" HorizontalAlignment="Right" />
-            <Label Content="Miasto:" Margin="10,9,0,0" FontFamily="Charlesworth" FontWeight="SemiBold" FontSize="18" HorizontalAlignment="Right"/>
-            <Label Content="Ulica:" Margin="10,8,0,0" FontFamily="Charlesworth" FontWeight="SemiBold" FontSize="18" HorizontalAlignment="Right"/>
-            <Label Content="Numer budynku:" Margin="10,9,0,0" FontFamily="Charlesworth" FontWeight="SemiBold" FontSize="18" HorizontalAlignment="Right"/>
-            <Label Content="Numer lokalu:" Margin="10,8,0,0" FontFamily="Charlesworth" FontWeight="SemiBold" FontSize="18" HorizontalAlignment="Right"/>
-            
+            <Label Content="Imię:" Margin="30,0,0,0" FontFamily="Charlesworth" FontWeight="SemiBold" FontSize="18" HorizontalAlignment="Right"/>
+            <Label Content="Nazwisko:" Margin="10,7,0,0" FontFamily="Charlesworth" FontWeight="SemiBold" FontSize="18" HorizontalAlignment="Right"/>
+            <Label Content="Wiek:" Margin="10,8,0,0" FontFamily="Charlesworth" FontWeight="SemiBold" FontSize="18" HorizontalAlignment="Right" />
+            <Label Content="Miejsce urodzenia:" Margin="10,9,0,0" FontFamily="Charlesworth" FontWeight="SemiBold" FontSize="18" HorizontalAlignment="Right"/>
+            <Label Content="IQ:" Margin="10,8,0,0" FontFamily="Charlesworth" FontWeight="SemiBold" FontSize="18" HorizontalAlignment="Right"/>
+            <Label Content="Skala:" Margin="10,9,0,0" FontFamily="Charlesworth" FontWeight="SemiBold" FontSize="18" HorizontalAlignment="Right"/>
+            <Label Content="Środowisko:" Margin="10,8,0,0" FontFamily="Charlesworth" FontWeight="SemiBold" FontSize="18" HorizontalAlignment="Right"/>
+            <Label Content="Inne:" Margin="10,8,0,0" FontFamily="Charlesworth" FontWeight="SemiBold" FontSize="18" HorizontalAlignment="Right"/>
+
         </StackPanel>
-        <StackPanel Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,30" Width="300" Grid.Row="1">
+        <StackPanel Grid.Column="1" HorizontalAlignment="Left" Margin="0.2,0.2,0,45.6" Width="300" Grid.Row="1" Grid.RowSpan="2">
             <TextBox Width="250" Height="25" Margin="10,30" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray"/>
             <TextBox Width="250" Height="25" Margin="10,-15,0,0" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray"/>
             <TextBox Width="250" Height="25" Margin="10,15,0,0" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray"/>
@@ -50,6 +51,7 @@
             <TextBox Width="250" Height="25" Margin="10,15" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray"/>
             <TextBox Width="250" Height="25" Margin="10,0" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray"/>
             <TextBox Width="250" Height="25" Margin="10,15" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray"/>
+            <TextBox Width="250" Height="25" Margin="10,0" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray"/>
 
         </StackPanel>
         <Button Grid.Column="2" Grid.Row="2" Width="80" Height="30" Content="4" FontSize="18" FontFamily="Marlett" Foreground="White" HorizontalAlignment="Left" Command="{Binding UpdateViewCommand}" CommandParameter="SchoolForm">
@@ -61,7 +63,7 @@
             </Button.Background>
         </Button>
 
-        <Button Grid.Column="0" Grid.Row="2" Width="80" Height="30" Content="3" Margin="20,0,0,0" FontSize="18" FontFamily="Marlett"  HorizontalAlignment="Left" Foreground="White" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm" >
+        <Button Grid.Column="0" Grid.Row="2" Width="80" Height="30" Content="3" Margin="20,0,0,0" FontSize="18" FontFamily="Marlett"  HorizontalAlignment="Left" Foreground="White" Command="{Binding UpdateViewCommand}" CommandParameter="GroupForm" >
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF193E63" Offset="0.421"/>

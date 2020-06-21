@@ -32,7 +32,15 @@ namespace PAC_1.Commands
             }
             else if(parameter.ToString() == "IndividualForm")
             {
+                mainWindowVM.SelectedViewModel = new AddEditPatientFormVM();
+            }
+            else if(parameter.ToString() == "SchoolForm")
+            {
                 mainWindowVM.SelectedViewModel = new SchoolFormVM();
+            }
+            else if(parameter.ToString() == "AddEditPatientForm")
+            {
+                mainWindowVM.SelectedViewModel = new AddEditPatientFormVM();
             }
         }
     }
