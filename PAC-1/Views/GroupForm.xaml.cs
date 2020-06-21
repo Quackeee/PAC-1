@@ -1,5 +1,4 @@
-﻿using PAC_1.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,18 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PAC_1
+namespace PAC_1.Views
 {
     /// <summary>
-    /// Logika interakcji dla klasy MainWindow.xaml
+    /// Logika interakcji dla klasy GroupForm.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class GroupForm : UserControl
     {
-        public MainWindow()
+        public GroupForm()
         {
             InitializeComponent();
-
-            DataContext = new MainWindowVM();
         }
     }
 }

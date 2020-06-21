@@ -4,7 +4,7 @@ using System.Windows.Input;
 
 namespace PAC_1.ViewModels.VMBase
 {
-    class ViewModelBase : INotifyPropertyChanged
+    public class ViewModelBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(params string[] namesOfProperties)
@@ -15,7 +15,10 @@ namespace PAC_1.ViewModels.VMBase
                 { PropertyChanged(this, new PropertyChangedEventArgs(prop)); }
             }
         }
+
+        
     }
+
     class RelayCommand : ICommand
     {
         readonly Action<object> _execute;

@@ -18,7 +18,7 @@ namespace PAC_1.ViewModels
         }
 
         public string Details => $"Imię: {_representedPatient.FirstName}\nNazwisko: {_representedPatient.LastName}\n" +
-                                $"Wiek: {_representedPatient.Age}\nSzkoła: {_representedPatient.School}\n" +
+                                $"Wiek: {_representedPatient.Age}\nSzkoła: {_representedPatient.School.ShortName}\n" +
                                 $"Miejsce urodzenia: {_representedPatient.BirthPlace}\n Iloraz inteligencji {_representedPatient.Iq} ({_representedPatient.Scale})\n" +
                                 $"Środowisko: {_representedPatient.Background}\nUwagi: {Other}";
 
@@ -26,6 +26,6 @@ namespace PAC_1.ViewModels
         public string FirstName { get => _representedPatient.FirstName; }
         public string LastName { get => _representedPatient.LastName;  }
         public int Age { get => _representedPatient.Age; }
-        public string School { get => _representedPatient.School.Name;  }
+        public string School { get => _representedPatient.School.ShortName;  }
     }
 }
