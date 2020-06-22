@@ -34,7 +34,9 @@
             </StackPanel.Background>
 
             <Label Content="Lista pacjentów" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="15" Foreground="#FFEEEAEA"/>
-            <Button Content="PAC-1" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="55,-55" Background="DarkBlue" Foreground="#FFEEEAEA" Command="{Binding GotoWelcome}"/>
+            <Button Content="PAC-1" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold"
+                    FontFamily="Charlesworth" Margin="55,-55" Background="Transparent" BorderThickness="0" Foreground="#FFEEEAEA"
+                    Command="{Binding GotoWelcome}"/>
 
         </StackPanel>
 

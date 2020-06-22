@@ -6,8 +6,63 @@
              xmlns:local="clr-namespace:PAC_1.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="GhostWhite">
-        <Button Content="Zajęcia indywidualne" Width="200" Height="30" HorizontalAlignment="Left" Margin="10" Command="{Binding UpdateViewCommand}" CommandParameter="IndividualForm"/>
-        <Label Content="GroupForm" FontSize="30" HorizontalAlignment="Center" />
+    <Grid Background="#FFF6F6F6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.15*"/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.15*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.12*"/>
+            <RowDefinition Height="0.60*"/>
+            <RowDefinition Height="0.12*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="4">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF193E63" Offset="0.421"/>
+                    <GradientStop Color="#FF11264E" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+
+            <Label Content="Udział w zabawie" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="15" Foreground="#FFEEEAEA"/>
+            <Button Content="PAC-1" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="55,-55" Background="Transparent" BorderThickness="0" Foreground="#FFEEEAEA" Command="{Binding UpdateViewCommand}" CommandParameter="WelcomeForm" />
+
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="1" Margin="10,20,0,0">
+            <ListBox Height="300"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.ColumnSpan="1" Grid.Row="1" Margin="0,20,10,0">
+            <ListBox Height="300"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4">
+            <Button Width="80" Height="30" Content="3" FontSize="18" FontFamily="Marlett" Foreground="White" HorizontalAlignment="Center" Margin="-300,20,20,0" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF193E63" Offset="0.421"/>
+                        <GradientStop Color="#FF11264E" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Label Grid.Column="0" Grid.Row="2" Width="80" Height="30" Content="NAPIS" Margin="0,-30,0,0" FontSize="18" FontFamily="Charlesworth"  HorizontalAlignment="Center" Foreground="DarkBlue" >
+            </Label>
+
+            <Button Grid.Column="0" Grid.Row="2" Width="80" Height="30" Content="4" Margin="320,-30,0,0" FontSize="18" FontFamily="Marlett"  HorizontalAlignment="Center" Foreground="White" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF193E63" Offset="0.421"/>
+                        <GradientStop Color="#FF11264E" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+
+        </StackPanel>
     </Grid>
 </UserControl>
