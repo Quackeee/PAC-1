@@ -32,7 +32,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button Width="280" Height="40" Content="Zajęcia indywidualne" FontSize="18" FontFamily="Charlesworth" Foreground="White" BorderThickness="2.5" BorderBrush="#FF193E63" Margin="240,123.8,240,210.6" Command="{Binding UpdateViewCommand}" CommandParameter="IndividualForm" Grid.Row="1">
+        <Button Width="280" Height="40" Content="Zajęcia indywidualne" FontSize="18" FontFamily="Charlesworth" Foreground="White" BorderThickness="2.5" BorderBrush="#FF193E63" Margin="240,123.8,240,210.6" Command="{Binding UpdateViewCommand}" CommandParameter="ChoosePatientsForm" Grid.Row="1">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF193E63" Offset="0.421"/>

@@ -50,6 +50,10 @@ namespace PAC_1.Commands
             {
                 mainWindowVM.SelectedViewModel = new WelcomeFormVM();
             }
+            else if(parameter.ToString() == "ChoosePatientsForm")
+            {
+                mainWindowVM.SelectedViewModel = new ChoosePatientsFormVM();
+            }
             
         }
     }

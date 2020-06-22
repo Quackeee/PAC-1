@@ -64,6 +64,7 @@
     <Compile Include="Model\Specialist.cs" />
     <Compile Include="ViewModels\AddEditPatientFormVM.cs" />
     <Compile Include="ViewModels\Base\ViewModelBase.cs" />
+    <Compile Include="ViewModels\ChoosePatientsFormVM.cs" />
     <Compile Include="ViewModels\GroupFormVM.cs" />
     <Compile Include="ViewModels\IndividualFormVM.cs" />
     <Compile Include="ViewModels\MainWindowVM.cs" />
@@ -74,6 +75,9 @@
     <Compile Include="ViewModels\WelcomeFormVM.cs" />
     <Compile Include="Views\AddEditPatientForm.xaml.cs">
       <DependentUpon>AddEditPatientForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChoosePatientsForm.xaml.cs">
+      <DependentUpon>ChoosePatientsForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\GroupForm.xaml.cs">
       <DependentUpon>GroupForm.xaml</DependentUpon>
@@ -103,6 +107,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\AddEditPatientForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ChoosePatientsForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
