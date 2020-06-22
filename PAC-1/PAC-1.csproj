@@ -71,6 +71,7 @@
     <Compile Include="ViewModels\PatientListVM.cs" />
     <Compile Include="ViewModels\PatientVM.cs" />
     <Compile Include="ViewModels\SchoolFormVM.cs" />
+    <Compile Include="ViewModels\WelcomeFormVM.cs" />
     <Compile Include="Views\AddEditPatientForm.xaml.cs">
       <DependentUpon>AddEditPatientForm.xaml</DependentUpon>
     </Compile>
@@ -85,6 +86,9 @@
     </Compile>
     <Compile Include="Views\SchoolForm.xaml.cs">
       <DependentUpon>SchoolForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WelcomeForm.xaml.cs">
+      <DependentUpon>WelcomeForm.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -118,6 +122,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\WelcomeForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -145,6 +153,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

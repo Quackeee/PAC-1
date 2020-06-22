@@ -6,55 +6,65 @@
              xmlns:local="clr-namespace:PAC_1.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800" Foreground="#FFFFF5F5">
-    <Grid Background="#FFF5F3F6">
+    <Grid Background="#FFF6F6F6">
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.15*"/>
             <ColumnDefinition Width="0.3*"/>
             <ColumnDefinition Width="0.6*"/>
             <ColumnDefinition Width="0.15*"/>
+
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.17*"/>
-            <RowDefinition Height="0.95*"/>
+            <RowDefinition Height="0.12*"/>
+            <RowDefinition Height="0.60*"/>
+            <RowDefinition Height="0.12*"/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0" Grid.ColumnSpan="3">
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="4">
             <StackPanel.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF973D64" Offset="0.184"/>
-                    <GradientStop Color="#FF420C23" Offset="1"/>
+                    <GradientStop Color="#FF193E63" Offset="0.421"/>
+                    <GradientStop Color="#FF11264E" Offset="1"/>
                 </LinearGradientBrush>
             </StackPanel.Background>
-            <Label Content="Dane pacjenta" VerticalAlignment="Top" FontSize="24" FontWeight="Black" FontFamily="Georgia" Margin="15" Foreground="#FFEEEAEA"/>
-        </StackPanel>
-        <StackPanel  HorizontalAlignment="Left" Margin="30,30,0,30" Grid.Row="1">
 
-            <Label Content="Imię:" Margin="30,0,0,0" FontFamily="Georgia" FontSize="18" HorizontalAlignment="Right"/>
-            <Label Content="Nazwisko:" Margin="10,10,0,0" FontFamily="Georgia" FontSize="18" HorizontalAlignment="Right"/>
-            <Label Content="Wiek:" Margin="10,10,0,0" FontFamily="Georgia" FontSize="18" HorizontalAlignment="Right" />
-            <Label Content="Miejsce urodzenia:" Margin="10,10,0,0" FontFamily="Georgia" FontSize="18" HorizontalAlignment="Right"/>
-            <Label Content="IQ:" Margin="10,10,0,0" FontFamily="Georgia" FontSize="18" HorizontalAlignment="Right"/>
-            <Label Content="Skala:" Margin="10,10,0,0" FontFamily="Georgia" FontSize="18" HorizontalAlignment="Right"/>
-            <Label Content="Środowisko:" Margin="10,10,0,0" FontFamily="Georgia" FontSize="18" HorizontalAlignment="Right"/>
-            <Label Content="Inne:" Margin="10,10,0,0" FontFamily="Georgia" FontSize="18" HorizontalAlignment="Right"/>
+            <Label Content="Lista pacjentów" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="15" Foreground="#FFEEEAEA"/>
+            <Label Content="PAC-1" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="55,-55" Foreground="#FFEEEAEA" />
+
         </StackPanel>
-        <StackPanel Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,0,30" Width="460" Grid.Row="1">
-            <TextBox Width="250" Height="25" Margin="10,30" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray"/>
-            <TextBox Width="250" Height="25" Margin="10,-10,0,0" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray"/>
-            <ComboBox Width="250" Height="25" Margin="10,10,0,0" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray"/>
-            <TextBox Width="250" Height="25" Margin="10,15,0,0" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray"/>
-            <ComboBox Width="250" Height="25" Margin="10,20" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray"/>
-            <TextBox Width="250" Height="25" Margin="10,-5" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray"/>
-            <TextBox Width="250" Height="25" Margin="10,20" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray"/>
-            <TextBox Width="250" Height="25" Margin="10,-5" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray" />
+
+        <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Margin="0,10,0,0">
+            <ListBox Height="310"/>
         </StackPanel>
-        <Button Grid.Column="2" Width="80" Height="30" HorizontalAlignment="Left" Content=">>" FontSize="18" FontFamily="Georgia" VerticalAlignment="Bottom" Margin="0,30" Grid.Row="1" Foreground="White">
+
+
+        <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4">
+        <Button Width="80" Height="30" Content="Dodaj" FontSize="18" FontFamily="Charlesworth" Foreground="White" HorizontalAlignment="Center" Margin="-300,20,20,0" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF973D64" Offset="0.184"/>
-                    <GradientStop Color="#FF420C23" Offset="1"/>
+                    <GradientStop Color="#FF193E63" Offset="0.421"/>
+                    <GradientStop Color="#FF11264E" Offset="1"/>
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
 
+            <Button Grid.Column="0" Grid.Row="2" Width="80" Height="30" Content="Usuń" Margin="0,-30,0,0" FontSize="18" FontFamily="Charlesworth"  HorizontalAlignment="Center" Foreground="White" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF193E63" Offset="0.421"/>
+                    <GradientStop Color="#FF11264E" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+            <Button Grid.Column="0" Grid.Row="2" Width="80" Height="30" Content="Edytuj" Margin="320,-30,0,0" FontSize="18" FontFamily="Charlesworth"  HorizontalAlignment="Center" Foreground="White" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF193E63" Offset="0.421"/>
+                        <GradientStop Color="#FF11264E" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </StackPanel>
     </Grid>
 </UserControl>

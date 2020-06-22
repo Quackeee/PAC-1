@@ -6,6 +6,9 @@
              xmlns:viewmodels="clr-namespace:PAC_1.ViewModels"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <DataTemplate DataType="{x:Type viewmodels:AddEditPatientFormVM}">
+            <views:AddEditPatientForm/>
+        </DataTemplate>
         <DataTemplate DataType ="{x:Type viewmodels:GroupFormVM}">
             <views:GroupForm/>
         </DataTemplate>
@@ -18,8 +21,8 @@
         <DataTemplate DataType="{x:Type viewmodels:SchoolFormVM}">
             <views:SchoolForm/>
         </DataTemplate>
-        <DataTemplate DataType="{x:Type viewmodels:AddEditPatientFormVM}">
-            <views:AddEditPatientForm/>
+        <DataTemplate DataType="{x:Type viewmodels:WelcomeFormVM}">
+            <views:WelcomeForm/>
         </DataTemplate>
     </Application.Resources>
 </Application>

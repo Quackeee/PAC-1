@@ -26,22 +26,31 @@ namespace PAC_1.Commands
 
         public void Execute(object parameter)
         {
-            if(parameter.ToString() == "GroupForm" )
+            if (parameter.ToString() == "AddEditPatientForm")
+            {
+                mainWindowVM.SelectedViewModel = new AddEditPatientFormVM();
+            }
+            else if (parameter.ToString() == "GroupForm")
             {
                 mainWindowVM.SelectedViewModel = new GroupFormVM();
             }
-            else if(parameter.ToString() == "IndividualForm")
+            else if (parameter.ToString() == "IndividualForm")
             {
-                mainWindowVM.SelectedViewModel = new AddEditPatientFormVM();
+                mainWindowVM.SelectedViewModel = new IndividualFormVM();
             }
-            else if(parameter.ToString() == "SchoolForm")
+            else if (parameter.ToString() == "PatientListForm")
+            {
+                mainWindowVM.SelectedViewModel = new PatientListFormVM();
+            }
+            else if (parameter.ToString() == "SchoolForm")
             {
                 mainWindowVM.SelectedViewModel = new SchoolFormVM();
             }
-            else if(parameter.ToString() == "AddEditPatientForm")
+            else if (parameter.ToString() == "WelcomeForm")
             {
-                mainWindowVM.SelectedViewModel = new AddEditPatientFormVM();
+                mainWindowVM.SelectedViewModel = new WelcomeFormVM();
             }
+            
         }
     }
 }

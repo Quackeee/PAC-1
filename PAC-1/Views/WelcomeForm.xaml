@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="PAC_1.Views.WelcomeForm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PAC_1.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="#FFF6F6F6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.12*"/>
+            <RowDefinition Height="0.60*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="4">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF193E63" Offset="0.421"/>
+                    <GradientStop Color="#FF11264E" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+
+            <Label Content="Strona główna" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="15" Foreground="#FFEEEAEA"/>
+            <Label Content="PAC-1" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="55,-55" Foreground="#FFEEEAEA" />
+
+        </StackPanel>
+
+        <Button Width="280" Height="40" Content="Zarządzaj pacjentami" FontSize="18" FontFamily="Charlesworth" Foreground="White" BorderThickness="2.5" BorderBrush="#FF193E63" HorizontalAlignment="Center" Margin="240,65.8,240,268.6" Command="{Binding UpdateViewCommand}" CommandParameter="PatientListForm" Grid.Row="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF193E63" Offset="0.421"/>
+                    <GradientStop Color="#FF11264E" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Width="280" Height="40" Content="Zajęcia indywidualne" FontSize="18" FontFamily="Charlesworth" Foreground="White" BorderThickness="2.5" BorderBrush="#FF193E63" Margin="240,123.8,240,210.6" Command="{Binding UpdateViewCommand}" CommandParameter="SchoolForm" Grid.Row="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF193E63" Offset="0.421"/>
+                    <GradientStop Color="#FF11264E" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button Width="280" Height="40" Content="Zajęcia grupowe" FontSize="18" FontFamily="Charlesworth" Foreground="White" BorderThickness="2.5" BorderBrush="#FF193E63" HorizontalAlignment="Center" Margin="240,184.8,240,149.6" Command="{Binding UpdateViewCommand}" CommandParameter="SchoolForm" Grid.Row="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF193E63" Offset="0.421"/>
+                    <GradientStop Color="#FF11264E" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button Width="280" Height="40" Content="Raporty" FontSize="18" FontFamily="Charlesworth" Foreground="White" BorderThickness="2.5" BorderBrush="#FF193E63" HorizontalAlignment="Center" Margin="240,244.8,240,89.6" Command="{Binding UpdateViewCommand}" CommandParameter="SchoolForm" Grid.Row="1" RenderTransformOrigin="0.584,3.077">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF193E63" Offset="0.421"/>
+                    <GradientStop Color="#FF11264E" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</UserControl>
