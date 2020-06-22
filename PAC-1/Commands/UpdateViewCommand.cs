@@ -26,35 +26,43 @@ namespace PAC_1.Commands
 
         public void Execute(object parameter)
         {
-            if (parameter.ToString() == "AddEditPatientForm")
+            Console.WriteLine(parameter.GetType());
+
+            if (parameter is string)
             {
-                mainWindowVM.SelectedViewModel = new AddEditPatientFormVM();
+                var name = parameter.ToString();
+
+                if (name == "PatientListForm")
+                {
+                    mainWindowVM.SelectedViewModel = new PatientListFormVM();
+                }
+                else if (name == "SchoolForm")
+                {
+                    mainWindowVM.SelectedViewModel = new SchoolFormVM();
+                }
+                else if (name == "WelcomeForm")
+                {
+                    mainWindowVM.SelectedViewModel = new WelcomeFormVM();
+                }
+                else if (name == "AddEditPatientForm")
+                {
+                    mainWindowVM.SelectedViewModel = new AddEditPatientFormVM();
+                }
             }
-            else if (parameter.ToString() == "GroupForm")
+            else if (parameter is GotoGroupArgs)
             {
-                mainWindowVM.SelectedViewModel = new GroupFormVM();
+                mainWindowVM.SelectedViewModel = new GroupFormVM(parameter as GotoGroupArgs);
             }
-            else if (parameter.ToString() == "IndividualForm")
+            else if (parameter is GotoIndividualArgs)
             {
-                mainWindowVM.SelectedViewModel = new IndividualFormVM();
+                mainWindowVM.SelectedViewModel = new IndividualFormVM(parameter as GotoIndividualArgs);
             }
-            else if (parameter.ToString() == "PatientListForm")
+            else if (parameter is GotoChoosePatientArgs)
             {
-                mainWindowVM.SelectedViewModel = new PatientListFormVM();
+                mainWindowVM.SelectedViewModel = new ChoosePatientsFormVM(parameter as GotoChoosePatientArgs);
             }
-            else if (parameter.ToString() == "SchoolForm")
-            {
-                mainWindowVM.SelectedViewModel = new SchoolFormVM();
-            }
-            else if (parameter.ToString() == "WelcomeForm")
-            {
-                mainWindowVM.SelectedViewModel = new WelcomeFormVM();
-            }
-            else if(parameter.ToString() == "ChoosePatientsForm")
-            {
-                mainWindowVM.SelectedViewModel = new ChoosePatientsFormVM();
-            }
-            
+
+
         }
     }
 }

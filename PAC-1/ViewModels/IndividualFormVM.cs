@@ -9,6 +9,11 @@ namespace PAC_1.ViewModels
 {
     class IndividualFormVM : ViewModelBase
     {
+        PatientVM _questionedPatient;
 
+        public IndividualFormVM(Commands.GotoIndividualArgs parameter)
+        {
+            _questionedPatient = parameter.patient;
+        }
     }
 }

@@ -4,8 +4,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PAC_1.Views"
+             xmlns:vm="clr-namespace:PAC_1.ViewModels"
+             xmlns:resx="clr-namespace:System.Resources;assembly=mscorlib"
+             
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+
+
     <Grid Background="#FFF6F6F6">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.15*"/>
@@ -34,12 +39,13 @@
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Margin="0,20,0,0">
-            <ListBox Height="300"/>
+            <ListBox Height="300" DataContext="{Binding Patients}" SelectionMode="{Binding Selection}" SelectedIndex="{Binding SelectedPatientIndex, Mode=OneWayToSource}"/>
         </StackPanel>
 
 
         <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4">
-            <Button Width="80" Height="30" Content="4" Margin="360,10,360,0" FontSize="18" FontFamily="Marlett"  HorizontalAlignment="Center" Foreground="White" Command="{Binding UpdateViewCommand}" CommandParameter="IndividualForm" >
+            <Button Width="80" Height="30" Content="4" Margin="360,10,360,0" FontSize="18" FontFamily="Marlett"  HorizontalAlignment="Center" Foreground="White" Command="{Binding UpdateViewCommand}" CommandParameter="{Binding GotoQuestionary}">
+
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF193E63" Offset="0.421"/>

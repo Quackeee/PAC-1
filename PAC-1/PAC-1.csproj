@@ -58,6 +58,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\ChangeViewArgs.cs" />
     <Compile Include="Commands\UpdateViewCommand.cs" />
     <Compile Include="Model\Patient.cs" />
     <Compile Include="Model\School.cs" />
