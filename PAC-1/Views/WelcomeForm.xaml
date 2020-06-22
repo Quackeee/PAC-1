@@ -24,7 +24,7 @@
 
         </StackPanel>
 
-        <Button Width="280" Height="40" Content="Zarządzaj pacjentami" FontSize="18" FontFamily="Charlesworth" Foreground="White" BorderThickness="2.5" BorderBrush="#FF193E63" HorizontalAlignment="Center" Margin="240,65.8,240,268.6" Command="{Binding UpdateViewCommand}" CommandParameter="PatientListForm" Grid.Row="1">
+        <Button Width="280" Height="40" Content="Zarządzaj pacjentami" FontSize="18" FontFamily="Charlesworth" Foreground="White" BorderThickness="2.5" BorderBrush="#FF193E63" HorizontalAlignment="Center" Margin="240,65.8,240,268.6" Command="{Binding GotoPatientList}" Grid.Row="1">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF193E63" Offset="0.421"/>
@@ -32,7 +32,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button Width="280" Height="40" Content="Zajęcia indywidualne" FontSize="18" FontFamily="Charlesworth" Foreground="White" BorderThickness="2.5" BorderBrush="#FF193E63" Margin="240,123.8,240,210.6" Command="{Binding UpdateViewCommand}" CommandParameter="{Binding GotoIndividual}" Grid.Row="1">
+        <Button Width="280" Height="40" Content="Zajęcia indywidualne" FontSize="18" FontFamily="Charlesworth" Foreground="White" BorderThickness="2.5" BorderBrush="#FF193E63" Margin="240,123.8,240,210.6" Command="{Binding GotoIndividual}" Grid.Row="1">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF193E63" Offset="0.421"/>
@@ -41,7 +41,7 @@
             </Button.Background>
         </Button>
 
-        <Button Width="280" Height="40" Content="Zajęcia grupowe" FontSize="18" FontFamily="Charlesworth" Foreground="White" BorderThickness="2.5" BorderBrush="#FF193E63" HorizontalAlignment="Center" Margin="240,184.8,240,149.6" Command="{Binding UpdateViewCommand}" CommandParameter="{Binding GotoGroup}" Grid.Row="1">
+        <Button Width="280" Height="40" Content="Zajęcia grupowe" FontSize="18" FontFamily="Charlesworth" Foreground="White" BorderThickness="2.5" BorderBrush="#FF193E63" HorizontalAlignment="Center" Margin="240,184.8,240,149.6" Command="{Binding GotoGroup}" Grid.Row="1">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF193E63" Offset="0.421"/>

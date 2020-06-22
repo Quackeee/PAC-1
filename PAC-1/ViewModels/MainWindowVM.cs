@@ -26,7 +26,7 @@ namespace PAC_1.ViewModels
 
 		public MainWindowVM()
 		{
-            mainWindow = this;
+            UpdateViewCommand.mainWindowVM = this;
 			_selectedViewModel = new WelcomeFormVM();
 		}
 

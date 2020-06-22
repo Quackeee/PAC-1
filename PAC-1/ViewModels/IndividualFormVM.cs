@@ -11,9 +11,9 @@ namespace PAC_1.ViewModels
     {
         PatientVM _questionedPatient;
 
-        public IndividualFormVM(Commands.GotoIndividualArgs parameter)
+        public IndividualFormVM(PatientVM patient)
         {
-            _questionedPatient = parameter.patient;
+            _questionedPatient = patient;
         }
     }
 }

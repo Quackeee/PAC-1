@@ -1,5 +1,6 @@
 ﻿using PAC_1.Commands;
 using PAC_1.ViewModels.VMBase;
+using PAC_1.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -21,35 +22,72 @@ namespace PAC_1.ViewModels
         //public PatientVM ChosenPatient { get => _patients[_selectedPatientIndex]; }
         public object SelectedPatientIndex { get => _selectedPatientIndex; set { _selectedPatientIndex = value; OnPropertyChanged(nameof(SelectedPatientIndex), nameof(GotoQuestionary)); } }
 
-        public ChangeViewArgs GotoQuestionary
+        private UpdateViewCommand _gotoQuestionary;
+        /*private ViewModelBase questionaryvm()
         {
-            get
+            if (_selectedPatientIndex != null)
             {
-                if (_selectedPatientIndex != null)
+                if (IsForGroup)
                 {
-                    if (IsForGroup)
-                    {
-                        var selectedPatientIndexes = _selectedPatientIndex as int[];
-                        var selectedPatients = new PatientVM[selectedPatientIndexes.Length];
-                        foreach (int index in selectedPatientIndexes)
-                            selectedPatients[index] = Patients[index];
+                    var selectedPatientIndexes = _selectedPatientIndex as int[];
+                    var selectedPatients = new PatientVM[selectedPatientIndexes.Length];
+                    foreach (int index in selectedPatientIndexes)
+                        selectedPatients[index] = Patients[index];
 
-                        return new GotoGroupArgs(selectedPatients);
-                    }
-                    else if ((int)_selectedPatientIndex != -1)
-                    {
-                        return new GotoIndividualArgs(_patients[(int)_selectedPatientIndex]);
-                    }
-                    else return null;
+                    return new GroupFormVM(selectedPatients);
                 }
-                return null;
+                else if ((int)_selectedPatientIndex != -1)
+                {
+                    return new IndividualFormVM(_patients[(int)_selectedPatientIndex]);
+                }
+                else return null;
             }
+            return null;
+        }*/
+        public UpdateViewCommand GotoQuestionary
+        {
+            get {
+                if (_gotoQuestionary is null)
+                {
+                    _gotoQuestionary = new UpdateViewCommand
+                    (
+                       () => {
+                           if (_selectedPatientIndex != null)
+                           {
+                               if (IsForGroup)
+                               {
+                                   var selectedPatientIndexes = _selectedPatientIndex as int[];
+                                   var selectedPatients = new PatientVM[selectedPatientIndexes.Length];
+                                   foreach (int index in selectedPatientIndexes)
+                                       selectedPatients[index] = Patients[index];
+
+                                   return new GroupFormVM(selectedPatients);
+                               }
+                               else if ((int)_selectedPatientIndex != -1)
+                               {
+                                   return new IndividualFormVM(_patients[(int)_selectedPatientIndex]);
+                               }
+                               else throw new InvalidOperationException();
+                           }
+                           else throw new InvalidOperationException();
+                       },
+                       (arg) =>
+                       {
+                           if (_selectedPatientIndex is null) return false;
+                           else if ((_selectedPatientIndex is int) && (((int)_selectedPatientIndex) == -1)) return false;
+                           else if (_selectedPatientIndex is int[] && (_selectedPatientIndex as int[]).Length == 0) return false;
+                           else return true;
+                       }
+                    );
+                }
+                return _gotoQuestionary;
+             }
         }
         public bool IsForGroup { get; }
 
-        public ChoosePatientsFormVM(GotoChoosePatientArgs args)
+        public ChoosePatientsFormVM(bool isForGroup)
         {
-            IsForGroup = args.IsForGroup;
+            IsForGroup = isForGroup;
             Selection = IsForGroup ? SelectionMode.Multiple : SelectionMode.Single;
             _patients = new ObservableCollection<PatientVM>();
 

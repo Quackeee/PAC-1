@@ -7,7 +7,6 @@ namespace PAC_1.ViewModels.VMBase
 {
     public class ViewModelBase : INotifyPropertyChanged
     {
-        public static MainWindowVM mainWindow;
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(params string[] namesOfProperties)
@@ -19,16 +18,8 @@ namespace PAC_1.ViewModels.VMBase
             }
         }
 
-        private static ICommand _updateViewCommand;
-        public static ICommand UpdateViewCommand
-        {
-            get
-            {
-                if (_updateViewCommand == null) _updateViewCommand = new UpdateViewCommand(mainWindow);
-                return _updateViewCommand;
-            }
-        }
-
+        public UpdateViewCommand GotoWelcome { get => new UpdateViewCommand(() => new WelcomeFormVM()); }
+        public UpdateViewCommand GotoPatientList { get => new UpdateViewCommand(() => new PatientListFormVM()); }
     }
 
     class RelayCommand : ICommand

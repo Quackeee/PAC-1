@@ -29,7 +29,7 @@
             </StackPanel.Background>
 
             <Label Content="Lista pacjentów" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="15" Foreground="#FFEEEAEA"/>
-            <Button Content="PAC-1" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="55,-55" Background="DarkBlue" Foreground="#FFEEEAEA" Command="{Binding UpdateViewCommand}" CommandParameter="WelcomeForm" />
+            <Button Content="PAC-1" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="55,-55" Background="DarkBlue" Foreground="#FFEEEAEA" Command="{Binding GotoWelcome}"/>
 
         </StackPanel>
 
@@ -39,7 +39,7 @@
 
 
         <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4">
-        <Button Width="80" Height="30" Content="Dodaj" FontSize="18" FontFamily="Charlesworth" Foreground="White" HorizontalAlignment="Center" Margin="-300,20,20,0" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm">
+        <Button Width="80" Height="30" Content="Dodaj" FontSize="18" FontFamily="Charlesworth" Foreground="White" HorizontalAlignment="Center" Margin="-300,20,20,0" Command="{Binding UpdateViewCommand}">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF193E63" Offset="0.421"/>
@@ -48,7 +48,7 @@
             </Button.Background>
         </Button>
 
-            <Button Grid.Column="0" Grid.Row="2" Width="80" Height="30" Content="Usuń" Margin="0,-30,0,0" FontSize="18" FontFamily="Charlesworth"  HorizontalAlignment="Center" Foreground="White" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm" >
+            <Button Grid.Column="0" Grid.Row="2" Width="80" Height="30" Content="Usuń" Margin="0,-30,0,0" FontSize="18" FontFamily="Charlesworth"  HorizontalAlignment="Center" Foreground="White" Command="{Binding UpdateViewCommand}" >
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF193E63" Offset="0.421"/>
