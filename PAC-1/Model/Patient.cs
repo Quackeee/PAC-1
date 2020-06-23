@@ -48,8 +48,6 @@ namespace PAC_1.Model
             Other = p.Other;
         }
 
-        ~Patient() { }
-
         public override string ToString()
         {
             //Tu zmieniłam na skrótową nazwę szkoły

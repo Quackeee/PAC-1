@@ -56,12 +56,12 @@ namespace PAC_1.ViewModels
             }
         }
         
-        public UpdateViewCommand GotoAddPatient {
-            get => new UpdateViewCommand(() => new AddEditPatientFormVM());
+        public ChangeViewCommand GotoAddPatient {
+            get => new ChangeViewCommand(() => new AddEditPatientFormVM());
         }
-        public UpdateViewCommand GotoEditPatient
+        public ChangeViewCommand GotoEditPatient
         {
-            get => new UpdateViewCommand(() => new AddEditPatientFormVM());
+            get => new ChangeViewCommand(() => new AddEditPatientFormVM());
         }
     }
 }

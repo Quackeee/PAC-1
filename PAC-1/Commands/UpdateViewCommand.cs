@@ -9,13 +9,13 @@ using System.Windows.Input;
 
 namespace PAC_1.Commands
 {
-    public class UpdateViewCommand : ICommand
+    public class ChangeViewCommand : ICommand
     {
         public static MainWindowVM mainWindowVM;
         private Func<ViewModelBase> _getVM;
         private Predicate<object> _canExecute;
 
-        public UpdateViewCommand(Func<ViewModelBase> getVM, Predicate<object> canExecute = null)
+        public ChangeViewCommand(Func<ViewModelBase> getVM, Predicate<object> canExecute = null)
         {
             _getVM = getVM;
             _canExecute = canExecute;

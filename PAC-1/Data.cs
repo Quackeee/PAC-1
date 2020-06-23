@@ -20,8 +20,8 @@ namespace PAC_1
             get
             {
                 if (_patients is null) _patients = new List<Patient> {
-                    new Patient("Krzysztof", "Kłak", schools[0], 21, "Zabrze", 100, "nwm", "normalne"),
-                    new Patient("Natalia", "Szarek", schools[0], 21, "Cieszyn", 200, "nwm", "normalne")
+                    new Patient("Krzysztof", "Kłak", schools[0], 20, "Zabrze", 100, "nwm", "normalne"),
+                    new Patient("Natalia", "Szarek", schools[0], 20, "Cieszyn", 200, "nwm", "normalne")
                 };
                 return _patients;
             }
