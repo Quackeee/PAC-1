@@ -8,6 +8,9 @@
         xmlns:local="clr-namespace:PAC_1"
         mc:Ignorable="d"
         Title="MainWindow" Height="540" Width="960">
+
+    
+    
     <Grid>
         <ContentControl Content="{Binding SelectedViewModel}"/>
     </Grid>
