@@ -13,7 +13,7 @@ namespace PAC_1.ViewModels
     {
         public List<Patient> Patients { get => Data.patients; }
 
-        public UpdateViewCommand GotoEditPatient { get => new UpdateViewCommand(() => new AddEditPatientFormVM()); }
+        public ChangeViewCommand GotoEditPatient { get => new ChangeViewCommand(() => new AddEditPatientFormVM()); }
 
     }
 }

@@ -51,11 +51,11 @@ namespace PAC_1.ViewModels
             //TODO
         }
 
-        public UpdateViewCommand Accept
+        public ChangeViewCommand Accept
         {
             get
             {
-                return new UpdateViewCommand
+                return new ChangeViewCommand
                 (
                     () =>
                     {
@@ -74,11 +74,11 @@ namespace PAC_1.ViewModels
             }
         }
 
-        public UpdateViewCommand AddSchool
+        public ChangeViewCommand AddSchool
         {
             get
             {
-                return new UpdateViewCommand
+                return new ChangeViewCommand
                 (
                     () => { _storedData = this; return new SchoolFormVM(); }
                 );

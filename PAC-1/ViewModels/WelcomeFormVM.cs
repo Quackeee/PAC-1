@@ -12,7 +12,7 @@ namespace PAC_1.ViewModels
 {
     class WelcomeFormVM : ViewModelBase
     {
-        public UpdateViewCommand GotoGroup { get => new UpdateViewCommand(() => new ChoosePatientsFormVM(true)); }
-        public UpdateViewCommand GotoIndividual { get => new UpdateViewCommand(() => new ChoosePatientsFormVM(false)); }
+        public ChangeViewCommand GotoGroup { get => new ChangeViewCommand(() => new ChoosePatientsFormVM(true)); }
+        public ChangeViewCommand GotoIndividual { get => new ChangeViewCommand(() => new ChoosePatientsFormVM(false)); }
     }
 }

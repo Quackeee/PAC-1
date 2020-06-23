@@ -45,16 +45,17 @@
 
         </StackPanel>
         <StackPanel Grid.Column="2" Grid.ColumnSpan="2"  HorizontalAlignment="Left" Margin="0.2,0.2,0,45.6" Width="300" Grid.Row="1" Grid.RowSpan="2">
-            <TextBox Width="250" Height="25" Margin="10,30" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray"/>
-            <TextBox Width="250" Height="25" Margin="10,-15,0,0" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray"/>
-            <TextBox Width="250" Height="25" Margin="10,15,0,0" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray"/>
-            <TextBox Width="250" Height="25" Margin="10,15,0,0" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray"/>
-            <TextBox Width="250" Height="25" Margin="10,15" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray"/>
-            <TextBox Width="250" Height="25" Margin="10,0" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray"/>
-            <TextBox Width="250" Height="25" Margin="10,15" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray"/>
+            <TextBox Width="250" Height="25" Margin="10,30" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray" Text="{Binding Name}"/>
+            <TextBox Width="250" Height="25" Margin="10,-15,0,0" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray" Text="{Binding ShortName}"/>
+            <TextBox Width="250" Height="25" Margin="10,15,0,0" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray" Text="{Binding ZipCode}"/>
+            <TextBox Width="250" Height="25" Margin="10,15,0,0" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray" Text="{Binding City}"/>
+            <TextBox Width="250" Height="25" Margin="10,15" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray" Text="{Binding Street}"/>
+            <TextBox Width="250" Height="25" Margin="10,0" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray" Text="{Binding Number}"/>
+            <TextBox Width="250" Height="25" Margin="10,15" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray" Text="{Binding SecondNumber}"/>
 
         </StackPanel>
-        <Button Grid.Column="4"  Grid.Row="2" Width="80" Height="30" Content="Zapisz" FontSize="18" FontFamily="Charlesworth" Foreground="White" HorizontalAlignment="Left" Command="{Binding UpdateViewCommand}" CommandParameter="PatientListForm">
+        <Button Grid.Column="4"  Grid.Row="2" Width="80" Height="30" Content="Zapisz" FontSize="18" FontFamily="Charlesworth" Foreground="White"
+                HorizontalAlignment="Left" Command="{Binding Accept}">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF193E63" Offset="0.421"/>
@@ -64,7 +65,7 @@
         </Button>
 
         <Button Grid.Column="0" Grid.Row="2" Width="80" Height="30" Content="3" Margin="0,0,0,0" FontSize="18" FontFamily="Marlett"
-                HorizontalAlignment="Right" Foreground="White" Command="{Binding GotoAddPatient}" CommandParameter="AddEditPatientForm" >
+                HorizontalAlignment="Right" Foreground="White" Command="{Binding Cancel}" >
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF193E63" Offset="0.421"/>

@@ -18,9 +18,9 @@ namespace PAC_1.ViewModels.VMBase
             }
         }
 
-        public UpdateViewCommand GotoAddPatient { get => new UpdateViewCommand(() => new AddEditPatientFormVM()); }
-        public UpdateViewCommand GotoWelcome { get => new UpdateViewCommand(() => new WelcomeFormVM()); }
-        public UpdateViewCommand GotoPatientList { get => new UpdateViewCommand(() => new PatientListFormVM()); }
+        public ChangeViewCommand GotoAddPatient { get => new ChangeViewCommand(() => new AddEditPatientFormVM()); }
+        public ChangeViewCommand GotoWelcome { get => new ChangeViewCommand(() => new WelcomeFormVM()); }
+        public ChangeViewCommand GotoPatientList { get => new ChangeViewCommand(() => new PatientListFormVM()); }
     }
 
     class RelayCommand : ICommand
