@@ -18,12 +18,28 @@ namespace PAC_1.ViewModels
             FirstName = _storedData.FirstName;
             LastName = _storedData.LastName;
             School = _storedData.School;
+            BirthPlace = _storedData.BirthPlace;
             Age = _storedData.Age;
             Iq = _storedData.Iq;
             Scale = _storedData.Scale;
             Background = _storedData.Background;
             Other = _storedData.Other;
+            _editedPatient = _storedData._editedPatient;
         }
+        private void _loadPatientData()
+        {
+            FirstName = _editedPatient.FirstName;
+            LastName = _editedPatient.LastName;
+            School = _editedPatient.School;
+            BirthPlace = _editedPatient.BirthPlace;
+            Age = _editedPatient.Age;
+            Iq = _editedPatient.Iq;
+            Scale = _editedPatient.Scale;
+            Background = _editedPatient.Background;
+            Other = _editedPatient.Other;
+        }
+
+        private Patient _editedPatient;
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -46,9 +62,10 @@ namespace PAC_1.ViewModels
                 _storedData = null;
             }
         }
-        public AddEditPatientFormVM(PatientVM editedPatient)
+        public AddEditPatientFormVM(Patient editedPatient)
         {
-            //TODO
+            _editedPatient = editedPatient;
+            _loadPatientData();
         }
 
         public ChangeViewCommand Accept
@@ -59,8 +76,16 @@ namespace PAC_1.ViewModels
                 (
                     () =>
                     {
-                        Data.patients.Add(new Patient(FirstName, LastName, School, (int)Age, BirthPlace, (int)Iq, Scale, Background, Other));
-                        return new PatientListFormVM();
+                        if (_editedPatient is null)
+                        {
+                            Data.patients.Add(new Patient(FirstName, LastName, School, (int)Age, BirthPlace, (int)Iq, Scale, Background, Other));
+                            return new PatientListFormVM();
+                        }
+                        else
+                        {
+                            Data.patients[Data.patients.IndexOf(_editedPatient)] = new Patient(FirstName, LastName, School, (int)Age, BirthPlace, (int)Iq, Scale, Background, Other);
+                            return new PatientListFormVM();
+                        }
                     },
                     (arg) =>
                         !string.IsNullOrEmpty(FirstName) &&
