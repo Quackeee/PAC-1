@@ -18,6 +18,7 @@ namespace PAC_1.ViewModels.VMBase
             }
         }
 
+        public UpdateViewCommand GotoAddPatient { get => new UpdateViewCommand(() => new AddEditPatientFormVM()); }
         public UpdateViewCommand GotoWelcome { get => new UpdateViewCommand(() => new WelcomeFormVM()); }
         public UpdateViewCommand GotoPatientList { get => new UpdateViewCommand(() => new PatientListFormVM()); }
     }

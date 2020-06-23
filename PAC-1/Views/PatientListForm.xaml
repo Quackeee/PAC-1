@@ -35,12 +35,13 @@
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Margin="0,20,0,0">
-            <ListBox Height="300"/>
+            <ListBox Height="300" ItemsSource="{Binding Patients}"/>
         </StackPanel>
 
 
         <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4">
-        <Button Width="80" Height="30" Content="Dodaj" FontSize="18" FontFamily="Charlesworth" Foreground="White" HorizontalAlignment="Center" Margin="-300,20,20,0" Command="{Binding UpdateViewCommand}">
+        <Button Width="80" Height="30" Content="Dodaj" FontSize="18" FontFamily="Charlesworth" Foreground="White"
+                HorizontalAlignment="Center" Margin="-300,20,20,0" Command="{Binding GotoAddPatient}">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF193E63" Offset="0.421"/>
@@ -49,7 +50,8 @@
             </Button.Background>
         </Button>
 
-            <Button Grid.Column="0" Grid.Row="2" Width="80" Height="30" Content="Usuń" Margin="0,-30,0,0" FontSize="18" FontFamily="Charlesworth"  HorizontalAlignment="Center" Foreground="White" Command="{Binding UpdateViewCommand}" >
+            <Button Grid.Column="0" Grid.Row="2" Width="80" Height="30" Content="Usuń" Margin="0,-30,0,0" FontSize="18" FontFamily="Charlesworth"
+                    HorizontalAlignment="Center" Foreground="White" Command="{Binding UpdateViewCommand}" >
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF193E63" Offset="0.421"/>
@@ -58,7 +60,8 @@
             </Button.Background>
         </Button>
 
-            <Button Grid.Column="0" Grid.Row="2" Width="80" Height="30" Content="Edytuj" Margin="320,-30,0,0" FontSize="18" FontFamily="Charlesworth"  HorizontalAlignment="Center" Foreground="White" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm" >
+            <Button Grid.Column="0" Grid.Row="2" Width="80" Height="30" Content="Edytuj" Margin="320,-30,0,0" FontSize="18" FontFamily="Charlesworth"
+                    HorizontalAlignment="Center" Foreground="White" Command="{Binding GotoEditPatient}" >
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF193E63" Offset="0.421"/>

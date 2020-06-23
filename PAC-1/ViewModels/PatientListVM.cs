@@ -10,6 +10,8 @@ namespace PAC_1.ViewModels
     using Model;
     using System.Collections.ObjectModel;
     using System.Windows.Input;
+    using PAC_1.Commands;
+    using PAC_1.Views;
 
     class PatientListVM : ViewModelBase
     {
@@ -54,5 +56,12 @@ namespace PAC_1.ViewModels
             }
         }
         
+        public UpdateViewCommand GotoAddPatient {
+            get => new UpdateViewCommand(() => new AddEditPatientFormVM());
+        }
+        public UpdateViewCommand GotoEditPatient
+        {
+            get => new UpdateViewCommand(() => new AddEditPatientFormVM());
+        }
     }
 }

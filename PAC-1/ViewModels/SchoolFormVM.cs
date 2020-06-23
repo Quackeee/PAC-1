@@ -9,5 +9,6 @@ namespace PAC_1.ViewModels
 {
     class SchoolFormVM : ViewModelBase
     {
+        
     }
 }

@@ -27,5 +27,7 @@ namespace PAC_1.ViewModels
         public string LastName { get => _representedPatient.LastName;  }
         public int Age { get => _representedPatient.Age; }
         public string School { get => _representedPatient.School.ShortName;  }
+        public string BirthPlace { get => _representedPatient.BirthPlace; }
+        public override string ToString() => _representedPatient.ToString();
     }
 }

@@ -1,4 +1,5 @@
 ﻿using PAC_1.Commands;
+using PAC_1.Model;
 using PAC_1.ViewModels.VMBase;
 using PAC_1.Views;
 using System;
@@ -14,36 +15,16 @@ namespace PAC_1.ViewModels
 {
     class ChoosePatientsFormVM : ViewModelBase
     {
-        private ObservableCollection<PatientVM> _patients;
-        private object _selectedPatientIndex;
-        public SelectionMode Selection;
+        private List<Patient> _patients;
+        private object _selectedPatientIndices;
+        public SelectionMode Selection { get; }
 
-        public ObservableCollection<PatientVM> Patients { get => _patients; }
+        public List<Patient> Patients { get => _patients; }
         //public PatientVM ChosenPatient { get => _patients[_selectedPatientIndex]; }
-        public object SelectedPatientIndex { get => _selectedPatientIndex; set { _selectedPatientIndex = value; OnPropertyChanged(nameof(SelectedPatientIndex), nameof(GotoQuestionary)); } }
+        public object SelectedPatientIndices { get => _selectedPatientIndices; set { _selectedPatientIndices = value; OnPropertyChanged(nameof(SelectedPatientIndices)); } }
 
         private UpdateViewCommand _gotoQuestionary;
-        /*private ViewModelBase questionaryvm()
-        {
-            if (_selectedPatientIndex != null)
-            {
-                if (IsForGroup)
-                {
-                    var selectedPatientIndexes = _selectedPatientIndex as int[];
-                    var selectedPatients = new PatientVM[selectedPatientIndexes.Length];
-                    foreach (int index in selectedPatientIndexes)
-                        selectedPatients[index] = Patients[index];
 
-                    return new GroupFormVM(selectedPatients);
-                }
-                else if ((int)_selectedPatientIndex != -1)
-                {
-                    return new IndividualFormVM(_patients[(int)_selectedPatientIndex]);
-                }
-                else return null;
-            }
-            return null;
-        }*/
         public UpdateViewCommand GotoQuestionary
         {
             get {
@@ -51,31 +32,32 @@ namespace PAC_1.ViewModels
                 {
                     _gotoQuestionary = new UpdateViewCommand
                     (
-                       () => {
-                           if (_selectedPatientIndex != null)
+                       () =>
+                       {
+                           if (_selectedPatientIndices != null)
                            {
                                if (IsForGroup)
                                {
-                                   var selectedPatientIndexes = _selectedPatientIndex as int[];
+                                   var selectedPatientIndexes = _selectedPatientIndices as int[];
                                    var selectedPatients = new PatientVM[selectedPatientIndexes.Length];
                                    foreach (int index in selectedPatientIndexes)
-                                       selectedPatients[index] = Patients[index];
+                                       selectedPatients[index] = new PatientVM(Patients[index]);
 
                                    return new GroupFormVM(selectedPatients);
                                }
-                               else if ((int)_selectedPatientIndex != -1)
+                               else if ((int)_selectedPatientIndices != -1)
                                {
-                                   return new IndividualFormVM(_patients[(int)_selectedPatientIndex]);
+                                   return new IndividualFormVM(new PatientVM(_patients[(int)_selectedPatientIndices]));
                                }
                                else throw new InvalidOperationException();
                            }
                            else throw new InvalidOperationException();
                        },
-                       (arg) =>
+                       arg =>
                        {
-                           if (_selectedPatientIndex is null) return false;
-                           else if ((_selectedPatientIndex is int) && (((int)_selectedPatientIndex) == -1)) return false;
-                           else if (_selectedPatientIndex is int[] && (_selectedPatientIndex as int[]).Length == 0) return false;
+                           if (_selectedPatientIndices is null) return false;
+                           else if ((_selectedPatientIndices is int) && (((int)_selectedPatientIndices) == -1)) return false;
+                           else if (_selectedPatientIndices is int[] && (_selectedPatientIndices as int[]).Length == 0) return false;
                            else return true;
                        }
                     );
@@ -88,10 +70,14 @@ namespace PAC_1.ViewModels
         public ChoosePatientsFormVM(bool isForGroup)
         {
             IsForGroup = isForGroup;
-            Selection = IsForGroup ? SelectionMode.Multiple : SelectionMode.Single;
-            _patients = new ObservableCollection<PatientVM>();
+            Selection = IsForGroup ? SelectionMode.Extended : SelectionMode.Single;
+            OnPropertyChanged(nameof(Selection));
+            _patients = Data.patients;
 
-            Debug.WriteLine(IsForGroup);
+            foreach (var patient in _patients)
+            {
+                Debug.WriteLine(patient);
+            }
         }
     }
 }

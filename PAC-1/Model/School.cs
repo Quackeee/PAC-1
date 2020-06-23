@@ -38,7 +38,10 @@ namespace PAC_1.Model
             SecondNumber = s.SecondNumber;
         }
 
-        ~School() { }
+        public override string ToString()
+        {
+            return ShortName;
+        }
 
     }
 

@@ -27,6 +27,7 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Grid.ColumnSpan="4">
             <StackPanel.Background>
+                
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF193E63" Offset="0.421"/>
                     <GradientStop Color="#FF11264E" Offset="1"/>
@@ -41,7 +42,7 @@
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Margin="0,20,0,0">
-            <ListBox Height="300" DataContext="{Binding Patients}" SelectionMode="{Binding Selection}" SelectedIndex="{Binding SelectedPatientIndex, Mode=OneWayToSource}"/>
+            <ListBox Height="300" ItemsSource="{Binding Patients}" SelectionMode="{Binding Selection, Mode=OneWay}" SelectedIndex="{Binding SelectedPatientIndex, Mode=OneWayToSource}"/>
         </StackPanel>
 
 
