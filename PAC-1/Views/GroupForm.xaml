@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PAC_1.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="540" d:DesignWidth="960">
     <Grid Background="#FFF6F6F6">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.15*"/>
@@ -34,10 +34,10 @@
         </StackPanel>
 
         <StackPanel Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="1" Margin="10,20,0,0">
-            <ListBox Height="300"/>
+            <ListBox Height="350"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.ColumnSpan="1" Grid.Row="1" Margin="0,20,10,0">
-            <ListBox Height="300"/>
+            <ListBox Height="350"/>
         </StackPanel>
 
         <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4">
@@ -49,9 +49,6 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-
-            <Label Grid.Column="0" Grid.Row="2" Width="80" Height="30" Content="NAPIS" Margin="0,-30,0,0" FontSize="18" FontFamily="Charlesworth"  HorizontalAlignment="Center" Foreground="DarkBlue" >
-            </Label>
 
             <Button Grid.Column="0" Grid.Row="2" Width="80" Height="30" Content="4" Margin="320,-30,0,0" FontSize="18" FontFamily="Marlett"  HorizontalAlignment="Center" Foreground="White" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm" >
                 <Button.Background>

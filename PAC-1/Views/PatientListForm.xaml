@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PAC_1.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800" Foreground="#FFFFF5F5">
+             d:DesignHeight="540" d:DesignWidth="960" Foreground="#FFFFF5F5">
 
     <UserControl.Resources>
         <Style TargetType="Button">
@@ -55,7 +55,7 @@
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Margin="0,20,0,0">
-            <ListBox Height="300" ItemsSource="{Binding Patients}" SelectedItem="{Binding SelectedPatient}"/>
+            <ListBox Height="350" ItemsSource="{Binding Patients}" SelectedItem="{Binding SelectedPatient}"/>
         </StackPanel>
 
         <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4">

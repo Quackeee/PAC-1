@@ -8,8 +8,7 @@
              xmlns:resx="clr-namespace:System.Resources;assembly=mscorlib"
              
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-
+             d:DesignHeight="540" d:DesignWidth="960">
 
     <Grid Background="#FFF6F6F6">
         <Grid.ColumnDefinitions>
@@ -27,7 +26,7 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Grid.ColumnSpan="4">
             <StackPanel.Background>
-                
+
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF193E63" Offset="0.421"/>
                     <GradientStop Color="#FF11264E" Offset="1"/>
@@ -36,13 +35,13 @@
 
             <Label Content="Lista pacjentów" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="15" Foreground="#FFEEEAEA"/>
             <Button Content="PAC-1" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold"
-                    FontFamily="Charlesworth" Margin="55,-55" Background="Transparent" BorderThickness="0" Foreground="#FFEEEAEA"
-                    Command="{Binding GotoWelcome}"/>
+                    FontFamily="Charlesworth" Margin="0,-55,55,-55" Background="Transparent" BorderThickness="0" Foreground="#FFEEEAEA"
+                    Command="{Binding GotoWelcome}" Height="40"/>
 
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Margin="0,20,0,0">
-            <ListBox Height="300" ItemsSource="{Binding Patients}" SelectionMode="{Binding Selection, Mode=OneWay}" SelectedIndex="{Binding SelectedPatientIndex, Mode=OneWayToSource}"/>
+            <ListBox Height="340" ItemsSource="{Binding Patients}" SelectionMode="{Binding Selection, Mode=OneWay}" SelectedIndex="{Binding SelectedPatientIndex, Mode=OneWayToSource}"/>
         </StackPanel>
 
 

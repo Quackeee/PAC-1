@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PAC_1.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="540" d:DesignWidth="960">
 
     <UserControl.Resources>
         <Style TargetType="Label">
@@ -16,10 +16,12 @@
         </Style>
 
         <Style TargetType="TextBox">
-            <Setter Property="FontFamily" Value="Charlesworth"/>
-            <Setter Property="FontWeight" Value="Light"/>
+            <Setter Property="FontFamily" Value="Cornerstone"/>
+            <Setter Property="FontWeight" Value="DemiBold"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="Width" Value="250"/>
             <Setter Property="Height" Value="25"/>
+            <Setter Property="FontSize" Value="14"/>
             <Setter Property="HorizontalAlignment" Value="Left"/>
             <Setter Property="BorderThickness" Value="2.5"/>
             <Setter Property="BorderBrush" Value="Gray"/>
@@ -89,11 +91,9 @@
             <TextBox Margin="10,15" />
             <TextBox Margin="10,0" />
             <TextBox Margin="10,15" />
-
         </StackPanel>
+        
         <Button Grid.Column="4"  Grid.Row="2" Content="Zapisz" HorizontalAlignment="Left" Command="{Binding UpdateViewCommand}" CommandParameter="PatientListForm" />
-
-
 
         <Button Grid.Column="0" Grid.Row="2" Content="3" HorizontalAlignment="Right" FontFamily="Marlett" Command="{Binding GotoAddPatient}" CommandParameter="AddEditPatientForm" />
 
