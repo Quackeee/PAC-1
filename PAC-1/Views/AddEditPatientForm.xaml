@@ -4,8 +4,63 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PAC_1.Views"
+             xmlns:vm="clr-namespace:PAC_1.ViewModels"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             
+             d:DesignHeight="540" d:DesignWidth="960">
+
+
+    <UserControl.Resources>
+
+        <Style TargetType="Label">
+            <Setter Property="FontFamily" Value="Charlesworth"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="Charlesworth"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Width" Value="180"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Grid.Row" Value="2"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF193E63" Offset="0.421"/>
+                        <GradientStop Color="#FF11264E" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="FontFamily" Value="Cornerstone"/>
+            <Setter Property="FontWeight" Value="DemiBold"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="BorderThickness" Value="2.5"/>
+            <Setter Property="BorderBrush" Value="Gray"/>
+        </Style>
+
+        <Style TargetType="ComboBox">
+            <Setter Property="FontFamily" Value="Cornerstone"/>
+            <Setter Property="FontWeight" Value="DemiBold"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="BorderThickness" Value="2.5"/>
+            <Setter Property="BorderBrush" Value="Gray"/>
+        </Style>
+
+    </UserControl.Resources>
+
     <Grid Background="#FFF6F6F6">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.25*"/>
@@ -29,56 +84,46 @@
             </StackPanel.Background>
 
             <Label Content="Dane pacjenta" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="15" Foreground="#FFEEEAEA"/>
-            <Button Content="PAC-1" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="55,-55" Background="Transparent" 
-                    BorderThickness="0" Foreground="#FFEEEAEA" Command="{Binding GotoWelcome}" />
+            <Button Content="PAC-1" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="0,-55,55,-55" Background="Transparent" 
+                    BorderThickness="0" Command="{Binding GotoWelcome}" Height="40" />
         </StackPanel>
-        <StackPanel  HorizontalAlignment="Left" Margin="0.2,10,0,63.6" Grid.Row="1" Grid.ColumnSpan="1" Grid.Column="1" Grid.RowSpan="2" Width="193">
+        <StackPanel  HorizontalAlignment="Right" Margin="0.2,40,0,63.6" Grid.Row="1" Grid.ColumnSpan="1" Grid.Column="1" Grid.RowSpan="2" Width="193">
 
-            <Label Content="Imię:" Margin="30,0,0,0" FontFamily="Charlesworth" FontWeight="SemiBold" FontSize="18" HorizontalAlignment="Right"/>
-            <Label Content="Nazwisko:" Margin="10,0,0,0" FontFamily="Charlesworth" FontWeight="SemiBold" FontSize="18" HorizontalAlignment="Right"/>
-            <Label Content="Wiek:" Margin="10,0,0,0" FontFamily="Charlesworth" FontWeight="SemiBold" FontSize="18" HorizontalAlignment="Right" />
-            <Label Content="Szkoła:" Margin="10,0,0,0" FontFamily="Charlesworth" FontWeight="SemiBold" FontSize="18" HorizontalAlignment="Right"/>
-            <Label Content="Miejsce urodzenia:" Margin="10,0,0,0" FontFamily="Charlesworth" FontWeight="SemiBold" FontSize="18" HorizontalAlignment="Right"/>
-            <Label Content="IQ:" Margin="10,0,0,0" FontFamily="Charlesworth" FontWeight="SemiBold" FontSize="18" HorizontalAlignment="Right"/>
-            <Label Content="Skala:" Margin="10,0,0,0" FontFamily="Charlesworth" FontWeight="SemiBold" FontSize="18" HorizontalAlignment="Right"/>
-            <Label Content="Środowisko:" Margin="10,0,0,0" FontFamily="Charlesworth" FontWeight="SemiBold" FontSize="18" HorizontalAlignment="Right"/>
-            <Label Content="Inne:" Margin="10,0,0,0" FontFamily="Charlesworth" FontWeight="SemiBold" FontSize="18" HorizontalAlignment="Right"/>
-
-        </StackPanel>
-        <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Margin="0,10,30,45.6" HorizontalAlignment="Right" Width="300" Grid.RowSpan="2" Grid.Row="1">
-            <TextBox Width="250" Height="25" Margin="10,2,0,0" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray" Text="{Binding FirstName}"/>
-            <TextBox Width="250" Height="25" Margin="10,7,0,0" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray" Text="{Binding LastName}"/>
-            <ComboBox Width="250" Height="25" Margin="10,7,0,0" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray" ItemsSource="{Binding AgeOptions}" SelectedValue="{Binding Age}"/>
-            <ComboBox Width="250" Height="25" Margin="10,7,0,0" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray" ItemsSource="{Binding SchoolOptions}" SelectedItem="{Binding School}"/>
-            <TextBox Width="250" Height="25" Margin="10,7" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray" Text="{Binding BirthPlace}"/>
-            <TextBox Width="250" Height="25" Margin="10,0" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray" Text="{Binding Iq}"/>
-            <TextBox Width="250" Height="25" Margin="10,7" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray" Text="{Binding Scale}"/>
-            <TextBox Width="250" Height="25" Margin="10,0" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray" Text="{Binding Background}"/>
-            <TextBox Width="250" Height="25" Margin="10,7" HorizontalAlignment="Left" BorderThickness="2.5" BorderBrush="Gray" Text="{Binding Other}"/>
+            <Label Content="Imię:" Margin="30,0,0,0" />
+            <Label Content="Nazwisko:" Margin="10,0,0,0" />
+            <Label Content="Wiek:" Margin="10,0,0,0" />
+            <Label Content="Szkoła:" Margin="10,0,0,0" />
+            <Label Content="Miejsce urodzenia:" Margin="10,0,0,0" />
+            <Label Content="IQ:" Margin="10,0,0,0" />
+            <Label Content="Skala:" Margin="10,0,0,0" />
+            <Label Content="Środowisko:" Margin="10,0,0,0" />
+            <Label Content="Inne:" Margin="10,0,0,0" />
 
         </StackPanel>
+        <StackPanel Grid.Column="2" Grid.ColumnSpan="2" Margin="0,40,30,45.6" HorizontalAlignment="Left" Width="300" Grid.RowSpan="2" Grid.Row="1">
+            <TextBox Margin="10,2,0,0" Text="{Binding FirstName}" />
+            <TextBox Margin="10,7,0,0" Text="{Binding LastName}"/>
+            <ComboBox Margin="10,7,0,0" ItemsSource="{Binding AgeOptions}" SelectedValue="{Binding Age}"/>
+            <ComboBox Margin="10,7,0,0" ItemsSource="{Binding SchoolOptions}" SelectedItem="{Binding School}"/>
+            <TextBox Margin="10,7" Text="{Binding BirthPlace}"/>
+            <TextBox Margin="10,0" Text="{Binding Iq}"/>
+            <TextBox Margin="10,7" Text="{Binding Scale}"/>
+            <TextBox Margin="10,0" Text="{Binding Background}"/>
+            <TextBox Margin="10,7" Text="{Binding Other}"/>
+
+        </StackPanel>
 
 
-        <Button Grid.Column="2"  Grid.Row="2" Width="250" Height="30" Content="Dodaj szkołę" FontSize="18"
-                FontFamily="Charlesworth" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top"
+        <Button Grid.Column="1" Grid.ColumnSpan="2" Content="Dodaj szkołę" HorizontalAlignment="Center"
                 Command="{Binding AddSchool}">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF193E63" Offset="0.421"/>
-                    <GradientStop Color="#FF11264E" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
         </Button>
 
-        <Button Grid.Column="0" Grid.Row="2" Width="80" Height="30" Content="3" Margin="0,0,0,0" FontSize="18"
-                FontFamily="Marlett"  HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="White"
+        <Button Grid.Column="2" Content="Zapisz" HorizontalAlignment="Right"
+                Command="{Binding AddSchool}">
+        </Button>
+
+        <Button Grid.Column="1" Content="Anuluj" HorizontalAlignment="Left"
                 Command="{Binding Accept}" >
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF193E63" Offset="0.421"/>
-                    <GradientStop Color="#FF11264E" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
         </Button>
     </Grid>
 </UserControl>

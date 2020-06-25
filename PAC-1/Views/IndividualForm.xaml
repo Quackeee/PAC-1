@@ -5,7 +5,28 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PAC_1.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="540" d:DesignWidth="960">
+
+    <UserControl.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="Charlesworth"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Width" Value="180"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF193E63" Offset="0.421"/>
+                        <GradientStop Color="#FF11264E" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </UserControl.Resources>
+    
     <Grid Background="#FFF6F6F6">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.15*"/>
@@ -13,6 +34,7 @@
             <ColumnDefinition Width="0.6*"/>
             <ColumnDefinition Width="0.15*"/>
 
+            
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
@@ -34,74 +56,26 @@
         </StackPanel>
 
         <StackPanel Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="1" Margin="0,20,0,0">
-            <ListBox Height="300"/>
+            <ListBox Height="350"/>
         </StackPanel>
-        <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1">
-            <Button Width="180" Height="30" Content="Kategoria1" FontSize="18" FontFamily="Charlesworth" Foreground="White" HorizontalAlignment="Center" Margin="0,50,20,0" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF193E63" Offset="0.421"/>
-                        <GradientStop Color="#FF11264E" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
+        <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Margin="0,20,0,0">
+            
+            <Button Content="Obsługiwanie siebie" Margin="0,50,20,0" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm"/>
 
-            <Button Width="180" Height="30" Content="Kategoria2" FontSize="18" FontFamily="Charlesworth" Foreground="White" HorizontalAlignment="Center" Margin="0,10,20,0" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF193E63" Offset="0.421"/>
-                        <GradientStop Color="#FF11264E" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-            <Button Width="180" Height="30" Content="Kategoria3" FontSize="18" FontFamily="Charlesworth" Foreground="White" HorizontalAlignment="Center" Margin="0,10,20,0" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF193E63" Offset="0.421"/>
-                        <GradientStop Color="#FF11264E" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-            <Button Width="180" Height="30" Content="Kategoria4" FontSize="18" FontFamily="Charlesworth" Foreground="White" HorizontalAlignment="Center" Margin="0,10,20,0" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF193E63" Offset="0.421"/>
-                        <GradientStop Color="#FF11264E" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-            <Button Width="180" Height="30" Content="Kategoria5" FontSize="18" FontFamily="Charlesworth" Foreground="White" HorizontalAlignment="Center" Margin="0,10,20,0" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF193E63" Offset="0.421"/>
-                        <GradientStop Color="#FF11264E" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
+            <Button Content="Komunikowanie się" Margin="0,10,20,0" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm"/>
+
+            <Button Content="Uspołecznienie" Margin="0,10,20,0" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm"/>
+
+            <Button Content="Zajęcia" Margin="0,10,20,0" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm"/>
+            
         </StackPanel>
 
         <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4">
-            <Button Width="80" Height="30" Content="3" FontSize="18" FontFamily="Marlett" Foreground="White" HorizontalAlignment="Center" Margin="-300,20,20,0" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF193E63" Offset="0.421"/>
-                        <GradientStop Color="#FF11264E" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
+            <Button Width="80" Content="3" FontFamily="Marlett" Margin="-300,20,20,0" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm"/>
 
-            <Label Grid.Column="0" Grid.Row="2" Width="80" Height="30" Content="NAPIS" Margin="0,-30,0,0" FontSize="18" FontFamily="Charlesworth"  HorizontalAlignment="Center" Foreground="DarkBlue" >
-            </Label>
+            <Label Grid.Column="0" Grid.Row="2" Width="80" Height="30" Content="NAPIS" Margin="0,-30,0,0" FontSize="18" FontFamily="Charlesworth"  HorizontalAlignment="Center" Foreground="DarkBlue" />
 
-            <Button Grid.Column="0" Grid.Row="2" Width="80" Height="30" Content="4" Margin="320,-30,0,0" FontSize="18" FontFamily="Marlett"  HorizontalAlignment="Center" Foreground="White" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm" >
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF193E63" Offset="0.421"/>
-                        <GradientStop Color="#FF11264E" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-
+            <Button Grid.Column="0" Grid.Row="2" Width="80" Content="4" Margin="320,-30,0,0" FontFamily="Marlett" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm" />
 
         </StackPanel>
     </Grid>
