@@ -11,15 +11,15 @@ namespace PAC_1
 {
     static class Data
     {
-        private static List<Patient> _patients;
+        private static ObservableCollection<Patient> _patients;
         private static int[] _ageOptions;
         private static int _ageRange = 20;
 
-        public static List<Patient> patients
+        public static ObservableCollection<Patient> patients
         {
             get
             {
-                if (_patients is null) _patients = new List<Patient> {
+                if (_patients is null) _patients = new ObservableCollection<Patient> {
                     new Patient("Krzysztof", "Kłak", schools[0], 20, "Zabrze", 100, "nwm", "normalne"),
                     new Patient("Natalia", "Szarek", schools[0], 20, "Cieszyn", 200, "nwm", "normalne")
                 };

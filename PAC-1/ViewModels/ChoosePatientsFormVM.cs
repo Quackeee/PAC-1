@@ -15,11 +15,11 @@ namespace PAC_1.ViewModels
 {
     class ChoosePatientsFormVM : ViewModelBase
     {
-        private List<Patient> _patients;
+        private ObservableCollection<Patient> _patients;
         private int _selectedPatientIndex;
         public SelectionMode Selection { get; }
 
-        public List<Patient> Patients { get => _patients; }
+        public ObservableCollection<Patient> Patients { get => _patients; }
         public int SelectedPatientIndex { get => _selectedPatientIndex; set { _selectedPatientIndex = value; OnPropertyChanged(nameof(SelectedPatientIndex)); } }
 
         private ChangeViewCommand _gotoQuestionary;

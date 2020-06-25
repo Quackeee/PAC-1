@@ -38,23 +38,7 @@ namespace PAC_1.ViewModels
         }
 
         public int SelectedIndex { get => _selectedIndex; set { _selectedIndex = value; OnPropertyChanged(nameof(SelectedPatientDetials)); } }
-        private ICommand _deletePatient = null;
-
-        public ICommand DeletePatient { get { 
-            if (_deletePatient == null)
-                {
-                    _deletePatient = new RelayCommand(
-                        arg =>
-                        {
-                            _patients.RemoveAt(_selectedIndex);
-                            OnPropertyChanged(nameof(Patients));
-                        },
-                        arg => SelectedIndex != -1
-                        );
-                }
-                return _deletePatient;
-            }
-        }
+        
         
         public ChangeViewCommand GotoAddPatient {
             get => new ChangeViewCommand(() => new AddEditPatientFormVM());

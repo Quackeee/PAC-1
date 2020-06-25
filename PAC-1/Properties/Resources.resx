@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,6 +60,7 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -68,9 +69,10 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="name" use="required" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -85,9 +87,10 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -109,9 +112,60 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AgilitySubcathegoryName" xml:space="preserve">
+    <value>Zręczność (kontrola motoryki)</value>
+  </data>
+  <data name="CommunicationCathegoryName" xml:space="preserve">
+    <value>Komunikacja</value>
+  </data>
+  <data name="DifferentiationSubcathegoryName" xml:space="preserve">
+    <value>Ujmowanie różnic</value>
+  </data>
+  <data name="DressingUpSubcathegoryName" xml:space="preserve">
+    <value>Ubieranie się</value>
+  </data>
+  <data name="HouseworkSubcathegoryName" xml:space="preserve">
+    <value>Czynnści domowe</value>
+  </data>
+  <data name="LanguageSubcathegoryName" xml:space="preserve">
+    <value>Język</value>
+  </data>
+  <data name="ManualSkillsSubcathegoryName" xml:space="preserve">
+    <value>Sprawność manualna (ruchy palców)</value>
+  </data>
+  <data name="MotorSkillsSubcathegoryName" xml:space="preserve">
+    <value>Sprawność motoryczna</value>
+  </data>
+  <data name="NumbersAndSizesSubcathegoryName" xml:space="preserve">
+    <value>Liczby i wielkości</value>
+  </data>
+  <data name="OccupationCathegoryName" xml:space="preserve">
+    <value>Zajęcia</value>
+  </data>
+  <data name="PencilAndPaperSkillsSubcathegoryName" xml:space="preserve">
+    <value>Posługiwanie się ołówkiem i papierem</value>
+  </data>
+  <data name="PlayingSubcathegoryName" xml:space="preserve">
+    <value>Udział w zabawie</value>
+  </data>
+  <data name="QuestionsSource" xml:space="preserve">
+    <value>./Pytania</value>
+  </data>
+  <data name="SelfHelpCathegoryName" xml:space="preserve">
+    <value>Obsługiwanie Siebie</value>
+  </data>
+  <data name="SocialisationCathegotyName" xml:space="preserve">
+    <value>Uspołecznienie</value>
+  </data>
+  <data name="TableMannersSubcathegoryName" xml:space="preserve">
+    <value>Zachowanie przy stole</value>
+  </data>
+  <data name="ToiletAndWashingSubcathegoryName" xml:space="preserve">
+    <value>Toaleta i mycie</value>
+  </data>
 </root>

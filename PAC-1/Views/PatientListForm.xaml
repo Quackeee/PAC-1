@@ -51,7 +51,7 @@
         </Button>
 
             <Button Grid.Column="0" Grid.Row="2" Width="80" Height="30" Content="Usuń" Margin="0,-30,0,0" FontSize="18" FontFamily="Charlesworth"
-                    HorizontalAlignment="Center" Foreground="White" Command="{Binding UpdateViewCommand}" >
+                    HorizontalAlignment="Center" Foreground="White" Command="{Binding DeletePatient}" >
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF193E63" Offset="0.421"/>
