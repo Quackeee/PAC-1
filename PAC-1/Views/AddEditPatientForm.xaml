@@ -113,17 +113,18 @@
 
         </StackPanel>
 
-
+        <Button Grid.Column="1" Content="Anuluj" HorizontalAlignment="Left"
+                Command="{Binding GotoAddPatient}" >
+        </Button>
+        
         <Button Grid.Column="1" Grid.ColumnSpan="2" Content="Dodaj szkołę" HorizontalAlignment="Center"
                 Command="{Binding AddSchool}">
         </Button>
 
         <Button Grid.Column="2" Content="Zapisz" HorizontalAlignment="Right"
-                Command="{Binding AddSchool}">
+                Command="{Binding Accept}">
         </Button>
 
-        <Button Grid.Column="1" Content="Anuluj" HorizontalAlignment="Left"
-                Command="{Binding Accept}" >
-        </Button>
+        
     </Grid>
 </UserControl>

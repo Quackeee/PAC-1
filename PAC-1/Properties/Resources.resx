@@ -154,7 +154,7 @@
     <value>Udział w zabawie</value>
   </data>
   <data name="QuestionsSource" xml:space="preserve">
-    <value>./Pytania</value>
+    <value>./Questions.json</value>
   </data>
   <data name="SelfHelpCathegoryName" xml:space="preserve">
     <value>Obsługiwanie Siebie</value>

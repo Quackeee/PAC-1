@@ -39,10 +39,6 @@ namespace PAC_1.ViewModels
 
         public int SelectedIndex { get => _selectedIndex; set { _selectedIndex = value; OnPropertyChanged(nameof(SelectedPatientDetials)); } }
         
-        
-        public ChangeViewCommand GotoAddPatient {
-            get => new ChangeViewCommand(() => new AddEditPatientFormVM());
-        }
         public ChangeViewCommand GotoEditPatient
         {
             get => new ChangeViewCommand(() => new AddEditPatientFormVM());

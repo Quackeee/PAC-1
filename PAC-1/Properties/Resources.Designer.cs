@@ -169,7 +169,7 @@ namespace PAC_1.Properties {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu ./Pytania.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu ./Questions.json.
         /// </summary>
         internal static string QuestionsSource {
             get {

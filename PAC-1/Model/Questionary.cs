@@ -26,6 +26,8 @@ namespace PAC_1.Model
         public static readonly Question[] ManualSkills;
         public static readonly Question[] Agility;
 
+        public static readonly Dictionary<Question[], string> SubcathegoryName;
+
         static Questionary()
         {
             Questions = JsonConvert.DeserializeObject<Question[]>(File.ReadAllText(Properties.Resources.QuestionsSource));
@@ -42,9 +44,25 @@ namespace PAC_1.Model
             Housework = Questions.AtIndexes(13, 30, 46, 64, 84, 85, 86, 103, 104, 117).ToArray();
             ManualSkills = Questions.AtIndexes(14, 15, 31, 47, 48, 65, 66, 87, 105, 118).ToArray();
             Agility = Questions.AtIndexes(16, 32, 49, 67, 88, 89, 90, 106, 107, 119).ToArray();
-            
+
+            SubcathegoryName = new Dictionary<Question[], string>();
+
+            SubcathegoryName.Add(TableManners, Properties.Resources.TableMannersSubcathegoryName);
+            SubcathegoryName.Add(MotorSkills, Properties.Resources.MotorSkillsSubcathegoryName);
+            SubcathegoryName.Add(ToiletAndWashing, Properties.Resources.MotorSkillsSubcathegoryName);
+            SubcathegoryName.Add(DressingUp, Properties.Resources.DressingUpSubcathegoryName);
+            SubcathegoryName.Add(Language, Properties.Resources.LanguageSubcathegoryName);
+            SubcathegoryName.Add(Differentiation, Properties.Resources.DifferentiationSubcathegoryName);
+            SubcathegoryName.Add(NumbersAndSizes, Properties.Resources.NumbersAndSizesSubcathegoryName);
+            SubcathegoryName.Add(PencilAndPaperSkills, Properties.Resources.PencilAndPaperSkillsSubcathegoryName);
+            SubcathegoryName.Add(Playing, Properties.Resources.PlayingSubcathegoryName);
+            SubcathegoryName.Add(Housework, Properties.Resources.HouseworkSubcathegoryName);
+            SubcathegoryName.Add(ManualSkills, Properties.Resources.ManualSkillsSubcathegoryName);
+            SubcathegoryName.Add(Agility, Properties.Resources.AgilitySubcathegoryName);
+
         }
 
+        
     }
 
     static class Extensions
