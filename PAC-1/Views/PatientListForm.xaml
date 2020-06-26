@@ -55,7 +55,18 @@
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Margin="0,20,0,0">
-            <ListBox Height="350" ItemsSource="{Binding Patients}" SelectedItem="{Binding SelectedPatient}"/>
+            <ListBox Height="350" ItemsSource="{Binding Patients}" SelectedItem="{Binding SelectedPatient}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="{Binding FirstName}"/>
+                            <Label Content="{Binding LastName}"/>
+                            <Label Content="{Binding Age}"/>
+                            <Label Content="{Binding School}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
         </StackPanel>
 
         <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4">
