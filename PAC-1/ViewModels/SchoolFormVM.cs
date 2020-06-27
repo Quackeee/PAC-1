@@ -1,6 +1,7 @@
 ﻿using PAC_1.Commands;
 using PAC_1.Model;
 using PAC_1.ViewModels.VMBase;
+using PAC_1.Statics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +26,7 @@ namespace PAC_1.ViewModels
         {
             get =>
                 new ChangeViewCommand(
-                    () => { Data.schools.Add(new School(Name, ShortName, ZipCode, City, Street, SecondNumber, Number)); return new AddEditPatientFormVM(); },
+                    () => { Data.Schools.Add(new School(Name, ShortName, ZipCode, City, Street, SecondNumber, Number)); return new AddEditPatientFormVM(); },
                     (arg) => !string.IsNullOrEmpty(Name) && !string.IsNullOrEmpty(ShortName)
             );
         }

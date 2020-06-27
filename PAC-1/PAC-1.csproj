@@ -64,21 +64,21 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Commands\UpdateViewCommand.cs" />
-    <Compile Include="Data.cs" />
+    <Compile Include="Statics\Data.cs" />
     <Compile Include="Model\Patient.cs" />
     <Compile Include="Model\Question.cs" />
-    <Compile Include="Model\Questionary.cs" />
+    <Compile Include="Statics\Questionary.cs" />
     <Compile Include="Model\School.cs" />
     <Compile Include="Model\Specialist.cs" />
     <Compile Include="ViewModels\AddEditPatientFormVM.cs" />
     <Compile Include="ViewModels\Base\ViewModelBase.cs" />
     <Compile Include="ViewModels\ChoosePatientsFormVM.cs" />
-    <Compile Include="ViewModels\GroupFormVM.cs" />
-    <Compile Include="ViewModels\IndividualFormVM.cs" />
+    <Compile Include="ViewModels\QuestionaryForms\GroupFormVM.cs" />
+    <Compile Include="ViewModels\QuestionaryForms\IndividualFormVM.cs" />
     <Compile Include="ViewModels\MainWindowVM.cs" />
     <Compile Include="ViewModels\PatientListFormVM.cs" />
-    <Compile Include="ViewModels\PatientListVM.cs" />
-    <Compile Include="ViewModels\PatientVM.cs" />
+    <Compile Include="ViewModels\QuestionaryForms\QuestionaryFormVM.cs" />
+    <Compile Include="ViewModels\QuestionVM.cs" />
     <Compile Include="ViewModels\SchoolFormVM.cs" />
     <Compile Include="ViewModels\WelcomeFormVM.cs" />
     <Compile Include="Views\AddEditPatientForm.xaml.cs">

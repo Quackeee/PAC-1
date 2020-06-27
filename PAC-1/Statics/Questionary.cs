@@ -1,4 +1,6 @@
 ﻿using Newtonsoft.Json;
+using PAC_1.Model;
+using PAC_1.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,34 +9,45 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PAC_1.Model
+namespace PAC_1.Statics
 {
     static class Questionary
     {
-        public static readonly Question[] Questions;
+        public static readonly QuestionVM[] Questions;
 
-        public static readonly Question[] TableManners;
-        public static readonly Question[] MotorSkills;
-        public static readonly Question[] ToiletAndWashing;
-        public static readonly Question[] DressingUp;
-        public static readonly Question[] Language;
-        public static readonly Question[] Differentiation;
-        public static readonly Question[] NumbersAndSizes;
-        public static readonly Question[] PencilAndPaperSkills;
-        public static readonly Question[] Playing;
-        public static readonly Question[] Housework;
-        public static readonly Question[] ManualSkills;
-        public static readonly Question[] Agility;
+        public static readonly QuestionVM[] TableManners;
+        public static readonly QuestionVM[] MotorSkills;
+        public static readonly QuestionVM[] ToiletAndWashing;
+        public static readonly QuestionVM[] DressingUp;
+        public static readonly QuestionVM[] Language;
+        public static readonly QuestionVM[] Differentiation;
+        public static readonly QuestionVM[] NumbersAndSizes;
+        public static readonly QuestionVM[] PencilAndPaperSkills;
+        public static readonly QuestionVM[] Playing;
+        public static readonly QuestionVM[] Housework;
+        public static readonly QuestionVM[] ManualSkills;
+        public static readonly QuestionVM[] Agility;
 
-        public static readonly Dictionary<Question[], string> SubcathegoryName;
+        public static readonly Dictionary<QuestionVM[], string> SubcathegoryName;
+
+        public static Cathegory SelfHelp;
+        public static Cathegory Communication;
+        public static Cathegory Socialization;
+        public static Cathegory Occupation;
 
         static Questionary()
         {
-            Questions = JsonConvert.DeserializeObject<Question[]>(File.ReadAllText(Properties.Resources.QuestionsSource));
+            var questionModels = JsonConvert.DeserializeObject<Question[]>(File.ReadAllText(Properties.Resources.QuestionsSource));
 
-            TableManners = Questions.AtIndexes(0, 1, 17, 19, 33, 50, 68, 91, 92, 108).ToArray();
+            Questions = new QuestionVM[120];
+            for (int i = 0; i < 120; i++)
+            {
+                Questions[i] = new QuestionVM(questionModels[i]);
+            }
+
+            TableManners = Questions.AtIndexes(0, 1, 17, 18, 33, 50, 68, 91, 92, 108).ToArray();
             MotorSkills = Questions.AtIndexes(2, 3, 19, 34, 35, 51, 69, 70, 93, 109).ToArray();
-            ToiletAndWashing = Questions.AtIndexes(4, 20, 21, 36, 37, 52, 53, 71, 84).ToArray();
+            ToiletAndWashing = Questions.AtIndexes(4, 20, 21, 36, 37, 52, 53, 71, 94,110).ToArray();
             DressingUp = Questions.AtIndexes(5, 6, 22, 23, 38, 54, 72, 73, 95,111).ToArray();
             Language = Questions.AtIndexes(7, 8, 24, 25, 39, 55, 56, 74, 96, 112).ToArray();
             Differentiation = Questions.AtIndexes(9, 26, 40, 57, 58, 75, 76, 77, 97, 113).ToArray();
@@ -45,11 +58,11 @@ namespace PAC_1.Model
             ManualSkills = Questions.AtIndexes(14, 15, 31, 47, 48, 65, 66, 87, 105, 118).ToArray();
             Agility = Questions.AtIndexes(16, 32, 49, 67, 88, 89, 90, 106, 107, 119).ToArray();
 
-            SubcathegoryName = new Dictionary<Question[], string>();
+            SubcathegoryName = new Dictionary<QuestionVM[], string>();
 
             SubcathegoryName.Add(TableManners, Properties.Resources.TableMannersSubcathegoryName);
             SubcathegoryName.Add(MotorSkills, Properties.Resources.MotorSkillsSubcathegoryName);
-            SubcathegoryName.Add(ToiletAndWashing, Properties.Resources.MotorSkillsSubcathegoryName);
+            SubcathegoryName.Add(ToiletAndWashing, Properties.Resources.ToiletAndWashingSubcathegoryName);
             SubcathegoryName.Add(DressingUp, Properties.Resources.DressingUpSubcathegoryName);
             SubcathegoryName.Add(Language, Properties.Resources.LanguageSubcathegoryName);
             SubcathegoryName.Add(Differentiation, Properties.Resources.DifferentiationSubcathegoryName);
@@ -60,9 +73,23 @@ namespace PAC_1.Model
             SubcathegoryName.Add(ManualSkills, Properties.Resources.ManualSkillsSubcathegoryName);
             SubcathegoryName.Add(Agility, Properties.Resources.AgilitySubcathegoryName);
 
+            SelfHelp = new Cathegory(TableManners, MotorSkills, ToiletAndWashing, DressingUp);
+            Communication = new Cathegory(Language, Differentiation, NumbersAndSizes, PencilAndPaperSkills);
+            Socialization = new Cathegory(Playing, Housework);
+            Occupation = new Cathegory(ManualSkills, Agility);
+
+        }
+
+        public class Cathegory {
+            public QuestionVM[][] Subcathegories { get; }
+            public Cathegory(params QuestionVM[][] subcathegories)
+            {
+                Subcathegories = subcathegories;
+            }
         }
 
         
+
     }
 
     static class Extensions

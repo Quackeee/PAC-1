@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,8 +19,7 @@ namespace PAC_1.Model
         public string Scale { get; } //skala użyta w badaniu IQ (zmienić na enum?)
         public string Background { get; } //że rodzina/dom dziecka, etc. (zmienić na enum?)
         public string Other { get; }
-
-        // Pacjent będzie musiał mieć jeszcze swoje aktualne wyniki w formularzu, ale to jak będą opdowiednie klasy do tego
+        public bool?[] QuestionResults { get; } = new bool?[120];// = new bool?[120];//odpowiedzi na pytania
 
         // Trzeba stworzyć pole na datę i czas badania, ale to później 
 

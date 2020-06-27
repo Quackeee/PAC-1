@@ -1,6 +1,7 @@
 ﻿using PAC_1.Commands;
 using PAC_1.Model;
 using PAC_1.ViewModels.VMBase;
+using PAC_1.Statics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,7 +45,7 @@ namespace PAC_1.ViewModels
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public School School { get; set; }
-        public List<School> SchoolOptions { get => Data.schools; }
+        public List<School> SchoolOptions { get => Data.Schools; }
         public int? Age { get; set; }
         public string BirthPlace { get; set; }
         public int? Iq { get; set; }
@@ -78,12 +79,12 @@ namespace PAC_1.ViewModels
                     {
                         if (_editedPatient is null)
                         {
-                            Data.patients.Add(new Patient(FirstName, LastName, School, (int)Age, BirthPlace, (int)Iq, Scale, Background, Other));
+                            Data.Patients.Add(new Patient(FirstName, LastName, School, (int)Age, BirthPlace, (int)Iq, Scale, Background, Other));
                             return new PatientListFormVM();
                         }
                         else
                         {
-                            Data.patients[Data.patients.IndexOf(_editedPatient)] = new Patient(FirstName, LastName, School, (int)Age, BirthPlace, (int)Iq, Scale, Background, Other);
+                            Data.Patients[Data.Patients.IndexOf(_editedPatient)] = new Patient(FirstName, LastName, School, (int)Age, BirthPlace, (int)Iq, Scale, Background, Other);
                             return new PatientListFormVM();
                         }
                     },

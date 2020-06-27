@@ -1,6 +1,7 @@
 ﻿using PAC_1.Commands;
 using PAC_1.Model;
 using PAC_1.ViewModels.VMBase;
+using PAC_1.Statics;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -13,7 +14,7 @@ namespace PAC_1.ViewModels
     class PatientListFormVM : ViewModelBase
     {
         public Patient SelectedPatient { get; set; }
-        public ObservableCollection<Patient> Patients { get => Data.patients; }
+        public ObservableCollection<Patient> Patients { get => Data.Patients; }
 
         new public ChangeViewCommand GotoAddPatient { get => new ChangeViewCommand(() => new AddEditPatientFormVM()); }
         public ChangeViewCommand GotoEditPatient {
@@ -32,7 +33,7 @@ namespace PAC_1.ViewModels
                     _deletePatient = new RelayCommand(
                         arg =>
                         {
-                            Data.patients.RemoveAt(Data.patients.IndexOf(SelectedPatient));
+                            Data.Patients.RemoveAt(Data.Patients.IndexOf(SelectedPatient));
                             OnPropertyChanged(nameof(Patients));
                         },
                         arg => SelectedPatient != null

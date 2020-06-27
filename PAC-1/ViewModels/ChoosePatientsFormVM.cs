@@ -1,6 +1,7 @@
 ﻿using PAC_1.Commands;
 using PAC_1.Model;
 using PAC_1.ViewModels.VMBase;
+using PAC_1.Statics;
 using PAC_1.Views;
 using System;
 using System.Collections.Generic;
@@ -46,7 +47,7 @@ namespace PAC_1.ViewModels
                                }
                                else*/ if ((int)_selectedPatientIndex != -1)
                                {
-                                   return new IndividualFormVM(new PatientVM(_patients[(int)_selectedPatientIndex]));
+                                   return new IndividualFormVM(_patients[_selectedPatientIndex]);
                                }
                                else throw new InvalidOperationException();
                            }
@@ -64,7 +65,7 @@ namespace PAC_1.ViewModels
         {
             IsForGroup = isForGroup;
             Selection = IsForGroup ? SelectionMode.Extended : SelectionMode.Single;
-            _patients = Data.patients;
+            _patients = Data.Patients;
         }
     }
 }

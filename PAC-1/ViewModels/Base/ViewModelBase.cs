@@ -28,7 +28,7 @@ namespace PAC_1.ViewModels.VMBase
         readonly Action<object> _execute;
         readonly Predicate<object> _canExecute;
 
-        public RelayCommand(Action<object> execute, Predicate<object> canExecute)
+        public RelayCommand(Action<object> execute, Predicate<object> canExecute = null)
         {
             if (execute == null) throw new ArgumentNullException(nameof(execute));
             else _execute = execute;

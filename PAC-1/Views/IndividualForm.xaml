@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PAC_1.Views"
+             xmlns:s="clr-namespace:PAC_1.Statics"
              mc:Ignorable="d" 
              d:DesignHeight="540" d:DesignWidth="960">
 
@@ -51,7 +52,7 @@
             </StackPanel.Background>
 
             <Label Content="Pacjent" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="15" Foreground="#FFEEEAEA"/>
-            <Button Content="PAC-1" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="55,-55" Background="Transparent" BorderThickness="0" Foreground="#FFEEEAEA" Command="{Binding UpdateViewCommand}" CommandParameter="WelcomeForm" />
+            <Button Content="PAC-1" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="55,-55" Background="Transparent" BorderThickness="0" Foreground="#FFEEEAEA" Command="{Binding GotoWelcome}" />
 
         </StackPanel>
 
@@ -60,9 +61,9 @@
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
-                            <Label Content="Pytanie" Width="100"/>
-                            <CheckBox Content="Tak  " VerticalAlignment="Center"/>
-                            <CheckBox Content="Nie  " VerticalAlignment="Center"/>
+                            <Label Content="{Binding Label}" Width="400"/>
+                            <CheckBox IsChecked="{Binding YesOptionChecked}" Content="Tak  " VerticalAlignment="Center"/>
+                            <CheckBox IsChecked="{Binding NoOptionChecked}" Content="Nie  " VerticalAlignment="Center"/>
                             <Button Content="i" Width="20" Height="20" FontWeight="Light" VerticalAlignment="Center" />
                         </StackPanel>
                     </DataTemplate>
@@ -71,22 +72,22 @@
         </StackPanel>
         <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Margin="0,20,0,0">
             
-            <Button Content="Obsługiwanie siebie" Margin="0,50,20,0" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm"/>
+            <Button Content="Obsługiwanie siebie" Margin="0,50,20,0" Command="{Binding ChangeSelectedCathegory}" CommandParameter="{x:Static s:Questionary.SelfHelp}"/>
 
-            <Button Content="Komunikowanie się" Margin="0,10,20,0" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm"/>
+            <Button Content="Komunikowanie się" Margin="0,10,20,0" Command="{Binding ChangeSelectedCathegory}" CommandParameter="{x:Static s:Questionary.Communication}"/>
 
-            <Button Content="Uspołecznienie" Margin="0,10,20,0" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm"/>
+            <Button Content="Uspołecznienie" Margin="0,10,20,0" Command="{Binding ChangeSelectedCathegory}" CommandParameter="{x:Static s:Questionary.Socialization}"/>
 
-            <Button Content="Zajęcia" Margin="0,10,20,0" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm"/>
+            <Button Content="Zajęcia" Margin="0,10,20,0" Command="{Binding ChangeSelectedCathegory}" CommandParameter="{x:Static s:Questionary.Occupation}"/>
             
         </StackPanel>
 
         <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4">
-            <Button Width="80" Content="3" FontFamily="Marlett" Margin="-300,20,20,0" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm"/>
+            <Button Width="80" Content="3" FontFamily="Marlett" Margin="-300,20,20,0" Command="{Binding TraverseSubcathegoriesLeft}"/>
 
             <Label Grid.Column="0" Grid.Row="2" Width="200" Height="30" Content="{Binding SelectedSubcathegoryName}" Margin="0,-30,0,0" FontSize="18" FontFamily="Charlesworth"  HorizontalAlignment="Center" Foreground="DarkBlue" />
 
-            <Button Grid.Column="0" Grid.Row="2" Width="80" Content="4" Margin="320,-30,0,0" FontFamily="Marlett" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm" />
+            <Button Grid.Column="0" Grid.Row="2" Width="80" Content="4" Margin="320,-30,0,0" FontFamily="Marlett" Command="{Binding TraverseSubcathegoriesRight}"/>
 
         </StackPanel>
     </Grid>
