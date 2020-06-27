@@ -84,18 +84,19 @@
 
         </StackPanel>
         <StackPanel Grid.Column="2" Grid.ColumnSpan="2"  HorizontalAlignment="Left" Margin="0.2,0.2,0,45.6" Width="300" Grid.Row="1" Grid.RowSpan="2">
-            <TextBox Margin="10,30" />
-            <TextBox Margin="10,-15,0,0" />
-            <TextBox Margin="10,15,0,0" />
-            <TextBox Margin="10,15,0,0" />
-            <TextBox Margin="10,15" />
-            <TextBox Margin="10,0" />
-            <TextBox Margin="10,15" />
+            <TextBox Margin="10,30" Text="{Binding Name}"/>
+            <TextBox Margin="10,-15,0,0" Text="{Binding ShortName}"/>
+            <TextBox Margin="10,15,0,0" Text="{Binding ZipCode}"/>
+            <TextBox Margin="10,15,0,0" Text="{Binding City}"/>
+            <TextBox Margin="10,15" Text="{Binding Street}"/>
+            <TextBox Margin="10,0" Text="{Binding Number}"/>
+            <TextBox Margin="10,15" Text="{Binding SecondNumber}"/>
+
         </StackPanel>
         
-        <Button Grid.Column="4"  Grid.Row="2" Content="Zapisz" HorizontalAlignment="Left" Command="{Binding UpdateViewCommand}" CommandParameter="PatientListForm" />
+        <Button Grid.Column="4"  Grid.Row="2" Content="Zapisz" HorizontalAlignment="Left" Command="{Binding Accept}" />
 
-        <Button Grid.Column="0" Grid.Row="2" Content="3" HorizontalAlignment="Right" FontFamily="Marlett" Command="{Binding GotoAddPatient}" CommandParameter="AddEditPatientForm" />
+        <Button Grid.Column="0" Grid.Row="2" Content="3" HorizontalAlignment="Right" FontFamily="Marlett" Command="{Binding Cancel}"/>
 
     </Grid>
 </UserControl>

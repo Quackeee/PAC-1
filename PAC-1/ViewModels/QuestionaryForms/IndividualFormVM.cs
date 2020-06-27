@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PAC_1.Statics;
+using PAC_1.Commands;
 
 namespace PAC_1.ViewModels
 {

@@ -63,6 +63,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Commands\UpdateViewCommand.cs" />
     <Compile Include="Statics\Data.cs" />
     <Compile Include="Model\Patient.cs" />
@@ -70,14 +71,18 @@
     <Compile Include="Statics\Questionary.cs" />
     <Compile Include="Model\School.cs" />
     <Compile Include="Model\Specialist.cs" />
-    <Compile Include="ViewModels\AddEditPatientFormVM.cs" />
+    <Compile Include="ViewModels\PatientEditorForm\AddPatientFormVM.cs" />
     <Compile Include="ViewModels\Base\ViewModelBase.cs" />
-    <Compile Include="ViewModels\ChoosePatientsFormVM.cs" />
+    <Compile Include="ViewModels\PatientEditorForm\Base\PatientEditorFormVM.cs" />
+    <Compile Include="ViewModels\PatientEditorForm\EditPatientFormVM.cs" />
+    <Compile Include="ViewModels\PatientSelectionForms\MultipleSelectionFormVM.cs" />
+    <Compile Include="ViewModels\PatientSelectionForms\SingleSelectionFormVM.cs" />
+    <Compile Include="ViewModels\PatientSelectionForms\Base\PatientSelectionFormVM.cs" />
     <Compile Include="ViewModels\QuestionaryForms\GroupFormVM.cs" />
     <Compile Include="ViewModels\QuestionaryForms\IndividualFormVM.cs" />
-    <Compile Include="ViewModels\MainWindowVM.cs" />
+    <Compile Include="ViewModels\Base\MainWindowVM.cs" />
     <Compile Include="ViewModels\PatientListFormVM.cs" />
-    <Compile Include="ViewModels\QuestionaryForms\QuestionaryFormVM.cs" />
+    <Compile Include="ViewModels\QuestionaryForms\Base\QuestionaryFormVM.cs" />
     <Compile Include="ViewModels\QuestionVM.cs" />
     <Compile Include="ViewModels\SchoolFormVM.cs" />
     <Compile Include="ViewModels\WelcomeFormVM.cs" />
@@ -99,6 +104,7 @@
     <Compile Include="Views\SchoolForm.xaml.cs">
       <DependentUpon>SchoolForm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\CustomControls\MultiselectListBox.cs" />
     <Compile Include="Views\WelcomeForm.xaml.cs">
       <DependentUpon>WelcomeForm.xaml</DependentUpon>
     </Compile>
@@ -170,8 +176,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controls\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

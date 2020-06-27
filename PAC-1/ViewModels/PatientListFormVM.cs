@@ -16,11 +16,11 @@ namespace PAC_1.ViewModels
         public Patient SelectedPatient { get; set; }
         public ObservableCollection<Patient> Patients { get => Data.Patients; }
 
-        new public ChangeViewCommand GotoAddPatient { get => new ChangeViewCommand(() => new AddEditPatientFormVM()); }
+        new public ChangeViewCommand GotoAddPatient { get => new ChangeViewCommand(arg => new AddPatientFormVM()); }
         public ChangeViewCommand GotoEditPatient {
             get => new ChangeViewCommand(
-                () => new AddEditPatientFormVM(SelectedPatient),
-                (arg) => SelectedPatient != null
+                arg => new EditPatientFormVM(SelectedPatient),
+                arg => SelectedPatient != null
                 ); }
 
         private RelayCommand _deletePatient;

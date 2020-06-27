@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:PAC_1.Views"
              xmlns:vm="clr-namespace:PAC_1.ViewModels"
              xmlns:resx="clr-namespace:System.Resources;assembly=mscorlib"
+             xmlns:cc="clr-namespace:PAC_1.Views.CustomControls"
              
              mc:Ignorable="d" 
              d:DesignHeight="540" d:DesignWidth="960">
@@ -41,7 +42,9 @@
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Margin="0,20,0,0">
-            <ListBox Height="340" ItemsSource="{Binding Patients}" SelectionMode="{Binding Selection, Mode=OneWay}" SelectedIndex="{Binding SelectedPatientIndex, Mode=OneWayToSource}">
+            <cc:MultiSelectListBox Height="340" ItemsSource="{Binding Patients}"
+                                   SelectionMode="{Binding Selection, Mode=OneWay}" SelectedIndex="{Binding SelectedPatientIndex, Mode=OneWayToSource}"
+                                   SelectedItemsList="{Binding SelectedPatients, Mode=OneWayToSource}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
@@ -52,7 +55,7 @@
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>    
-            </ListBox>
+            </cc:MultiSelectListBox>
         </StackPanel>
 
 

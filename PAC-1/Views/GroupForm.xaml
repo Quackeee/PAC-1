@@ -41,7 +41,7 @@
         </StackPanel>
 
         <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4">
-            <Button Width="80" Height="30" Content="3" FontSize="18" FontFamily="Marlett" Foreground="White" HorizontalAlignment="Center" Margin="-300,20,20,0" Command="{Binding UpdateViewCommand}" CommandParameter="AddEditPatientForm">
+            <Button Width="80" Height="30" Content="3" FontSize="18" FontFamily="Marlett" Foreground="White" HorizontalAlignment="Center" Margin="-300,20,20,0" Command="{Binding UpdateViewCommand}">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF193E63" Offset="0.421"/>

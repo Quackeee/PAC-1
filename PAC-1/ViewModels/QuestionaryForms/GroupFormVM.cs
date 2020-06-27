@@ -12,12 +12,11 @@ namespace PAC_1.ViewModels
 {
     class GroupFormVM : QuestionaryFormVM
     {
-        private ObservableCollection<Patient> _questionedPatients;
+        private Patient[] _questionedPatients;
 
         public GroupFormVM(Patient[] questionedPatients)
         {
-            Debug.WriteLine("hej, hej!");
-            _questionedPatients = new ObservableCollection<Patient>(questionedPatients);
+            _questionedPatients = questionedPatients;
         }
 
         public override Patient SelectedPatient => throw new NotImplementedException();

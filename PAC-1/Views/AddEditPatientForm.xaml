@@ -114,7 +114,7 @@
         </StackPanel>
 
         <Button Grid.Column="1" Content="Anuluj" HorizontalAlignment="Left"
-                Command="{Binding GotoAddPatient}" >
+                Command="{Binding GotoWelcome}" >
         </Button>
         
         <Button Grid.Column="1" Grid.ColumnSpan="2" Content="Dodaj szkołę" HorizontalAlignment="Center"
