@@ -11,7 +11,7 @@ namespace PAC_1.Statics
 {
     static class Data
     {
-        private static ObservableCollection<Patient> _patients;
+        private static ObservableCollection<Patient> _patients = null;
         private static int[] _ageOptions;
         private static int _ageRange = 20;
 
@@ -21,10 +21,12 @@ namespace PAC_1.Statics
         {
             get
             {
-                if (_patients is null) _patients = new ObservableCollection<Patient> {
-                    new Patient("Krzysztof", "Kłak", Schools[0], 20, "Zabrze", 100, "nwm", "normalne"),
-                    new Patient("Natalia", "Szarek", Schools[0], 20, "Cieszyn", 200, "nwm", "normalne")
-                };
+                if (_patients is null)
+                {
+                    _patients = new ObservableCollection<Patient>();
+                    PatientSelectionFormVM.Load();
+                }
+                
                 return _patients;
             }
         }
