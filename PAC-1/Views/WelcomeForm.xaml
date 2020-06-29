@@ -58,7 +58,7 @@
 
         <Button Content="Zajęcia grupowe" Margin="240,184.8,240,149.6" Command="{Binding GotoGroup}" Grid.Row="1"/>
 
-        <Button Content="Raporty" Margin="240,244.8,240,89.6" Command="{Binding UpdateViewCommand}" CommandParameter="WelcomeForm" Grid.Row="1" />
+        <Button Content="Raporty" Margin="240,244.8,240,89.6" Command="{Binding GotoReport}" Grid.Row="1" />
 
     </Grid>
 </UserControl>

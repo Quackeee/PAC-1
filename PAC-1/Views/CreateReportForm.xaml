@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="PAC_1.Views.CreateReportForm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PAC_1.Views"
+             xmlns:cc="clr-namespace:PAC_1.Views.CustomControls"
+             mc:Ignorable="d" 
+            d:DesignHeight="540" d:DesignWidth="960">
+    <Grid Background="#FFF6F6F6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.15*"/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.15*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.12*"/>
+            <RowDefinition Height="0.60*"/>
+            <RowDefinition Height="0.12*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="4">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF193E63" Offset="0.421"/>
+                    <GradientStop Color="#FF11264E" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+
+            <Label Content="Udział w zabawie" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="15" Foreground="#FFEEEAEA"/>
+            <Button Content="PAC-1" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="55,-55" Background="Transparent" BorderThickness="0" Foreground="#FFEEEAEA" Command="{Binding GotoWelcome}" />
+
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="1" Height="340"  VerticalAlignment="Top"  Margin="10,20,0,0">
+            <ListBox Height="340"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.ColumnSpan="1" Grid.Row="1" Height="340"  VerticalAlignment="Top" Margin="0,20,10,0">
+            <ListView Height="340" ItemsSource="{Binding Patients}" SelectedIndex="{Binding SelectedIndex, Mode=TwoWay}" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="{Binding FirstImie}"/>
+                            <Label Content="{Binding LastName}"/>
+                            <Label Content="{Binding Age}"/>
+                            <Label Content="{Binding School}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4">
+     
+
+            <Button Grid.Column="0" Grid.Row="2" Width="180" Height="30" Content="Generuj raport" Margin="0,20,0,0" FontSize="18" FontFamily="Charlesworth"  HorizontalAlignment="Center" Foreground="White" Command="{Binding CreateReport}" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF193E63" Offset="0.421"/>
+                        <GradientStop Color="#FF11264E" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+
+        </StackPanel>
+    </Grid>
+</UserControl>

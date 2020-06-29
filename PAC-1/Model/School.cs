@@ -16,7 +16,7 @@ namespace PAC_1.Model
         public int? Number { get; }
         public string SecondNumber { get;  }
 
-        public School(string name, string shortName, string zipCode, string city, string street, string secondNumber, int? number)
+        public School(string name, string shortName, string zipCode, string city, string street, string secondNumber, int? number = null)
         {
             Name = name;
             ShortName = shortName;
