@@ -31,31 +31,41 @@ namespace PAC_1.ViewModels
                     _createReport = new RelayCommand(
                         arg =>
                         {
-                            //Data.Patients.RemoveAt(Data.Patients.IndexOf(SelectedPatient));
-                            GenerateReport();
+                            //(Data.Patients.IndexOf(SelectedPatient));
+                            GenerateReport(SelectedPatient);
                         },
-                        arg => SelectedPatient != null || SelectedPatient is null
-                        ); ;
+                        arg => SelectedPatient != null
+                        );
                 }
                 return _createReport;
             }
         }
 
-        public void GenerateReport()
+        public void GenerateReport(Patient patient)
         {
             PdfWriter writer = new PdfWriter("D:\\probny_dokument_wpf.pdf");
 
             PdfDocument pdf = new PdfDocument(writer);
             Document document = new Document(pdf);
 
-
-            Paragraph header = new Paragraph("Header")
+            string s = patient.ToString();
+            Paragraph header = new Paragraph(s)
                 .SetTextAlignment(TextAlignment.CENTER)
                 .SetFontSize(20);
 
 
             document.Add(header);
             document.Close();
+        }
+
+        public string GeneratePatientInfo()
+        {
+            return null;
+        }
+
+        public string GenerateSpecialistInfo()
+        {
+            return null;
         }
     }
 }
