@@ -13,10 +13,10 @@ namespace PAC_1.Model
         public string ZipCode { get; }
         public string City { get; } //mozesz zrefaktorowac. Nie wiedzialam, jak zrobic ogolna nazwe
         public string Street { get; }
-        public int? Number { get; }
-        public string SecondNumber { get;  }
+        public string Number { get; }
+        public int? SecondNumber { get;  }
 
-        public School(string name, string shortName, string zipCode, string city, string street, string secondNumber, int? number = null)
+        public School(string name, string shortName, string zipCode, string city, string street, string number, int? secondNumber = null)
         {
             Name = name;
             ShortName = shortName;

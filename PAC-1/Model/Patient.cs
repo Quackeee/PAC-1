@@ -10,6 +10,8 @@ namespace PAC_1.Model
 {
     class Patient
     {
+        internal object school;
+
         public string FirstName { get; }
         public string LastName { get; }
         public School School { get; }

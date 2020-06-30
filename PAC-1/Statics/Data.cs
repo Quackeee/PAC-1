@@ -21,9 +21,11 @@ namespace PAC_1.Statics
         {
             get
             {
+                
                 if (_patients is null)
                 {
                     _patients = new ObservableCollection<Patient>();
+                    _patients.Add(new Patient("Natalia", "Szarek", Schools[0], 20, "Cieszyn", 123, "jakaś skala", "rodzina"));
                     PatientSelectionFormVM.Load();
                 }
                 
@@ -34,7 +36,7 @@ namespace PAC_1.Statics
 
         public static List<School> Schools = new List<School>()
         {
-            new School("Politechnika Śląska","polsl",null,"Gliwice","Akademicka",null,null)
+            new School("Politechnika Śląska","polsl","44-100","Gliwice","Akademicka","23",null)
         };
 
         public static int[] AgeOptions

@@ -8,8 +8,8 @@ namespace PAC_1.Model
 {
     class Specialist
     {
-        private string firstName = "Lucyna";
-        private string lastName = "Kisiała-Majerczyk";
+        private string firstName;
+        private string lastName;
         public School school; //tutaj tez dalam School. Moglabym zrobic klase poradnia z takimi samymi atrybutami, ale po co?
 
         public Specialist(string firstname, string lastName, School school)
