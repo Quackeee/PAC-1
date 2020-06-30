@@ -4,6 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PAC_1.Views"
+             xmlns:vm="clr-namespace:PAC_1.ViewModels"
+             xmlns:resx="clr-namespace:System.Resources;assembly=mscorlib"
              xmlns:cc="clr-namespace:PAC_1.Views.CustomControls"
              mc:Ignorable="d" 
             d:DesignHeight="540" d:DesignWidth="960">
@@ -42,7 +44,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
-                            <Label Content="{Binding FirstImie}"/>
+                            <Label Content="{Binding FirstName}"/>
                             <Label Content="{Binding LastName}"/>
                             <Label Content="{Binding Age}"/>
                             <Label Content="{Binding School}"/>

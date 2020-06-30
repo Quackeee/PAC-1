@@ -12,6 +12,7 @@ using iText.Kernel.Pdf.Navigation;
 using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Properties;
+using System.Collections.ObjectModel;
 
 namespace PAC_1.ViewModels
 {
@@ -19,6 +20,8 @@ namespace PAC_1.ViewModels
     {
         private RelayCommand _createReport;
         public Patient SelectedPatient { get; set; }
+
+        public ObservableCollection<Patient> Patients { get => Data.Patients; }
         public RelayCommand CreateReport
         {
             get 
