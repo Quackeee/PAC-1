@@ -17,12 +17,27 @@ using iText.Kernel.Font;
 using iText.IO.Font;
 using iText.Kernel.Geom;
 using Org.BouncyCastle.Bcpg.OpenPgp;
+using iText.Layout.Borders;
+using System.Drawing;
+using iText.IO.Image;
 
 namespace PAC_1.ViewModels
 {
     class CreateReportFormVM : ViewModelBase
     {
         private RelayCommand _createReport;
+        private List<int> TableManners = new List<int> { 0, 1, 17, 18, 33, 50, 68, 91, 92, 108 };
+        private List<int> MotorSkills = new List<int> { 2, 3, 19, 34, 35, 51, 69, 70, 93, 109 };
+        private List<int> ToiletAndWashing = new List<int> { 4, 20, 21, 36, 37, 52, 53, 71, 94, 110 };
+        private List<int> DressingUp = new List<int> { 5, 6, 22, 23, 38, 54, 72, 73, 95, 111 };
+        private List<int> Language = new List<int> { 7, 8, 24, 25, 39, 55, 56, 74, 96, 112 };
+        private List<int> Differentiation = new List<int> { 9, 26, 40, 57, 58, 75, 76, 77, 97, 113 };
+        private List<int>  NumbersAndSizes = new List<int> { 10, 27, 41, 42, 59, 78, 79, 80, 98, 114 };
+        private List<int> PencilAndPaperSkills = new List<int> { 11, 28, 43, 60, 81, 82, 99, 100, 101, 115 };
+        private List<int> Playing = new List<int> { 12, 29, 44, 45, 61, 62, 63, 83, 102, 116 };
+        private List<int> Housework = new List<int> { 13, 30, 46, 64, 84, 85, 86, 103, 104, 117 };
+        private List<int> ManualSkills = new List<int> { 14, 15, 31, 47, 48, 65, 66, 87, 105, 118 };
+        private List<int> Agility = new List<int> { 16, 32, 49, 67, 88, 89, 90, 106, 107, 119 };
         public Patient SelectedPatient { get; set; }
         public Specialist specialist { get => new Specialist("Lucyna", "Kisiała-Majerczyk", Data.Schools[0]); }
         public ObservableCollection<Patient> Patients { get => Data.Patients; }
@@ -50,31 +65,93 @@ namespace PAC_1.ViewModels
             string fileName = SelectedPatient.FirstName + "_" + SelectedPatient.LastName;
             PdfWriter writer = new PdfWriter("D:\\" + fileName + "_Raport.pdf");
 
+            ImageData data = ImageDataFactory.Create(@".\Diagram.png");
+            iText.Layout.Element.Image image = new iText.Layout.Element.Image(data);
+
+
             PdfDocument pdf = new PdfDocument(writer);
             Document document = new Document(pdf);
             PdfFontFactory.Register(@".\noto-serif.regular.ttf", "Noto");
             PdfFontFactory.Register(@".\NotoSerif-CondensedBold.ttf", "BoldNoto");
+            PdfFontFactory.Register(@".\NotoSerif-Bold.ttf", "Bold");
             PdfFontFactory.Register(@".\NotoSerif-CondensedBoldItalic.ttf", "BoldItalicNoto");
             PdfFontFactory.Register(@".\NotoSerif-CondensedItalic.ttf", "ItalicNoto");
             PdfFontFactory.Register(@".\NotoSerif-Light.ttf", "Light");
 
             PdfFont normal = PdfFontFactory.CreateRegisteredFont("Noto", PdfEncodings.CP1250, true);
+            PdfFont widebold = PdfFontFactory.CreateRegisteredFont("Bold", PdfEncodings.CP1250, true);
             PdfFont bold = PdfFontFactory.CreateRegisteredFont("BoldNoto", PdfEncodings.CP1250, true);
             PdfFont boldItalic = PdfFontFactory.CreateRegisteredFont("BoldItalicNoto", PdfEncodings.CP1250, true);
-            PdfFont Italic = PdfFontFactory.CreateRegisteredFont("ItalicNoto", PdfEncodings.CP1250, true);
-            PdfFont Light = PdfFontFactory.CreateRegisteredFont("Light", PdfEncodings.CP1250, true);
+            PdfFont italic = PdfFontFactory.CreateRegisteredFont("ItalicNoto", PdfEncodings.CP1250, true);
+            PdfFont light = PdfFontFactory.CreateRegisteredFont("Light", PdfEncodings.CP1250, true);
 
-            Rectangle[] columns = {
-                        new Rectangle(36, 36, 254, 770),
-                    new Rectangle(305, 36, 254, 770)};
+            //Rectangle[] columns = {new Rectangle(36, 36, 254, 770),  new Rectangle(305, 36, 254, 770)};
+
+           // document.SetRenderer(new ColumnDocumentRenderer(document, columns));
 
             GenerateHeader(document, bold);
-            GenerateSection("1.Osoba przeprowadzająca badanie",document, boldItalic);
+            GenerateSection("Osoba przeprowadzająca badanie",document, boldItalic);
             GenerateSpecialistInfo(document, normal);
-            GenerateSection("2.Osoba badana",document, boldItalic);
+            GenerateSection("Osoba badana",document, boldItalic);
             GeneratePatientInfo(document, normal);
-            
+
+            document.Add(new AreaBreak(AreaBreakType.NEXT_PAGE));
             GenerateSection("Odpowiedzi na pytania", document, boldItalic);
+
+            /*************************************************************/
+            GenerateSubsection("1.Obsługiwanie siebie", document, widebold);
+            GenerateCategory("Zachowanie przy stole", document, bold);
+            GenerateQuestionsInfo(document, light, normal, TableManners);
+            GenerateCategory("Sprawność motoryczna", document, bold);
+            GenerateQuestionsInfo(document, light, normal, MotorSkills);
+            GenerateCategory("Ubieranie się", document, bold);
+            GenerateQuestionsInfo(document, light, normal, DressingUp);
+            GenerateCategory("Toaleta i mycie", document, bold);
+            GenerateQuestionsInfo(document, light, normal, ToiletAndWashing);
+
+            /*************************************************************/
+            document.Add(new AreaBreak(AreaBreakType.NEXT_PAGE));
+            GenerateSubsection("2.Komunikowanie się", document, widebold);
+            GenerateCategory("Język", document, bold);
+            GenerateQuestionsInfo(document, light, normal, Language);
+            GenerateCategory("Ujmowanie różnic", document, bold);
+            GenerateQuestionsInfo(document, light, normal, Differentiation);
+            document.Add(new AreaBreak(AreaBreakType.NEXT_PAGE));
+            GenerateCategory("Liczby i wielkości", document, bold);
+            GenerateQuestionsInfo(document, light, normal, NumbersAndSizes);
+            GenerateCategory("Posługiwanie się ołówkiem i papierem", document, bold);
+            GenerateQuestionsInfo(document, light, normal, PencilAndPaperSkills);
+
+            /*************************************************************/
+            document.Add(new AreaBreak(AreaBreakType.NEXT_PAGE));
+            GenerateSubsection("3.Uspołecznienie", document, widebold);
+            GenerateCategory("Udział w zabawie", document, bold);
+            GenerateQuestionsInfo(document, light, normal, Playing);
+            GenerateCategory("Czynności domowe", document, bold);
+            GenerateQuestionsInfo(document, light, normal, Housework);
+
+            /*************************************************************/
+            document.Add(new AreaBreak(AreaBreakType.NEXT_PAGE));
+            GenerateSubsection("4.Zajęcia", document, widebold);
+            GenerateCategory("Sprawność manualna (ruchy palców)", document, bold);
+            GenerateQuestionsInfo(document, light, normal, ManualSkills);
+            GenerateCategory("Zręczność (kontrola motoryki)", document, bold);
+            GenerateQuestionsInfo(document, light, normal, Agility);
+
+            /*************************************************************/
+            document.Add(new AreaBreak(AreaBreakType.NEXT_PAGE));
+            GenerateSection("Diagram", document, bold);
+            GenerateSubsection("Zadania z pozytywnym:", document, widebold);
+            WriteResults(document, normal, true);
+            GenerateSubsection("\nZadania z negatywnym rezultatem:", document, widebold);
+            WriteResults(document, normal, false);
+            GenerateSubsection("\nNiewykonane zadania:", document, widebold);
+            WriteResults(document, normal, null);
+
+            document.Add(new AreaBreak(AreaBreakType.NEXT_PAGE));
+            document.Add(image)
+                .SetHorizontalAlignment(HorizontalAlignment.CENTER);
+                
 
             document.Close();
             System.Diagnostics.Process.Start(@"D:\\" + fileName + "_Raport.pdf");
@@ -96,17 +173,28 @@ namespace PAC_1.ViewModels
             Paragraph Section = new Paragraph(topic)
                 .SetTextAlignment(TextAlignment.LEFT)
                 .SetFont(font)
-                .SetFontSize(12);
+                .SetFontSize(14);
 
             document.Add(Section);
         }
 
         public void GenerateSubsection(string topic, Document document, PdfFont font)
         {
-            Paragraph Subsection = new Paragraph(topic)
+            Paragraph subsection = new Paragraph(topic)
+                .SetTextAlignment(TextAlignment.LEFT)
+                .SetFont(font)
+                .SetFontSize(12);
+
+            document.Add(subsection);
+        }
+        public void GenerateCategory(string topic, Document document, PdfFont font)
+        {
+            Paragraph category = new Paragraph(topic)
                 .SetTextAlignment(TextAlignment.LEFT)
                 .SetFont(font)
                 .SetFontSize(10);
+
+            document.Add(category);
         }
         
         public void GenerateSpecialistInfo(Document document, PdfFont font)
@@ -147,11 +235,55 @@ namespace PAC_1.ViewModels
             document.Add(specialistInfo);
         }
 
-        public void GenerateQuestionsInfo(Document document, PdfFont font)
+        public void GenerateQuestionsInfo(Document document, PdfFont font, PdfFont font1, List<int> table)
         {
-            
+            foreach(var element in table)
+            {
+                Text question1 = new Text(Questionary.Questions[element].Summary).SetFont(font).SetFontSize(10);
+
+                Text answer1 = new Text(MakeAnswer(SelectedPatient.QuestionResults[element])).SetFont(font1).SetFontSize(10);
+
+                Paragraph questionAndAnswer = new Paragraph().Add(question1).Add(" ").Add(answer1);
+
+                document.Add(questionAndAnswer);
+            }
+
         }
         
+        public string MakeAnswer(bool? result)
+        {
+            string answer;
+
+            if (result == null)
+                answer = "Brak odpowiedzi";
+
+            else if (result == true)
+                answer = "Tak";
+
+            else
+                answer = "Nie";
+
+            return answer;
+        }
         
+        public void WriteResults(Document document, PdfFont font, bool? expectedResult)
+        {
+            string sb = "";
+            for(int i=0; i< 120; i++)
+            {
+                if(SelectedPatient.QuestionResults[i] == expectedResult)
+                {
+                    sb += (i + 1) + ", ";
+                }
+            }
+            
+            Paragraph writeResults = new Paragraph().Add( new Text(sb))
+                .SetTextAlignment(TextAlignment.LEFT)
+                .SetFont(font)
+                .SetFontSize(10);
+
+            document.Add(writeResults);
+
+        }
     }
 }
