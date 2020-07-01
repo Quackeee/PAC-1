@@ -16,6 +16,7 @@ using System.Collections.ObjectModel;
 using iText.Kernel.Font;
 using iText.IO.Font;
 using iText.Kernel.Geom;
+using Org.BouncyCastle.Bcpg.OpenPgp;
 
 namespace PAC_1.ViewModels
 {
@@ -34,7 +35,6 @@ namespace PAC_1.ViewModels
                     _createReport = new RelayCommand(
                         arg =>
                         {
-                            //(Data.Patients.IndexOf(SelectedPatient));
                             GenerateReport(SelectedPatient);
                         },
                         arg => SelectedPatient != null
@@ -46,38 +46,72 @@ namespace PAC_1.ViewModels
 
         public void GenerateReport(Patient patient)
         {
-            PdfWriter writer = new PdfWriter("D:\\probny_dokument_wpf.pdf");
+
+            string fileName = SelectedPatient.FirstName + "_" + SelectedPatient.LastName;
+            PdfWriter writer = new PdfWriter("D:\\" + fileName + "_Raport.pdf");
 
             PdfDocument pdf = new PdfDocument(writer);
             Document document = new Document(pdf);
-            PdfFontFactory.Register(@"C:\Users\nszar\AppData\Local\Microsoft\Windows\Fonts\noto-serif.regular.ttf", "Noto");
-            PdfFontFactory.Register(@"C:\Windows\Fonts\NotoSerif-CondensedBold.ttf", "BoldNoto");
-            PdfFont font = PdfFontFactory.CreateRegisteredFont("Noto", PdfEncodings.CP1250, true);
+            PdfFontFactory.Register(@".\noto-serif.regular.ttf", "Noto");
+            PdfFontFactory.Register(@".\NotoSerif-CondensedBold.ttf", "BoldNoto");
+            PdfFontFactory.Register(@".\NotoSerif-CondensedBoldItalic.ttf", "BoldItalicNoto");
+            PdfFontFactory.Register(@".\NotoSerif-CondensedItalic.ttf", "ItalicNoto");
+            PdfFontFactory.Register(@".\NotoSerif-Light.ttf", "Light");
+
+            PdfFont normal = PdfFontFactory.CreateRegisteredFont("Noto", PdfEncodings.CP1250, true);
             PdfFont bold = PdfFontFactory.CreateRegisteredFont("BoldNoto", PdfEncodings.CP1250, true);
+            PdfFont boldItalic = PdfFontFactory.CreateRegisteredFont("BoldItalicNoto", PdfEncodings.CP1250, true);
+            PdfFont Italic = PdfFontFactory.CreateRegisteredFont("ItalicNoto", PdfEncodings.CP1250, true);
+            PdfFont Light = PdfFontFactory.CreateRegisteredFont("Light", PdfEncodings.CP1250, true);
 
             Rectangle[] columns = {
                         new Rectangle(36, 36, 254, 770),
                     new Rectangle(305, 36, 254, 770)};
 
+            GenerateHeader(document, bold);
+            GenerateSection("1.Osoba przeprowadzająca badanie",document, boldItalic);
+            GenerateSpecialistInfo(document, normal);
+            GenerateSection("2.Osoba badana",document, boldItalic);
+            GeneratePatientInfo(document, normal);
+            
+            GenerateSection("Odpowiedzi na pytania", document, boldItalic);
+
+            document.Close();
+            System.Diagnostics.Process.Start(@"D:\\" + fileName + "_Raport.pdf");
+        }
+
+        public void GenerateHeader(Document document, PdfFont font)
+        {
             string s = "Inwentarz PAC-1";
             Paragraph header = new Paragraph(s)
                 .SetTextAlignment(TextAlignment.CENTER)
-                .SetFont(bold)
+                .SetFont(font)
                 .SetFontSize(20);
-
-            //Paragraph specialistInfo = new Paragraph(GenerateSpecialistInfo())
-              // .SetTextAlignment(TextAlignment.RIGHT);
             document.Add(header);
-            GenerateSpecialistInfo(document, font);
-            GeneratePatientInfo(document, font);
-            document.Close();
-            System.Diagnostics.Process.Start(@"D:\\probny_dokument_wpf.pdf");
+        }
+
+        public void GenerateSection(string s,Document document, PdfFont font)
+        {
+            string topic = "\n" + s;
+            Paragraph Section = new Paragraph(topic)
+                .SetTextAlignment(TextAlignment.LEFT)
+                .SetFont(font)
+                .SetFontSize(12);
+
+            document.Add(Section);
+        }
+
+        public void GenerateSubsection(string topic, Document document, PdfFont font)
+        {
+            Paragraph Subsection = new Paragraph(topic)
+                .SetTextAlignment(TextAlignment.LEFT)
+                .SetFont(font)
+                .SetFontSize(10);
         }
         
         public void GenerateSpecialistInfo(Document document, PdfFont font)
         {
-            string s = "\n1.Osoba przeprowadzająca badanie" +
-                "\n\n Imię: " + specialist.FirstName +
+            string s = "Imię: " + specialist.FirstName +
                 "\n Nazwisko: " + specialist.LastName +
                 "\n Placówka: " + specialist.school.Name +
                 "\n           " + "ul. " + specialist.school.Street + " " + specialist.school.Number +
@@ -94,8 +128,7 @@ namespace PAC_1.ViewModels
 
         public void GeneratePatientInfo(Document document, PdfFont font)
         {
-            string s = "\n2.Osoba badana" +
-                "\n\n Imię: " + SelectedPatient.FirstName +
+            string s = "Imię: " + SelectedPatient.FirstName +
                 "\n Nazwisko: " + SelectedPatient.LastName +
                 "\n Wiek: " + SelectedPatient.Age.ToString() +
                 "\n Miejsce urodzenia: " + SelectedPatient.BirthPlace +
@@ -114,11 +147,11 @@ namespace PAC_1.ViewModels
             document.Add(specialistInfo);
         }
 
-        public string GenerateQuestionsInfo()
+        public void GenerateQuestionsInfo(Document document, PdfFont font)
         {
-            return null;
+            
         }
-
+        
         
     }
 }
