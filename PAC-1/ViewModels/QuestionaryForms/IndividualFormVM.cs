@@ -17,6 +17,7 @@ namespace PAC_1.ViewModels
         Questionary.Cathegory _selectedCathegory = Questionary.SelfHelp;
         private int _selectedSubcathegoryIndex = 0;
         public override Patient SelectedPatient { get => _questionedPatient; }
+        public string SelectedPatientFullName { get => SelectedPatient.FirstName + " " + SelectedPatient.LastName; }
         public string SelectedSubcathegoryName { get => Questionary.SubcathegoryName[SelectedSubcathegory]; }
         public string Notes { get => _questionedPatient.Notes; set => _questionedPatient.Notes = value; }
 
@@ -80,5 +81,7 @@ namespace PAC_1.ViewModels
             _questionedPatient = patient;
             Data.OpenQuestionaryForm = this;
         }
+
+        
     }
 }
