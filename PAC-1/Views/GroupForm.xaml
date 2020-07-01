@@ -33,12 +33,46 @@
 
         </StackPanel>
 
-        <StackPanel Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="1" Margin="10,20,0,0">
-            <ListBox Height="350"/>
-        </StackPanel>
         <StackPanel Grid.Column="1" Grid.ColumnSpan="1" Grid.Row="1" Margin="0,20,10,0">
-            <ListBox Height="350"/>
+            <ListBox Height="340" ItemsSource="{Binding QuestionedPatients}" SelectedIndex="{Binding SelectedPatientIndex}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="{Binding FirstName}"/>
+                            <Label Content="{Binding LastName}"/>
+                            <Label Content="{Binding Age}"/>
+                            <Label Content="{Binding School}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
         </StackPanel>
+        <StackPanel Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="1" Margin="10,20,0,0">
+            <ListBox Height="350" ItemsSource="{Binding Questions}">
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="{x:Type ListBoxItem}">
+                        <Setter Property="Focusable" Value="False"/>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock  Text="{Binding Label}" Width="350" TextWrapping="Wrap" />
+                            <CheckBox IsChecked="{Binding YesOptionChecked}" Content="Tak  " VerticalAlignment="Center"/>
+                            <CheckBox IsChecked="{Binding NoOptionChecked}" Content="Nie  " VerticalAlignment="Center"/>
+                            <Button Content="i" Width="20" Height="20" FontWeight="Light" VerticalAlignment="Center">
+                                <Button.ToolTip>
+                                    <ToolTip MaxWidth="400">
+                                        <TextBlock Text="{Binding Description}" TextWrapping="Wrap" />
+                                    </ToolTip>
+                                </Button.ToolTip>
+                            </Button>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+        
 
         <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4">
             <Button Width="80" Height="30" Content="3" FontSize="18" FontFamily="Marlett" Foreground="White" HorizontalAlignment="Center" Margin="-300,20,20,0" Command="{Binding UpdateViewCommand}">

@@ -52,5 +52,10 @@ namespace PAC_1.ViewModels
         public string Summary { get => _representedQuestion.Summary; }
         public string Description { get => _representedQuestion.Description.Replace("\\n", Environment.NewLine); }
         public string Label { get => $"{ID}) {Summary}"; }
+
+        public void RaiseSelectedPatientChanged()
+        {
+            OnPropertyChanged(nameof(YesOptionChecked), nameof(NoOptionChecked));
+        }
     }
 }
