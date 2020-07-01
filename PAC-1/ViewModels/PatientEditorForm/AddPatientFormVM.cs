@@ -31,6 +31,7 @@ namespace PAC_1.ViewModels
                     arg =>
                     {
                         Data.Patients.Add(new Patient(FirstName, LastName, School, (int)Age, BirthPlace, (int)Iq, Scale, Background, Other));
+                        Data.SavePatients();
                         return new PatientListFormVM();
                     },
                     (arg) => _dataOk()

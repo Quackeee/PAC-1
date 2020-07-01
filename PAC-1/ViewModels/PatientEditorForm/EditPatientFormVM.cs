@@ -29,6 +29,7 @@ namespace PAC_1.ViewModels
                         _editedPatient.Scale = Scale;
                         _editedPatient.Background = Background;
                         _editedPatient.Other = Other;
+                        Data.SavePatients();
                         return new PatientListFormVM();
                     },
                     arg => _dataOk()

@@ -42,18 +42,5 @@ namespace PAC_1.ViewModels
                 return _deletePatient;
             }
         }
-
-        override public ChangeViewCommand GotoWelcome
-        {
-            get
-            {
-                return new ChangeViewCommand(arg =>
-                   {
-                       Data.SavePatients();
-                       return new WelcomeFormVM();
-                   }
-                );
-            }
-        }
     }
 }

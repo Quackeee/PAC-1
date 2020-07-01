@@ -26,7 +26,10 @@ namespace PAC_1.ViewModels
         {
             get =>
                 new ChangeViewCommand(
-                    arg => { Data.Schools.Add(new School(Name, ShortName, ZipCode, City, Street, SecondNumber, Number)); return new AddPatientFormVM(); },
+                    arg => {
+                        Data.Schools.Add(new School(Name, ShortName, ZipCode, City, Street, SecondNumber, Number));
+                        Data.SaveSchools();
+                        return new AddPatientFormVM(); },
                     arg => !string.IsNullOrEmpty(Name) && !string.IsNullOrEmpty(ShortName)
             );
         }
