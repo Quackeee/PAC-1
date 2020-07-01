@@ -4,6 +4,7 @@ using PAC_1.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -93,20 +94,16 @@ namespace PAC_1.Statics
 
             if (File.Exists(@"./schools.json"))
             {
-                _schools = JsonConvert.DeserializeObject<List<School>>(File.ReadAllText(@"./schools.json"));
+                Debug.WriteLine("Loading Schools");
+                var loadedSchools = JsonConvert.DeserializeObject<List<School>>(File.ReadAllText(@"./schools.json"));
+                foreach (var school in loadedSchools)
+                    _schools.Add(school);
             }
         }
 
         public static void SaveSchools()
         {
-            var savingSchools = new List<School>();
-
-            foreach (var school in Schools)
-            {
-                savingSchools.Add(school);
-            }
-
-            string SaveJson = JsonConvert.SerializeObject(savingSchools);
+            string SaveJson = JsonConvert.SerializeObject(_schools);
             File.WriteAllText(@"./schools.json", SaveJson);
         }
     }

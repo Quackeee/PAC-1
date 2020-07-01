@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,13 +9,13 @@ namespace PAC_1.Model
 {
     class School
     {
-        public string Name { get; } //pelna nazwa placowki
-        public string ShortName { get; } //skrotowa nazwa
-        public string ZipCode { get; }
-        public string City { get; } //mozesz zrefaktorowac. Nie wiedzialam, jak zrobic ogolna nazwe
-        public string Street { get; }
-        public string Number { get; }
-        public int? SecondNumber { get;  }
+        public string Name { get; set; } //pelna nazwa placowki
+        public string ShortName { get; set; } //skrotowa nazwa
+        public string ZipCode { get; set; }
+        public string City { get; set; } //mozesz zrefaktorowac. Nie wiedzialam, jak zrobic ogolna nazwe
+        public string Street { get; set; }
+        public string Number { get; set; }
+        public int? SecondNumber { get; set; }
 
 
         public School() { }

@@ -1,4 +1,5 @@
-﻿using PAC_1.Statics;
+﻿using Newtonsoft.Json;
+using PAC_1.Statics;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,11 +12,14 @@ namespace PAC_1.Model
 {
     class Patient
     {
+        [JsonProperty]
         private int _schoolIndex;
         
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
+        [JsonIgnore]
         public School School { get => Data.Schools[_schoolIndex]; set => _schoolIndex=Data.Schools.IndexOf(value); }
         public int Age { get; set; }
         public string BirthPlace { get; set; }
