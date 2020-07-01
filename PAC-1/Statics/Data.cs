@@ -59,33 +59,31 @@ namespace PAC_1.Statics
 
         public static void SavePatients()
         {
-            var savingPatients = new List<Patient>();
+            var patients = new List<Patient>();
+            foreach (var patient in _patients)
+                patients.Add(patient);
 
-            foreach (var patient in Patients)
-            {
-                savingPatients.Add(patient);
-            }
-
-            string SaveJson = JsonConvert.SerializeObject(savingPatients);
+            string SaveJson = JsonConvert.SerializeObject(patients);
             File.WriteAllText(@"./patients.json", SaveJson);
+            Debug.WriteLine("Patients saved");
         }
 
         public static void LoadPatients()
         {
-            if (_patients is null) _patients = new ObservableCollection<Patient>();
+            _patients = new ObservableCollection<Patient>();
 
             if (File.Exists(@"./patients.json"))
             {
                 List<Patient> load = JsonConvert.DeserializeObject<List<Patient>>(File.ReadAllText(@"./patients.json"));
 
                 if (load != null)
-                {
-                    foreach (Patient patient in load)
+                    foreach (var patient in load)
                     {
-                        _patients.Add(new Patient(patient));
+                        _patients.Add(patient);
                     }
-                }
+                Debug.WriteLine("Patients Loaded");
             }
+
         }
 
         public static void LoadSchools()
@@ -94,7 +92,6 @@ namespace PAC_1.Statics
 
             if (File.Exists(@"./schools.json"))
             {
-                Debug.WriteLine("Loading Schools");
                 var loadedSchools = JsonConvert.DeserializeObject<List<School>>(File.ReadAllText(@"./schools.json"));
                 foreach (var school in loadedSchools)
                     _schools.Add(school);

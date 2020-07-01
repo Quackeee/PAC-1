@@ -1,4 +1,6 @@
-﻿using PAC_1.Model;
+﻿using PAC_1.Commands;
+using PAC_1.Model;
+using PAC_1.Statics;
 using PAC_1.ViewModels.VMBase;
 using System;
 using System.Collections.Generic;
@@ -11,5 +13,16 @@ namespace PAC_1.ViewModels
     abstract class QuestionaryFormVM : ViewModelBase
     {
         public abstract Patient SelectedPatient { get; }
+
+        public override ChangeViewCommand GotoWelcome
+        {
+            get => new ChangeViewCommand(
+                arg =>
+                    {
+                        Data.SavePatients();
+                        return new WelcomeFormVM();
+                    }
+                );
+        }
     }
 }

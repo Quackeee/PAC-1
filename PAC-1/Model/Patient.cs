@@ -14,11 +14,8 @@ namespace PAC_1.Model
     {
         [JsonProperty]
         private int _schoolIndex;
-        
-
         public string FirstName { get; set; }
         public string LastName { get; set; }
-
         [JsonIgnore]
         public School School { get => Data.Schools[_schoolIndex]; set => _schoolIndex=Data.Schools.IndexOf(value); }
         public int Age { get; set; }
@@ -27,7 +24,7 @@ namespace PAC_1.Model
         public string Scale { get; set; } //skala użyta w badaniu IQ (zmienić na enum?)
         public string Background { get; set; } //że rodzina/dom dziecka, etc. (zmienić na enum?)
         public string Other { get; set; }
-        public bool?[] QuestionResults { get; set; } = new bool?[120];// = new bool?[120];//odpowiedzi na pytania
+        public bool?[] QuestionResults { get; set; } = new bool?[120];
         public string Notes { get; set; }
 
         // Trzeba stworzyć pole na datę i czas badania, ale to później 

@@ -20,7 +20,6 @@ namespace PAC_1.ViewModels
     {
         protected ChangeViewCommand _gotoQuestionary;
         public SelectionMode Selection { get; protected set; }
-        public ObservableCollection<Patient> patients = null;
         public IList SelectedPatients { get; set; }
         public abstract ChangeViewCommand GotoQuestionary { get; }
         public ObservableCollection<Patient> Patients
