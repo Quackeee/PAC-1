@@ -135,9 +135,6 @@
     <Compile Include="Views\ChoosePatientsForm.xaml.cs">
       <DependentUpon>ChoosePatientsForm.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CreateReportForm.xaml.cs">
-      <DependentUpon>CreateReportForm.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\GroupForm.xaml.cs">
       <DependentUpon>GroupForm.xaml</DependentUpon>
     </Compile>
@@ -171,10 +168,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ChoosePatientsForm.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\CreateReportForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
