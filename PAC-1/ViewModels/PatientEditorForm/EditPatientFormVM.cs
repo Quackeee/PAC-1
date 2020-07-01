@@ -20,7 +20,15 @@ namespace PAC_1.ViewModels
                 return new ChangeViewCommand(
                     arg =>
                     {
-                        Data.Patients[Data.Patients.IndexOf(_editedPatient)] = new Patient(FirstName, LastName, School, (int)Age, BirthPlace, (int)Iq, Scale, Background, Other);
+                        _editedPatient.FirstName = FirstName;
+                        _editedPatient.LastName = LastName;
+                        _editedPatient.School = School;
+                        _editedPatient.Age = (int) Age;
+                        _editedPatient.BirthPlace = BirthPlace;
+                        _editedPatient.Iq = (int) Iq;
+                        _editedPatient.Scale = Scale;
+                        _editedPatient.Background = Background;
+                        _editedPatient.Other = Other;
                         return new PatientListFormVM();
                     },
                     arg => _dataOk()

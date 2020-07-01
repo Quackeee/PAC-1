@@ -18,6 +18,7 @@ namespace PAC_1.ViewModels
         private int _selectedSubcathegoryIndex = 0;
         public override Patient SelectedPatient { get => _questionedPatient; }
         public string SelectedSubcathegoryName { get => Questionary.SubcathegoryName[SelectedSubcathegory]; }
+        public string Notes { get => _questionedPatient.Notes; set => _questionedPatient.Notes = value; }
 
         public Questionary.Cathegory SelectedCathegory
         {

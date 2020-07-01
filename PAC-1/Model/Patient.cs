@@ -12,16 +12,17 @@ namespace PAC_1.Model
     {
         internal object school;
 
-        public string FirstName { get; }
-        public string LastName { get; }
-        public School School { get; }
-        public int Age { get; }
-        public string BirthPlace { get; }
-        public int Iq { get; }
-        public string Scale { get; } //skala użyta w badaniu IQ (zmienić na enum?)
-        public string Background { get; } //że rodzina/dom dziecka, etc. (zmienić na enum?)
-        public string Other { get; }
-        public bool?[] QuestionResults { get; } = new bool?[120];// = new bool?[120];//odpowiedzi na pytania
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public School School { get; set; }
+        public int Age { get; set; }
+        public string BirthPlace { get; set; }
+        public int Iq { get; set; }
+        public string Scale { get; set; } //skala użyta w badaniu IQ (zmienić na enum?)
+        public string Background { get; set; } //że rodzina/dom dziecka, etc. (zmienić na enum?)
+        public string Other { get; set; }
+        public bool?[] QuestionResults { get; set; } = new bool?[120];// = new bool?[120];//odpowiedzi na pytania
+        public string Notes { get; set; }
 
         // Trzeba stworzyć pole na datę i czas badania, ale to później 
 

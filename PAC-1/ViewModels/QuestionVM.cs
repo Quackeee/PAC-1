@@ -50,7 +50,7 @@ namespace PAC_1.ViewModels
 
         public int ID { get => _representedQuestion.ID; }
         public string Summary { get => _representedQuestion.Summary; }
-        public string Description { get => _representedQuestion.Description; }
+        public string Description { get => _representedQuestion.Description.Replace("\\n", Environment.NewLine); }
         public string Label { get => $"{ID}) {Summary}"; }
     }
 }
