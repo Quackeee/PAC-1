@@ -16,7 +16,7 @@ namespace PAC_1.ViewModels
         public Patient SelectedPatient { get; set; }
         public ObservableCollection<Patient> Patients { get => Data.Patients; }
 
-        new public ChangeViewCommand GotoAddPatient { get => new ChangeViewCommand(arg => new AddPatientFormVM()); }
+        override public ChangeViewCommand GotoAddPatient { get => new ChangeViewCommand(arg => new AddPatientFormVM()); }
         public ChangeViewCommand GotoEditPatient {
             get => new ChangeViewCommand(
                 arg => new EditPatientFormVM(SelectedPatient),
@@ -43,5 +43,17 @@ namespace PAC_1.ViewModels
             }
         }
 
+        override public ChangeViewCommand GotoWelcome
+        {
+            get
+            {
+                return new ChangeViewCommand(arg =>
+                   {
+                       Data.SavePatients();
+                       return new WelcomeFormVM();
+                   }
+                );
+            }
+        }
     }
 }

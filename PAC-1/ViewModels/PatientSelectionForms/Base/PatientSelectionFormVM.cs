@@ -28,42 +28,5 @@ namespace PAC_1.ViewModels
             get => Data.Patients;
         }
         public PatientSelectionFormVM(SelectionMode selectionMode) { Selection = selectionMode; }
-
-        public static void Save()
-        {
-            List<Patient> Savingpatients = new List<Patient>();
-
-            foreach (Patient patient in Data.Patients)
-            {
-                Savingpatients.Add(patient);
-            }
-
-            string SaveJson = JsonConvert.SerializeObject(Savingpatients);
-            File.WriteAllText(@"./data.json", SaveJson);
-        }
-
-        public static void Load()
-        {
-            if (File.Exists(@"./data.json"))
-            {
-                List<Patient> load = JsonConvert.DeserializeObject<List<Patient>>(File.ReadAllText(@"./data.json"));
-
-                if (load != null)
-                {
-                    foreach (Patient patient in load)
-                    {
-                        Data.Patients.Add(new Patient(patient));
-                    }
-                }
-            }
-        }
-
-        public ICommand Write
-        {
-            get
-            {
-                return new RelayCommand(arg => Save(), arg => true);
-            }
-        }
     }
 }

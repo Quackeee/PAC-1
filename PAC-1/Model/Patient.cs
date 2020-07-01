@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PAC_1.Statics;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
@@ -10,11 +11,12 @@ namespace PAC_1.Model
 {
     class Patient
     {
-        internal object school;
+        private int _schoolIndex;
+        
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public School School { get; set; }
+        public School School { get => Data.Schools[_schoolIndex]; set => _schoolIndex=Data.Schools.IndexOf(value); }
         public int Age { get; set; }
         public string BirthPlace { get; set; }
         public int Iq { get; set; }
@@ -26,6 +28,7 @@ namespace PAC_1.Model
 
         // Trzeba stworzyć pole na datę i czas badania, ale to później 
 
+        public Patient() { }
         public Patient(string firstName, string lastName, School school, int age, string birthplace, int iq, string scale, string background, string other = null)
         {
             FirstName = firstName;

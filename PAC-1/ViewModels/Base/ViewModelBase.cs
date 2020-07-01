@@ -18,8 +18,8 @@ namespace PAC_1.ViewModels.VMBase
             }
         }
 
-        public ChangeViewCommand GotoAddPatient { get => new ChangeViewCommand(arg => new AddPatientFormVM()); }
-        public ChangeViewCommand GotoWelcome { get => new ChangeViewCommand(arg => new WelcomeFormVM()); }
-        public ChangeViewCommand GotoPatientList { get => new ChangeViewCommand(arg => new PatientListFormVM()); }
+        virtual public ChangeViewCommand GotoAddPatient { get => new ChangeViewCommand(arg => new AddPatientFormVM()); }
+        virtual public ChangeViewCommand GotoWelcome { get => new ChangeViewCommand(arg => new WelcomeFormVM()); }
+        virtual public ChangeViewCommand GotoPatientList { get => new ChangeViewCommand(arg => new PatientListFormVM()); }
     }
 }
