@@ -36,27 +36,25 @@
             </StackPanel.Background>
 
             <Label Content="Lista pacjentów" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="15" Foreground="#FFEEEAEA"/>
-            <Button Content="PAC-1" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold"
+            <Button Content="Menu" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold"
                     FontFamily="Charlesworth" Margin="0,-55,55,-55" Background="Transparent" BorderThickness="0" Foreground="#FFEEEAEA"
                     Command="{Binding GotoWelcome}" Height="40"/>
 
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Margin="0,20,0,0">
-            <cc:MultiSelectListBox Height="340" ItemsSource="{Binding Patients}"
+            <cc:MultiSelectListView Height="340" ItemsSource="{Binding Patients}"
                                    SelectionMode="{Binding Selection, Mode=OneWay}" SelectedIndex="{Binding SelectedPatientIndex, Mode=OneWayToSource}"
-                                   SelectedItemsList="{Binding SelectedPatients, Mode=OneWayToSource}">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Horizontal">
-                            <Label Content="{Binding FirstName}"/>
-                            <Label Content="{Binding LastName}"/>
-                            <Label Content="{Binding Age}"/>
-                            <Label Content="{Binding School}"/>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>    
-            </cc:MultiSelectListBox>
+                                    SelectedItemsList="{Binding SelectedPatients, Mode=OneWayToSource}" FontSize="12">
+                <cc:MultiSelectListView.View>
+                    <GridView>
+                        <GridViewColumn  Header="Imię" Width="175" DisplayMemberBinding="{Binding FirstName}"/>
+                        <GridViewColumn   Header="Imię" Width="175"  DisplayMemberBinding="{Binding LastName}"/>
+                        <GridViewColumn  Header="Wiek" Width="175"  DisplayMemberBinding="{Binding Age}"/>
+                        <GridViewColumn  Header="Szkoła" Width="172" DisplayMemberBinding="{Binding School}"/>
+                    </GridView>
+                </cc:MultiSelectListView.View>
+            </cc:MultiSelectListView>
         </StackPanel>
 
 

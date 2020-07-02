@@ -30,10 +30,11 @@
 
     <Grid Background="#FFF6F6F6">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="24*"/>
-            <ColumnDefinition Width="72*"/>
-            <ColumnDefinition Width="125*"/>
-            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="48*"/>
+            <ColumnDefinition Width="144*"/>
+            <ColumnDefinition Width="217*"/>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="38*"/>
 
 
         </Grid.ColumnDefinitions>
@@ -43,7 +44,7 @@
             <RowDefinition Height="0.60*"/>
             <RowDefinition Height="0.1*"/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0" Grid.ColumnSpan="4">
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="5" Margin="0,0,0,0.2">
             <StackPanel.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF193E63" Offset="0.421"/>
@@ -52,11 +53,11 @@
             </StackPanel.Background>
 
             <Label Content="{Binding SelectedPatientFullName}" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="15" Foreground="#FFEEEAEA"/>
-            <Button Content="PAC-1" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="55,-55" Background="Transparent" BorderThickness="0" Foreground="#FFEEEAEA" Command="{Binding GotoWelcome}" />
+            <Button Content="Menu" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="55,-55" Background="Transparent" BorderThickness="0" Foreground="#FFEEEAEA" Command="{Binding GotoWelcome}" />
 
         </StackPanel>
 
-        <StackPanel Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="1" Margin="0,20,0,0">
+        <StackPanel Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1" Margin="0,19.8,0,0.4">
             <ListBox Height="350" ItemsSource="{Binding SelectedSubcathegory}">
                 <ListBox.ItemContainerStyle>
                     <Style TargetType="{x:Type ListBoxItem}">
@@ -83,7 +84,7 @@
                 </ListBox.ItemTemplate>
             </ListBox>
         </StackPanel>
-        <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Margin="0,10,0,0">
+        <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Margin="0,9.8,0,0.4">
             <Label Content="Notatki" FontSize="18" FontFamily="Charlesworth" FontWeight="DemiBold" Margin="40,0,0,0"/>
             <TextBox Width="300" Height="150" TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding Notes}" VerticalScrollBarVisibility="Auto" />
             <Button Content="Obsługiwanie siebie" Margin="0,20,20,0" Command="{Binding ChangeSelectedCathegory}" CommandParameter="{x:Static s:Questionary.SelfHelp}"/>
@@ -96,7 +97,7 @@
 
         </StackPanel>
 
-        <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4">
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" Margin="0,394.8,0,0" Grid.RowSpan="2">
             <Button Width="80" Content="3" FontFamily="Marlett" Margin="-540,20,20,0" Command="{Binding TraverseSubcathegoriesLeft}"/>
 
             <Label Grid.Column="0" Grid.Row="2" Width="400" Height="30" Content="{Binding SelectedSubcathegoryName}" Margin="0,-30,0,0" FontSize="18" FontFamily="Charlesworth"  HorizontalAlignment="Center" HorizontalContentAlignment="Center" Foreground="#FF193E63" />
