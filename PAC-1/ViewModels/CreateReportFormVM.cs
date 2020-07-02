@@ -140,6 +140,8 @@ namespace PAC_1.ViewModels
             WriteResults(document, normal, false);
             GenerateSubsection("\nNiewykonane zadania:", document, widebold);
             WriteResults(document, normal, null);
+            GenerateSection("Notatki", document, bold);
+            WriteNotes(document, normal);
 
             document.Add(new AreaBreak(AreaBreakType.NEXT_PAGE));
             document.Add(image)
@@ -309,6 +311,18 @@ namespace PAC_1.ViewModels
 
             document.Add(writeResults);
 
+        }
+
+        public void WriteNotes(Document document, PdfFont font)
+        {
+            Text notes = new Text(SelectedPatient.Notes);
+
+            Paragraph writeNotes = new Paragraph().Add(notes)
+                .SetTextAlignment(TextAlignment.LEFT)
+                .SetFont(font)
+                .SetFontSize(10);
+
+            document.Add(writeNotes);
         }
 
     }
