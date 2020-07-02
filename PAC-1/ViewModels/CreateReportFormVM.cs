@@ -194,11 +194,23 @@ namespace PAC_1.ViewModels
         
         public void GenerateSpecialistInfo(Document document, PdfFont font)
         {
-            string s = "Imię: " + specialist.FirstName +
-                "\n Nazwisko: " + specialist.LastName +
-                "\n Placówka: " + specialist.school.Name +
-                "\n           " + "ul. " + specialist.school.Street + " " + specialist.school.Number +
-                "\n           " + specialist.school.ZipCode + " " + specialist.school.City;
+            string s = null;
+            if (specialist.school.SecondNumber == null)
+            {
+                s = "Imię: " + specialist.FirstName +
+                    "\n Nazwisko: " + specialist.LastName +
+                    "\n Placówka: " + specialist.school.Name +
+                    "\n           " + "ul. " + specialist.school.Street + " " + specialist.school.Number +
+                    "\n           " + specialist.school.ZipCode + " " + specialist.school.City;
+            }
+            else
+            {
+                s = "Imię: " + specialist.FirstName +
+                    "\n Nazwisko: " + specialist.LastName +
+                    "\n Placówka: " + specialist.school.Name +
+                    "\n           " + "ul. " + specialist.school.Street + " " + specialist.school.Number + "\\" + specialist.school.SecondNumber +
+                    "\n           " + specialist.school.ZipCode + " " + specialist.school.City;
+            }
 
             Paragraph specialistInfo = new Paragraph(s)
                 .SetTextAlignment(TextAlignment.LEFT)
@@ -211,17 +223,35 @@ namespace PAC_1.ViewModels
 
         public void GeneratePatientInfo(Document document, PdfFont font)
         {
-            string s = "Imię: " + SelectedPatient.FirstName +
-                "\n Nazwisko: " + SelectedPatient.LastName +
-                "\n Wiek: " + SelectedPatient.Age.ToString() +
-                "\n Miejsce urodzenia: " + SelectedPatient.BirthPlace +
-                "\n IQ: " + SelectedPatient.Iq.ToString() +
-                "\n Mierzone w skali: " + SelectedPatient.Scale +
-                "\n Środowisko: " + SelectedPatient.Background +
-                "\n Inne: " + SelectedPatient.Other +
-                "\n Placówka: " + SelectedPatient.School.Name +
-                "\n           " + "ul. " + SelectedPatient.School.Street + " " + SelectedPatient.School.Number +
-                "\n           " + SelectedPatient.School.ZipCode + " " + SelectedPatient.School.City;
+            string s = null;
+            if (SelectedPatient.School.SecondNumber == null)
+            {
+                s = "Imię: " + SelectedPatient.FirstName +
+                    "\n Nazwisko: " + SelectedPatient.LastName +
+                    "\n Wiek: " + SelectedPatient.Age.ToString() +
+                    "\n Miejsce urodzenia: " + SelectedPatient.BirthPlace +
+                    "\n IQ: " + SelectedPatient.Iq.ToString() +
+                    "\n Mierzone w skali: " + SelectedPatient.Scale +
+                    "\n Środowisko: " + SelectedPatient.Background +
+                    "\n Inne: " + SelectedPatient.Other +
+                    "\n Placówka: " + SelectedPatient.School.Name +
+                    "\n           " + "ul. " + SelectedPatient.School.Street + " " + SelectedPatient.School.Number +
+                    "\n           " + SelectedPatient.School.ZipCode + " " + SelectedPatient.School.City;
+            }
+            else
+            {
+                s = "Imię: " + SelectedPatient.FirstName +
+                   "\n Nazwisko: " + SelectedPatient.LastName +
+                   "\n Wiek: " + SelectedPatient.Age.ToString() +
+                   "\n Miejsce urodzenia: " + SelectedPatient.BirthPlace +
+                   "\n IQ: " + SelectedPatient.Iq.ToString() +
+                   "\n Mierzone w skali: " + SelectedPatient.Scale +
+                   "\n Środowisko: " + SelectedPatient.Background +
+                   "\n Inne: " + SelectedPatient.Other +
+                   "\n Placówka: " + SelectedPatient.School.Name +
+                   "\n           " + "ul. " + SelectedPatient.School.Street + " " + SelectedPatient.School.Number + "\\" + SelectedPatient.School.SecondNumber +
+                   "\n           " + SelectedPatient.School.ZipCode + " " + SelectedPatient.School.City;
+            }
 
             Paragraph specialistInfo = new Paragraph(s)
                 .SetTextAlignment(TextAlignment.LEFT)

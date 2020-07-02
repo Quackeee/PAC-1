@@ -18,8 +18,8 @@ namespace PAC_1.ViewModels
         public string ZipCode { get; set; }
         public string City { get; set; } //mozesz zrefaktorowac. Nie wiedzialam, jak zrobic ogolna nazwe
         public string Street { get; set; }
-        public int? Number { get; set; }
-        public string SecondNumber { get; set; }
+        public string Number { get; set; }
+        public int? SecondNumber { get; set; }
 
 
         public ChangeViewCommand Accept
@@ -27,7 +27,7 @@ namespace PAC_1.ViewModels
             get =>
                 new ChangeViewCommand(
                     arg => {
-                        Data.Schools.Add(new School(Name, ShortName, ZipCode, City, Street, SecondNumber, Number));
+                        Data.Schools.Add(new School(Name, ShortName, ZipCode, City, Street, Number, SecondNumber));
                         Data.SaveSchools();
                         return PatientEditorFormVM.CachedPatientEditor; },
                     arg => !string.IsNullOrEmpty(Name) && !string.IsNullOrEmpty(ShortName)
