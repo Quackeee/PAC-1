@@ -40,7 +40,7 @@ namespace PAC_1.ViewModels
         protected override void _loadStoredData()
         {
             base._loadStoredData();
-            _editedPatient = (_cachedData as EditPatientFormVM)._editedPatient;
+            _editedPatient = (CachedPatientEditor as EditPatientFormVM)._editedPatient;
         }
 
         private void _loadPatientData()

@@ -15,10 +15,10 @@ namespace PAC_1.ViewModels
     {
         public AddPatientFormVM()
         {
-            if (_cachedData != null)
+            if (CachedPatientEditor != null)
             {
                 _loadStoredData();
-                _cachedData = null;
+                CachedPatientEditor = null;
             }
         }
 

@@ -29,7 +29,7 @@ namespace PAC_1.ViewModels
                     arg => {
                         Data.Schools.Add(new School(Name, ShortName, ZipCode, City, Street, SecondNumber, Number));
                         Data.SaveSchools();
-                        return new AddPatientFormVM(); },
+                        return PatientEditorFormVM.CachedPatientEditor; },
                     arg => !string.IsNullOrEmpty(Name) && !string.IsNullOrEmpty(ShortName)
             );
         }
@@ -37,7 +37,7 @@ namespace PAC_1.ViewModels
         {
             get =>
                 new ChangeViewCommand(
-                    arg => new AddPatientFormVM()
+                    arg => PatientEditorFormVM.CachedPatientEditor
             );
         }
     }

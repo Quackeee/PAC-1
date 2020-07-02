@@ -12,7 +12,7 @@ namespace PAC_1.ViewModels
 {
     abstract class PatientEditorFormVM : ViewModelBase
     {
-        protected static PatientEditorFormVM _cachedData;
+        public static PatientEditorFormVM CachedPatientEditor;
         protected bool _dataOk() =>
         (
             !string.IsNullOrEmpty(FirstName) &&
@@ -25,15 +25,15 @@ namespace PAC_1.ViewModels
         );
         protected virtual void _loadStoredData()
         {
-            FirstName = _cachedData.FirstName;
-            LastName = _cachedData.LastName;
-            School = _cachedData.School;
-            BirthPlace = _cachedData.BirthPlace;
-            Age = _cachedData.Age;
-            Iq = _cachedData.Iq;
-            Scale = _cachedData.Scale;
-            Background = _cachedData.Background;
-            Other = _cachedData.Other;
+            FirstName = CachedPatientEditor.FirstName;
+            LastName = CachedPatientEditor.LastName;
+            School = CachedPatientEditor.School;
+            BirthPlace = CachedPatientEditor.BirthPlace;
+            Age = CachedPatientEditor.Age;
+            Iq = CachedPatientEditor.Iq;
+            Scale = CachedPatientEditor.Scale;
+            Background = CachedPatientEditor.Background;
+            Other = CachedPatientEditor.Other;
         }
 
         public string FirstName { get; set; }
@@ -56,7 +56,7 @@ namespace PAC_1.ViewModels
             {
                 return new ChangeViewCommand
                 (
-                    arg => { _cachedData = this; return new SchoolFormVM(); }
+                    arg => { CachedPatientEditor = this; return new SchoolFormVM(); }
                 );
             }
         }
