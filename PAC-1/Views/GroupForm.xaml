@@ -38,18 +38,16 @@
             <TextBox Height="150" AcceptsReturn="True" TextWrapping="Wrap" Text="{Binding Notes}" VerticalScrollBarVisibility="Auto">
                 
             </TextBox>
-            <ListBox Height="140" Margin="0,20,0,0" ItemsSource="{Binding QuestionedPatients}" SelectedIndex="{Binding SelectedPatientIndex}">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Horizontal">
-                            <Label Content="{Binding FirstName}"/>
-                            <Label Content="{Binding LastName}"/>
-                            <Label Content="{Binding Age}"/>
-                            <Label Content="{Binding School}"/>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
+            <ListView Height="140" Margin="0,20,0,0" ItemsSource="{Binding QuestionedPatients}" SelectedIndex="{Binding SelectedPatientIndex}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn  Header="Imię" Width="70" DisplayMemberBinding="{Binding FirstName}"/>
+                        <GridViewColumn   Header="Imię" Width="70"  DisplayMemberBinding="{Binding LastName}"/>
+                        <GridViewColumn  Header="Wiek" Width="70"  DisplayMemberBinding="{Binding Age}"/>
+                        <GridViewColumn  Header="Szkoła" Width="67"  DisplayMemberBinding="{Binding School}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
         </StackPanel>
         <StackPanel Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="1" Margin="10,20,0,0">
             <ListBox Height="350" ItemsSource="{Binding Questions}">
