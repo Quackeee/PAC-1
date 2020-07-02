@@ -218,6 +218,16 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\Resources\Fonts\NotoSerif-Bold.ttf" />
+    <None Include="Properties\Resources\Fonts\NotoSerif-BoldItalic.ttf" />
+    <None Include="Properties\Resources\Fonts\NotoSerif-Condensed.ttf" />
+    <None Include="Properties\Resources\Fonts\NotoSerif-CondensedBold.ttf" />
+    <None Include="Properties\Resources\Fonts\NotoSerif-CondensedBoldItalic.ttf" />
+    <None Include="Properties\Resources\Fonts\NotoSerif-CondensedItalic.ttf" />
+    <None Include="Properties\Resources\Fonts\NotoSerif-Light.ttf" />
+    <None Include="Properties\Resources\Fonts\NotoSerif-LightItalic.ttf" />
+    <None Include="Properties\Resources\Fonts\NotoSerif-Regular.ttf" />
+    <None Include="Properties\Resources\Questions\QuestionsPL.json" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -226,6 +236,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Properties\Resources\Graphics\PAC1Diagram.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

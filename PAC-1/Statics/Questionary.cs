@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using PAC_1.Model;
+using PAC_1.Properties;
 using PAC_1.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 
 namespace PAC_1.Statics
 {
@@ -37,8 +39,8 @@ namespace PAC_1.Statics
 
         static Questionary()
         {
-            var questionModels = JsonConvert.DeserializeObject<Question[]>(File.ReadAllText(Properties.Resources.QuestionsSource));
-
+            var questionModels = JsonConvert.DeserializeObject<Question[]>(Encoding.UTF8.GetString(Resources.Questions));
+            
             Questions = new QuestionVM[120];
             for (int i = 0; i < 120; i++)
             {
@@ -60,18 +62,18 @@ namespace PAC_1.Statics
 
             SubcathegoryName = new Dictionary<QuestionVM[], string>();
 
-            SubcathegoryName.Add(TableManners, Properties.Resources.TableMannersSubcathegoryName);
-            SubcathegoryName.Add(MotorSkills, Properties.Resources.MotorSkillsSubcathegoryName);
-            SubcathegoryName.Add(ToiletAndWashing, Properties.Resources.ToiletAndWashingSubcathegoryName);
-            SubcathegoryName.Add(DressingUp, Properties.Resources.DressingUpSubcathegoryName);
-            SubcathegoryName.Add(Language, Properties.Resources.LanguageSubcathegoryName);
-            SubcathegoryName.Add(Differentiation, Properties.Resources.DifferentiationSubcathegoryName);
-            SubcathegoryName.Add(NumbersAndSizes, Properties.Resources.NumbersAndSizesSubcathegoryName);
-            SubcathegoryName.Add(PencilAndPaperSkills, Properties.Resources.PencilAndPaperSkillsSubcathegoryName);
-            SubcathegoryName.Add(Playing, Properties.Resources.PlayingSubcathegoryName);
-            SubcathegoryName.Add(Housework, Properties.Resources.HouseworkSubcathegoryName);
-            SubcathegoryName.Add(ManualSkills, Properties.Resources.ManualSkillsSubcathegoryName);
-            SubcathegoryName.Add(Agility, Properties.Resources.AgilitySubcathegoryName);
+            SubcathegoryName.Add(TableManners, Resources.TableMannersSubcathegoryName);
+            SubcathegoryName.Add(MotorSkills, Resources.MotorSkillsSubcathegoryName);
+            SubcathegoryName.Add(ToiletAndWashing, Resources.ToiletAndWashingSubcathegoryName);
+            SubcathegoryName.Add(DressingUp, Resources.DressingUpSubcathegoryName);
+            SubcathegoryName.Add(Language, Resources.LanguageSubcathegoryName);
+            SubcathegoryName.Add(Differentiation, Resources.DifferentiationSubcathegoryName);
+            SubcathegoryName.Add(NumbersAndSizes, Resources.NumbersAndSizesSubcathegoryName);
+            SubcathegoryName.Add(PencilAndPaperSkills, Resources.PencilAndPaperSkillsSubcathegoryName);
+            SubcathegoryName.Add(Playing, Resources.PlayingSubcathegoryName);
+            SubcathegoryName.Add(Housework, Resources.HouseworkSubcathegoryName);
+            SubcathegoryName.Add(ManualSkills, Resources.ManualSkillsSubcathegoryName);
+            SubcathegoryName.Add(Agility, Resources.AgilitySubcathegoryName);
 
             SelfHelp = new Cathegory(TableManners, MotorSkills, ToiletAndWashing, DressingUp);
             Communication = new Cathegory(Language, Differentiation, NumbersAndSizes, PencilAndPaperSkills);
@@ -87,9 +89,6 @@ namespace PAC_1.Statics
                 Subcathegories = subcathegories;
             }
         }
-
-        
-
     }
 
     static class Extensions

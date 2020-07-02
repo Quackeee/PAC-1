@@ -20,6 +20,7 @@ using Org.BouncyCastle.Bcpg.OpenPgp;
 using iText.Layout.Borders;
 using System.Drawing;
 using iText.IO.Image;
+using PAC_1.Properties;
 
 namespace PAC_1.ViewModels
 {
@@ -32,7 +33,7 @@ namespace PAC_1.ViewModels
         private List<int> DressingUp = new List<int> { 5, 6, 22, 23, 38, 54, 72, 73, 95, 111 };
         private List<int> Language = new List<int> { 7, 8, 24, 25, 39, 55, 56, 74, 96, 112 };
         private List<int> Differentiation = new List<int> { 9, 26, 40, 57, 58, 75, 76, 77, 97, 113 };
-        private List<int>  NumbersAndSizes = new List<int> { 10, 27, 41, 42, 59, 78, 79, 80, 98, 114 };
+        private List<int> NumbersAndSizes = new List<int> { 10, 27, 41, 42, 59, 78, 79, 80, 98, 114 };
         private List<int> PencilAndPaperSkills = new List<int> { 11, 28, 43, 60, 81, 82, 99, 100, 101, 115 };
         private List<int> Playing = new List<int> { 12, 29, 44, 45, 61, 62, 63, 83, 102, 116 };
         private List<int> Housework = new List<int> { 13, 30, 46, 64, 84, 85, 86, 103, 104, 117 };
@@ -65,25 +66,19 @@ namespace PAC_1.ViewModels
             string fileName = SelectedPatient.FirstName + "_" + SelectedPatient.LastName;
             PdfWriter writer = new PdfWriter("D:\\" + fileName + "_Raport.pdf");
 
-            ImageData data = ImageDataFactory.Create(@".\Diagram.png");
+            ImageData data = ImageDataFactory.Create(Resources.PAC1Diagram, null);
             iText.Layout.Element.Image image = new iText.Layout.Element.Image(data);
 
 
             PdfDocument pdf = new PdfDocument(writer);
             Document document = new Document(pdf);
-            PdfFontFactory.Register(@".\noto-serif.regular.ttf", "Noto");
-            PdfFontFactory.Register(@".\NotoSerif-CondensedBold.ttf", "BoldNoto");
-            PdfFontFactory.Register(@".\NotoSerif-Bold.ttf", "Bold");
-            PdfFontFactory.Register(@".\NotoSerif-CondensedBoldItalic.ttf", "BoldItalicNoto");
-            PdfFontFactory.Register(@".\NotoSerif-CondensedItalic.ttf", "ItalicNoto");
-            PdfFontFactory.Register(@".\NotoSerif-Light.ttf", "Light");
 
-            PdfFont normal = PdfFontFactory.CreateRegisteredFont("Noto", PdfEncodings.CP1250, true);
-            PdfFont widebold = PdfFontFactory.CreateRegisteredFont("Bold", PdfEncodings.CP1250, true);
-            PdfFont bold = PdfFontFactory.CreateRegisteredFont("BoldNoto", PdfEncodings.CP1250, true);
-            PdfFont boldItalic = PdfFontFactory.CreateRegisteredFont("BoldItalicNoto", PdfEncodings.CP1250, true);
-            PdfFont italic = PdfFontFactory.CreateRegisteredFont("ItalicNoto", PdfEncodings.CP1250, true);
-            PdfFont light = PdfFontFactory.CreateRegisteredFont("Light", PdfEncodings.CP1250, true);
+            PdfFont normal = PdfFontFactory.CreateFont(Resources.NotoSerif_Regular, PdfEncodings.CP1250, true);
+            PdfFont widebold = PdfFontFactory.CreateFont(Resources.NotoSerif_Bold, PdfEncodings.CP1250, true);
+            PdfFont bold = PdfFontFactory.CreateFont(Resources.NotoSerif_CondensedBold, PdfEncodings.CP1250, true);
+            PdfFont boldItalic = PdfFontFactory.CreateFont(Resources.NotoSerif_BoldItalic, PdfEncodings.CP1250, true);
+            PdfFont italic = PdfFontFactory.CreateFont(Resources.NotoSerif_CondensedItalic, PdfEncodings.CP1250, true);
+            PdfFont light = PdfFontFactory.CreateFont(Resources.NotoSerif_Light, PdfEncodings.CP1250, true);
 
             //Rectangle[] columns = {new Rectangle(36, 36, 254, 770),  new Rectangle(305, 36, 254, 770)};
 

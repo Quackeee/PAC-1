@@ -1,0 +1,805 @@
+[
+	{
+	"ID":1,
+	"Summary":"Używa łyżki przy jedzeniu bez pomocy innych.",
+	"Description":"Zaliczamy, gdy badany je łyżką przygotowany odpowiednio pokarm i bardzo rzadko potrzebuje pomocy.",
+	"DifficultyLevel":0
+	},
+	
+	{
+	"ID":2,
+	"Summary":"Pije trzymając szklankę w jednej ręce, nie rozlewa.",
+	"Description":"Zaliczamy, jeżeli dziecko potrafi trzymać filiżankę lub szklankę (odpowiednia dla niego) w jednej ręce i pić nic rozlewając.",
+	"DifficultyLevel":0
+	},
+	
+	{
+	"ID":3,
+	"Summary":"Wchodzi po schodach obydwiema nogami na każdy stopień.",
+	"Description":"Zaliczamy, jeżeli dziecko potrafi wejść przynajmniej na 4 stopnie. Może skorzystać z poręczy, ale ma wchodzić, nie wdrapywać się.",
+	"DifficultyLevel":0
+	},
+	
+	{
+	"ID":4,
+	"Summary":"Schodzi po schodach obydwiema nogami na każdy stopień.",
+	"Description":"Dopuszcza się korzystanie z poręczy.",
+	"DifficultyLevel":0
+	},
+	
+	{
+	"ID":5,
+	"Summary":"Wyćwiczony w sprawach toalety z rzadkimi, nieszczęśliwymi przypadkami.",
+	"Description":"Zaliczamy, jeżeli dziecko kontroluje oddawanie moczu i nie zanieczyszcza się w ciągu dnia (moczenie się w nocy nic wchodzi tu w zakres tego zadania). Zanieczyszczanie może się czasem zdarzyć, np. w sytuacji podniecenia, ale zazwyczaj dziecko potrafi kontrolować się przez dłuższy czas, między jednym a drugim pójściem do toalety.",
+	"DifficultyLevel":0
+	},
+	
+	{
+	"ID":6,
+	"Summary":"Zdejmuje skarpetki.",
+	"Description":"Zaliczamy, jeżeli dziecko samo, bez trudności, zdejmuje skarpety w czasie rozbierania się. Może to robić spontanicznie lub na polecenie. Nie jest podstawą do zaliczenia przypadkowe zdjęcie skarpet, np. w czasie zabawy.",
+	"DifficultyLevel":0
+	},
+	
+	{
+	"ID":7,
+	"Summary":"Włącza się, gdy ubiera się go.",
+	"Description":"Jest to udział w formie prostej współpracy, polegający na wyciągnięciu rąk czy nóg w stronę podawanego ubioru. Dziecko powinno spełnić przynajmniej jeden z następujących warunków a) włożyć rękę w duży otwór rękawa, b) pomóc ubierającemu naciągnąć spodnie, c) przytrzymać swoje ubranie, gdy dorosła osoba pomaga mu się ubierać.",
+	"DifficultyLevel":0
+	},
+	
+	{
+	"ID":8,
+	"Summary":"Słucha prostych poleceń.",
+	"Description":"Zaliczamy, jeżeli dziecko odpowiednio reaguje na 4 z następujących poleceń:\\na) proszę zamknąć drzwi,\\nb) podnieś ten kawałek papieru,\\nc) rzuć piłkę,\\nd) daj mi twój płaszcz,\\ne) pokaż mi twoje ręce,\\nf) zamknij oczy. Poleceniu nie mogą towarzyszyć gesty. Przedmioty (kawałek papieru, piłka, płaszcz) powinny być w pobliżu, ale równocześnie powinno tam być 4 lub 5 innych przedmiotów, by dziecko musiało wybrać właściwy. Nie chodzi tu o jakość wykonania, ale o rozumienie poleceń. ",
+	"DifficultyLevel":0
+	},
+	
+	{
+	"ID":9,
+	"Summary":"Rozumie układy słów zawierające: na, do, w, za, nad, pod, przed, na zewnątrz, na górze, na dole. ",
+	"Description":" Zaliczamy, jeżeli dziecko odpowiednio zareaguje przynajmniej na 5 z następujących poleceń (wyrażonych bez gestów):\\na)  połóż książkę na krześle,\\nb)  włóż książkę do pudełka,\\nc)  stań za krzesłem,\\nd)  wejdź pod stół,\\ne)  wznieś ręce nad głową,\\nf)  stań przed stołem (adapt.),\\ng) połóż książkę na wierzchu pudełka, h) połóż ołówek pod papier.",
+	"DifficultyLevel":0
+	},
+	
+	{
+	"ID":10,
+	"Summary":"Potrafi dostrzec różnice płci (np. mężczyzna, kobieta, chłopiec, dziewczynka).",
+	"Description":"Należy użyć 4 różne obrazki: kobieta, mężczyzna, dziewczyna, chłopiec. Dziecko powinno opisać je przynajmniej za pomocą przybliżonych określeń, np.: pani, mama, tata, itp. Można nie brać pod uwagę nieścisłości wieku opisanej osoby w stosunku do obrazka. Zaliczamy, jeśli dziecko dobrze nazwie 4 obrazki.",
+	"DifficultyLevel":0
+	},
+	
+	{
+	"ID":11,
+	"Summary":"Potrafi odróżnić poprawnie pojęcia: \"jedna rzecz\", \"wiele rzeczy\".",
+	"Description":"Zaliczamy, jeżeli dziecko potrafi odróżnić jeden przedmiot od. większej liczby przedmiotów, tzn. więcej niż 2 lub 3 (adapt.). Można posłużyć się patyczkami, kamyczkami, monetami polecając dziecku: ‘daj mi jeden’, ‘daj mi kilka’. Dziecko powinno wykonać poprawnie przynajmniej 3 z 6 prób",
+	"DifficultyLevel":0
+	},
+	
+	{
+	"ID":12,
+	"Summary":"Trzyma ołówek, potrafi rysować kreski pionowe i łuki.",
+	"Description":"Rysujemy na papierze linię pionową długości około 5 cm Polecamy dziecku przerysować linię kilkakrotnie. Następnie rysujemy tuki i polecamy dziecku rysować. Linie nie muszą być dokładne, mogą być odkształcone, ale powinny przypominać proste pionowe oraz potwierdzać umiejętność łukowego prowadzenia linii przez dziecko.",
+	"DifficultyLevel":0
+	},
+	
+	{
+	"ID":13,
+	"Summary":"Bawi się w towarzystwie innych, ale nie współdziała z innymi.",
+	"Description":"Na tym poziomie dziecko zajmuje się swoimi zabawkami, poświęcając bardzo mało uwagi innym dzieciom. Przy ocenie zwracamy uwagę na to, czy dziecko nie przeszkadza innym. Jeżeli współdziała z innymi, to tym bardziej zaliczamy.",
+	"DifficultyLevel":0
+	},
+	
+	{
+	"ID":14,
+	"Summary":"Jest usłużny, gdy otrzyma jakieś polecenia.",
+	"Description":"Wykonuje dokładnie proste polecenie, takie jak:\\na) \"podaje książkę\" (wskazać komu),\\nb) \"podaje butelkę\", gdy butelka jest w pobliżu. Dziecko powinno być nie tylko zdolne do właściwej reakcji na polecenie, ale reakcje te powinny charakteryzować się rutyną, nabywaną wskutek wymagań rodziców, nauczycieli itp.",
+	"DifficultyLevel":0
+	},
+	
+	{
+	"ID":15,
+	"Summary":"Potrafi nawlekać większe korale.",
+	"Description":"Do przeprowadzenia tej próby potrzebne jest pudełko z dużymi koralami, sznurowadło zakończone z jednej strony supłem (by korale nie usuwały się), z drugiej metalowym okuciem. Zaliczamy, jeżeli dziecko potrafi nawlec przynajmniej 12 korali w ciągu 10 min.",
+	"DifficultyLevel":0
+	},
+	
+	{
+	"ID":16,
+	"Summary":"Potrafi zdjąć pokrywkę, odkręcić nakrętkę, przekręcić zamek zatrzaskowy.",
+	"Description":"W zadaniu tym chodzi o pewne celowe ruchy rąk. Zaliczamy, jeżeli dziecko potrafi przekręcać gałkę, by otworzyć drzwi, odkręcić pokrywkę od stoika itp.",
+	"DifficultyLevel":0
+	},
+	
+	{
+	"ID":17,
+	"Summary":"Potrafi kopnąć piłkę bez potknięcia się.",
+	"Description":"Można posłużyć się zwykłą piłką nożną lub inną piłką. Zaliczamy, jeśli dziecko potrafi kopnąć piłkę (niekoniecznie w określonym kierunku) i nie straci przy tym równowagi.",
+	"DifficultyLevel":0
+	},
+	
+	{
+	"ID":18,
+	"Summary":"Używa bez trudności widelca (pokarm może być pokrojony i przygotowany).",
+	"Description":"Zadanie to zaliczamy także wtedy, gdy pokarm jest pokrojony i przygotowany, ale dziecko umie właściwie posługiwać się widelcem (choćby przystosowanym dla siebie).",
+	"DifficultyLevel":1
+	},
+	
+	{
+	"ID":19,
+	"Summary":"Samo, bez pomocy, potrafi pić.",
+	"Description":"W stosunku do punktu drugiego wymaga się tu dodatkowo, by dziecko umiało wziąć i nalać sobie napój z jakiegoś naczynia. Może to być woda, mleko, herbata itp. napoje łatwo dostępne dziecku.",
+	"DifficultyLevel":1
+	},
+	
+	{
+	"ID":20,
+	"Summary":"Jeździ na zabawkach kołowych, np. rower na trzech kółkach.",
+	"Description":"Zaliczamy, jeżeli dziecko korzysta z takich zabawek, jak rower na trzech kółkach, samochodzik z pedałami. Może nie korzystać z pedałów i odpychać się nogami. Zaliczamy, jeśli dziecko kiedyś z takich zabawek korzystało, a obecnie jest już za duże.",
+	"DifficultyLevel":1
+	},
+	
+	{
+	"ID":21,
+	"Summary":"Prosi, żeby iść do toalety albo idzie samo.",
+	"Description":"Zaliczamy, jeżeli dziecko ma zwyczaj zwracać uwagę (słowami czy. gestem) na swoją potrzebę pójścia do toalety albo idzie samo. Można także zaliczyć, jeżeli dziecko czyni świadomy wysiłek, żeby nie dopuścić do wypadku zanim dorosły zda sobie sprawę z tego, że wypadek jest bliski.",
+	"DifficultyLevel":1
+	},
+	
+	{
+	"ID":22,
+	"Summary":"Wyciera (suszy) ręce dokładnie bez nadzoru innych (jednak przy ich obecności)",
+	"Description":"Zaliczamy to zadanie, gdy dziecko: a) porządnie wyciera (suszy) ręce ręcznikiem, który można mu przygotować, b) wyciera dokładnie także między palcami.",
+	"DifficultyLevel":1
+	},
+	
+	{
+	"ID":23,
+	"Summary":"Zdejmuje i zakłada proste części odzieży.",
+	"Description":"Dziecko potrafi nałożyć i zdjąć przynajmniej jedną z następujących części ubioru: płaszcz, marynarkę, pulower, kamizelkę albo sukienkę. Na tym etapie nie jest wymagane zapinanie guzików, zamków błyskawicznych itp. Dorośli mogą w tym zastąpić dziecko.",
+	"DifficultyLevel":1
+	},
+	
+	{
+	"ID":24,
+	"Summary":"Rozpina guziki.",
+	"Description":"Zaliczamy, gdy dziecko potrafi rozpiąć duży, łatwo dostępny guzik, np. guzik płaszcza.",
+	"DifficultyLevel":1
+	},
+	
+	{
+	"ID":25,
+	"Summary":"Opowiada zwięźle o zdarzeniach.",
+	"Description":"Aby zaliczyć to zadanie, dziecko powinno:\\na) mówić zdaniami,\\nb) mówić w sposób wystarczająco wyraźny, zrozumiały, \\n c) przedstawić w opowiadaniu następstwa zdarzeń, np. w czasie czynności porannych, dokonywania zakupów, spędzania niedzieli.",
+	"DifficultyLevel":1
+	},
+	
+	{
+	"ID":26,
+	"Summary":"Formułuje zdania zawierające liczbę mnogą, czas przeszły, zaimek \"ja\", przyimki.",
+	"Description":"Aby zaliczyć to zadanie trzeba być z dzieckiem dłuższy czas. Nie jest konieczne, aby mówiło zawsze poprawnie pod względem gramatycznym, posługiwało się kombinacją podmiotu i orzeczenia. Do zaliczenia tego zadania jest wymagane, by dziecko posługiwało się formą \"ja\" oraz liczbą mnogą i czasem przeszłym przynajmniej w jednym przypadku, a także przynajmniej jednym przyimkiem. Jeżeli tych form nie słyszymy w spontanicznych wypowiedziach dziecka, możemy ostrożnie pytać, ale w taki sposób, by nie podpowiadać odpowiedzi. Można np.: \"Gdzie jest książka?\" (dziecko odpowie np.: \"na stole\").",
+	"DifficultyLevel":1
+	},
+	
+	{
+	"ID":27,
+	"Summary":"Potrafi, mając różne przedmioty kolorowe przed sobą odróżnić ich kolory.",
+	"Description":"Należy mieć kawałki kolorowego papieru: czerwony, niebieski, zielony, pomarańczowy, żółty, czarny, biały, brązowy. Pokazujemy. dziecku określony kolor i polecamy mu wybrać taki sam. Zaliczamy, jeśli dziecko dobrze wybierze wszystkie 8 kolorów nie wymagamy nazywania kolorów.",
+	"DifficultyLevel":1
+	},
+	
+	{
+	"ID":28,
+	"Summary":"Rozumie różnice między \"dwie\" i \"wiele rzeczy\".",
+	"Description":"Zaliczamy, jeżeli dziecko potrafi odróżnić jeden przedmiot od. większej liczby przedmiotów, tzn. więcej niż 2 lub 3 (adapt.). Można posłużyć się patyczkami, kamyczkami, monetami polecając dziecku: \"daj mi jeden\", \"daj mi kilka\". Dziecko powinno wykonać poprawnie przynajmniej 3 z 6 prób.",
+	"DifficultyLevel":1
+	},
+	
+	{
+	"ID":29,
+	"Summary":"Potrafi odrysować koło.",
+	"Description":"Zaliczamy, jeżeli dziecko potrafi odrysować kółko narysowane przez badającego, a tym bardziej, gdy robi to spontanicznie samo. Nie musi to być dokładne koło, punkty wyjścia i zakończenia nie muszą się pokrywać, ale winno przypominać koło. Dziecko powinno narysować przynajmniej 3 takie kółka.",
+	"DifficultyLevel":1
+	},
+	
+	{
+	"ID":30,
+	"Summary":"Czeka na \"swój moment\" i potrafi włączyć się w odpowiednim czasie.",
+	"Description":"Zadanie to zaliczamy, jeżeli dziecko potrafi czasem zaczekać, kiedy tego wymaga dorosły, oraz włączyć się w odpowiednim momencie na jego życzenie. Na tym poziomie nie wymaga się, by dziecko wyczekiwało z własnej inicjatywy lub samo włączało się w odpowiednim momencie.",
+	"DifficultyLevel":1
+	},
+	
+	{
+	"ID":31,
+	"Summary":"Pomaga w zajęciach domowych, np. ściera ze stołu, zamiata itp.",
+	"Description":"Zaliczamy, jeżeli dziecko zachęcone do zajęć domowych spełnianych przez dorosłych, jak np. uprzątnięcie zabawek, podlanie kwiatów, bierze w nich udział. Nie wymagamy, aby dziecko wykonało to bardzo dobrze, oraz nie jest tu konieczne, by robiło to z własnej inicjatywy; wystarczy, że potrafi to robić i jest chętne do pomocy.",
+	"DifficultyLevel":1
+	},
+	
+	{
+	"ID":32,
+	"Summary":"Potrafi ciąć papier nożycami.",
+	"Description":"Zaliczamy, jeżeli dziecko potrafi wykonywać ruchy konieczne do cięcia papieru nożycami. Nie wymaga się, by cięto po oznaczonym miejscu.",
+	"DifficultyLevel":1
+	},
+	
+	{
+	"ID":33,
+	"Summary":"Potrafi podskakiwać  na dwóch nogach.",
+	"Description":"Zaliczamy, jeśli dziecko podskakując na tym samym miejscu: \\n a) trzyma stopy razem, \\n b) ląduje na palcach, zginając kolana podczas tej czynności.",
+	"DifficultyLevel":1
+	},
+	
+	{
+	"ID":34,
+	"Summary":"Obsługuje się przy stole i je bez większej pomocy.",
+	"Description":"Zaliczamy, gdy dziecko spełnia następujące warunki:\\na) używa łyżki i widelca (niekoniecznie noża) przy jedzeniu pokarmów wcześniej pokrojonych i przygotowanych.\\nb) czeka na swoją kolejkę nie domagając się, by je obsłużono jako pierwsze,\\nc) radzi sobie samo z nałożeniem ziemniaków, jarzyn itp.,\\nd) rzadko mu zdarza się przy stole niezdarność, gwałtowność, chciwość itp.,\\ne) na ogół nic trzeba poświęcać mu specjalnej uwagi, choć od czasu do czasu trzeba mu pomóc.",
+	"DifficultyLevel":2
+	},
+	
+	{
+	"ID":35,
+	"Summary":"Normalnie wchodzi po schodach, bez trzymania się poręczy.",
+	"Description":"Zaliczamy, jeżeli dziecko:\\na) potrafi wejść na 8-10 stopni samodzielnie, nie korzystając z poręczy,\\nb) nie dostawia drugiej stopy na tym samym stopniu.",
+	"DifficultyLevel":2
+	},
+	
+	{
+	"ID":36,
+	"Summary":"Normalnie schodzi po schodach, bez trzymania się poręczy.",
+	"Description":"Zaliczamy, jeżeli dziecko:\\na) potrafi wejść na 8-10 stopni samodzielnie, nie korzystając z poręczy,\\nb) nie dostawia drugiej stopy na tym samym stopniu.",
+	"DifficultyLevel":2
+	},
+	
+	{
+	"ID":37,
+	"Summary":"Sam sobie radzi w sprawach toalety i dbaniu o swoją czystość.",
+	"Description":"W tym zadaniu zwracamy uwagę na wykonywanie przez badanego podstawowych czynności związanych z toaletą i myciem się. Zaliczenie tego zadania nie wymaga wykluczenia pomocy przy trudniejszych czynnościach związanych z ubieraniem się i rozbieraniem (jest to objęte innym zadaniem).",
+	"DifficultyLevel":2
+	},
+	
+	{
+	"ID":38,
+	"Summary":"Porządnie myje ręce mydłem.",
+	"Description":"Zaliczamy, jeżeli dziecko:\\na) używa mydlą nie robiąc wokół nieporządku,\\nb) myje i spłukuje ręce wystarczająco dobrze, by nie brudzić ręcznika.",
+	"DifficultyLevel":2
+	},
+	
+	{
+	"ID":39,
+	"Summary":"Zapina guziki, zamki itp.",
+	"Description":"Zaliczamy, jeżeli dziecko radzi sobie przynajmniej z trzema rodzajami zapięć takich, jak: guziki, klamry, sprzączki, zatrzaski, zamki błyskawiczne itp. Nie muszą być skomplikowane.",
+	"DifficultyLevel":2
+	},
+	
+	{
+	"ID":40,
+	"Summary":"Rozumie proste pytania i daje sensowne odpowiedzi.",
+	"Description":"Aby zaliczyć to zadanie, należy postawić podane niżej pytania. Dziecko powinno dać przybliżona odpowiedź przynajmniej na 5 z nich:\\na) \"Co robisz, gdy jesteś głodny?\"\\nb) \"Co nakładasz na nogi?\"\\nc) \"Co robisz z piłką?\"\\nd) \"Co jesz na śniadanie?\"\\ne) \"Na czym jeździsz?\"\\nf) \"Czym rysujesz?\"\\ng) \"Z czego zrobione jest okno?\"\\nh) \"Z czego pijesz?\"",
+	"DifficultyLevel":2
+	},
+	
+	{
+	"ID":41,
+	"Summary":"Rozróżnia między: krótki - długi, mały - duży, cienki - gruby.",
+	"Description":"Zaliczamy, jeżeli dziecko:\\na) wskaże, który z dwóch ołówków jest krótki, a który długi,\\nb) wskaże, która z taśm papieru jest długa, a która krótka,\\nc) wskaże, które z dwóch pudełek jest duże, a które małe,\\nd) wskaże, która z dwóch piłek jest duża, a która mała,\\ne) wskaże, który z dwóch ołówków jest gruby, a który cienki,\\nf) wskaże, która z dwóch książek jest gruba, a która cienka.",
+	"DifficultyLevel":2
+	},
+	
+	{
+	"ID":42,
+	"Summary":" Potrafi policzyć mechanicznie 10 przedmiotów.",
+	"Description":"W zadaniu tym chodzi nie tylko o to, by dziecko umiało liczyć do 10, ale policzyć 10 przedmiotów. Przy ocenie dajemy dziecku 16 patyczków albo kostek i każemy mu policzyć, i odłożyć 10 z nich. Jeżeli dziecko zrobi błąd i jest nadzieja, że go poprawi, to każemy mu powtórzyć.",
+	"DifficultyLevel":2
+	},
+	
+	{
+	"ID":43,
+	"Summary":"Potrafi radzić sobie w \"sytuacji liczb\" w granicach liczby 4 (włączając także odejmowanie)",
+	"Description":"Używając patyczków lub innych przedmiotów polecamy dziecku wykonać 4 dodawania (l + l, l + 2, l + 3,2 + 2) i 6 odejmowań (4 — l, 4 — 2, 4 — 3, 3 — 2, 3 — 1,2— l). Możemy pytać następująco (lub w sposób podobny): ‘jeżeli masz 4 patyczki i weźmiesz z nich 2, ile zostanie?’. Niektóre dzieci mają trudności w skupieniu się, dlatego próby można powtórzyć. Aby zaliczyć, dziecko powinno prawidłowo wykonać przynajmniej 3 dodawania i 4 odejmowania.",
+	"DifficultyLevel":2
+	},
+	
+	{
+	"ID":44,
+	"Summary":"Prymitywnie rysuje człowieka, zaznaczając głowę i nogi.",
+	"Description":"Nie jest czymś nienormalnym, jeżeli małe dziecko rysuje człowieka bez korpusu i rąk. Możemy zaliczyć, jeżeli w kółku oznaczającym głowę badany rysuje oczy, nos, usta, dodając niżej nogi. Tym bardziej zaliczamy, jeżeli ten rysunek jest na wyższym poziomie.",
+	"DifficultyLevel":2
+	},
+	
+	{
+	"ID":45,
+	"Summary":"Bawi się współdziałając z innymi.",
+	"Description":"W zadaniu tym mamy na uwadze udział dziecka w zabawie z innymi. Zaliczamy, jeżeli dziecko uczestniczy w prostych zabawach lub krótkich grach z zabawkami czy innymi przedmiotami (np. zabawa lalką, zabawa w dom). Jeżeli bierze udział w zabawach bardziej skomplikowanych, to tym bardziej zaliczamy.",
+	"DifficultyLevel":2
+	},
+	
+	{
+	"ID":46,
+	"Summary":"Z przyjemnością wciąga innych do zabawy.",
+	"Description":"Zaliczamy, jeżeli dziecko - zachęcone przez dorosłego - próbuje wciągnąć innych do zabawy, np. tańcząc, śpiewając, wystukując rytm, grając role itp. Zaliczamy także, jeżeli dziecko ma ten etap już poza sobą.",
+	"DifficultyLevel":2
+	},
+	
+	{
+	"ID":47,
+	"Summary":"Chodzi po drobne sprawunki poza dom.",
+	"Description":"Chodzi po sprawunki do miejsc w sąsiedztwie. Odległość nie jest istotna, lecz ważne jest, by dziecko posiadało doświadczenie, by to czyniło samo i poza otoczeniem domowym.",
+	"DifficultyLevel":2
+	},
+	
+	{
+	"ID":48,
+	"Summary":"Potrafi lepić z plasteliny różne przedmioty, budować z klocków itp.",
+	"Description":"Aby zaliczyć to zadanie dziecko powinno umieć tworzyć z materiału zabawowego pewne konstrukcje. Musi to być:\\na) celowe; powinno robić coś, co można rozpoznać, gdy jest zakończone, choćby nie było zadowalające,\\nb) wykraczać poza poziom budowania prostych wież z klocków i robienia prostych okrągłych kształtów z plasteliny.",
+	"DifficultyLevel":2
+	},
+	
+	{
+	"ID":49,
+	"Summary":"Potrafi wyciąć obrazki, chociaż nie bardzo dokładnie.",
+	"Description":"Zaliczamy, jeżeli:\\na) dziecko stara się coś wyciąć, choćby mały kwadratowy kawałek, a nie tylko tnie przypadkowo,\\nb) potrafi prowadzić nożyce w kierunku zamierzonym.",
+	"DifficultyLevel":2
+	},
+	
+	{
+	"ID":50,
+	"Summary":"Potrafi stać na palcach 10 sek.",
+	"Description":"Zaliczamy, jeśli dziecko potrafi wznieść pięty przynajmniej na 10 sek. w 3 z 5 prób. Zaliczamy nawet wtedy, gdy zdarzy się jakiś błąd - zachwianie równowagi.",
+	"DifficultyLevel":2
+	},
+	
+	{
+	"ID":51,
+	"Summary":"Używa noża stołowego do posmarowania chleba masłem, marmoladą  czy konfiturami.",
+	"Description":"Do zaliczenia tego zadania wymaga się tylko używania noża do smarowania. Nie najlepszym sprawdzianem jest smarowanie masłem, które bywa twarde, może to być dżem, miód itp.",
+	"DifficultyLevel":3
+	},
+	
+	{
+	"ID":52,
+	"Summary":"Chodzi do sąsiadów i pobliskich miejsc.",
+	"Description":"Zaliczamy, jeżeli dziecko:\\na) może być pozostawione bez nadzoru w domu lub w ogrodzie,\\nb) może pozostać przez krótki czas poza zasięgiem naszego wzroku, z tym że łatwo je przywołać. Zaliczamy tym bardziej, jeżeli dziecko wykonuje zadanie 70.",
+	"DifficultyLevel":3
+	},
+	
+	{
+	"ID":53,
+	"Summary":"Myje twarz mniej lub bardziej dokładnie (niekoniecznie za uszami).",
+	"Description":"Aby można było zaliczyć to zadanie dziecko powinno myjąc mydłem twarz umyć także uszy, nie jest jednak konieczne na tym etapie, aby myło miejsca za uszami oraz szyję.",
+	"DifficultyLevel":3
+	},
+	
+	{
+	"ID":54,
+	"Summary":"Myje zęby.",
+	"Description":"Aby zaliczyć to zadanie dziecko musi myć zęby i nie zapominać o tym. Nie musi samo nakładać pasty na szczoteczkę, ale powinno umieć to zrobić. Nie musi czyścić ich z góry na dół, jak to praktykuje wielu dorosłych",
+	"DifficultyLevel":3
+	},
+	
+	{
+	"ID":55,
+	"Summary":"Rozbiera się na noc przy małym dozorze.",
+	"Description":"Zaliczamy, jeżeli dziecko rozbiera się przed spaniem oraz nakłada pidżamę i nocną koszulę.",
+	"DifficultyLevel":3
+	},
+	
+	{
+	"ID":56,
+	"Summary":"Potrafi zdefiniować znaczenie prostych słów.",
+	"Description":"Zaliczamy, jeśli dziecko potrafi określić znaczenie 4 z następujących słów: krzesło, okno, buty, piłka, filiżanka, płaszcz. Stawiamy proste pytania:\\na) np.: \"Co to jest krzesło?\" Możemy akceptować odpowiedzi, które zawierają określanie funkcji użytkowej, np.:\"do siedzenia\" albo odpowiedzi podkreślające materiał, z którego jest zrobione to, co dziecko określa, np.: „Co to jest okno?\" - odpowiedź: „szkło\".",
+	"DifficultyLevel":3
+	},
+	
+	{
+	"ID":57,
+	"Summary":"Używa zdań złożonych zawierających: ponieważ, ale itp.",
+	"Description":"Zadanie to sprawdza umiejętność używania słów wyrażających stosunki. Aby zaliczyć to zadanie dziecko musi używać przynajmniej 3 następujących stów: ponieważ, przed, jeśli, chociaż, czy, bez, że, który, podczas, gdy, mimo (wbrew), na przekór.",
+	"DifficultyLevel":3
+	},
+	
+	{
+	"ID":58,
+	"Summary":"Bezbłędnie wyróżnia i nazywa 4 lub więcej kolorów.",
+	"Description":"Kolory, które łatwo zapamiętać, to: czerwony, niebieski, żółty, zielony. Zaliczamy, jeśli dziecko nazwie te 4 kolory poprawnie.",
+	"DifficultyLevel":3
+	},
+	
+	{
+	"ID":59,
+	"Summary":"Poprawnie używa „z rana\", „po południu\".",
+	"Description":"Zaliczamy, jeżeli dziecko pytane, czy teraz jest „rano\" czy „popołudniu\", zawsze odpowiada poprawnie. Sprawdzamy to kilkakrotnie z rana i po południu (...).",
+	"DifficultyLevel":3
+	},
+	
+	{
+	"ID":60,
+	"Summary":"Potrafi układać rzeczy w kolejności, od najmniejszych do największych.",
+	"Description":"W tym zadaniu należy się posłużyć przynajmniej 6 przedmiotami tego samego typu, ale różnych rozmiarów (mogą to być ołówki). Polecamy dziecku ułożyć przedmioty w porządku od najmniejszych do największych. Jeżeli dziecko nic rozumie polecenia, pokazujemy mu różnice w wielkości przedmiotów. Jeżeli dziecko robi jeden błąd, a dalsza kolejność jest właściwa, to każemy mu ułożyć drugi raz, lecz nie pomagamy.",
+	"DifficultyLevel":3
+	},
+	
+	{
+	"ID":61,
+	"Summary":"Rysuje w dający się rozpoznać sposób „ludzi\" i „domy\".",
+	"Description":"Zaliczamy, jeżeli:\\na) jest wystarczająca kontrola motoryki, linie rysowane są dobrze, a rysunek stwarza wrażenie, że dziecko nieźle opanowało prowadzenie ołówka,\\nb) rysunek człowieka powinien zawierać: głowę, korpus, nogi, ręce, oczy, nos, usta i coś z ubioru (wystarczające jest zaznaczenie guzików lub brzegu ubrania),\\nc) dom na rysunku powinien mieć ściany, dach oraz zaznaczone drzwi i okna.",
+	"DifficultyLevel":3
+	},
+	
+	{
+	"ID":62,
+	"Summary":"Bierze udział w zabawach wymagających współzawodnictwa, np. ukrywania się i szukania, chwytania itp.",
+	"Description":"Nie ma opisu, trzeba zapytać Lucynę",
+	"DifficultyLevel":3
+	},
+	
+	{
+	"ID":63,
+	"Summary":"Odtwarza, „gra\" usłyszane historyjki - zabawa tematyczna (adapt.).",
+	"Description":"W zadaniu tym chodzi o to, by dziecko raczej odtwarzało usłyszane historyjki, niż tworzyło własne. Powinno:\\na) posługiwać się słowami i ruchami,\\nb) trzymać się możliwie dokładnie usłyszanego tekstu (może to być historyjka słyszana przez dziecko wielokrotnie). Zaliczamy tym bardziej, jeżeli dziecko ten etap ma już za sobą.",
+	"DifficultyLevel":3
+	},
+	
+	{
+	"ID":64,
+	"Summary":"Śpiewa, tańczy przy muzyce, nastawia ulubione melodie.",
+	"Description":"Aby zaliczyć to zadanie dziecko powinno aktywnie okazywać zainteresowanie muzyką i mieć wyczucie rytmu i melodii. Nie wystarcza, by zwracało uwag; na muzykę, kiedy mu się to poleca, ale musi wykazywać spontanicznie zainteresowanie muzyką.",
+	"DifficultyLevel":3
+	},
+	
+	{
+	"ID":65,
+	"Summary":"Jest wysyłany do do sklepu albo domu towarowego, z tym że dorosły czeka na zewnątrz",
+	"Description":"To wymaga 3 oddzielnych umiejętności. Dziecko (gdy mu się powie, co ma kupić, i da wystarczającą ilość pieniędzy) powinno:\\na) pójść do sklepu samo i poprosić przynajmniej o jeden przedmiot, np. chleb, cukier itp.,\\nb) zapłacić,\\nc) przynieść produkt i resztę dorosłemu będącemu na zewnątrz sklepu. Zaliczamy tym bardziej, jeśli dziecko wykonuje zadanie 85.",
+	"DifficultyLevel":3
+	},
+	
+	{
+	"ID":66,
+	"Summary":"Potrafi, gdy zachodzi potrzeba, dobrze nawijać nici na szpulkę.",
+	"Description":"Zaliczamy, jeżeli:\\na) nawinie dwa metry nici w czasie mniejszym niż 35 sęk. (adapt.),\\nab) wykona to poprawnie.",
+	"DifficultyLevel":3
+	},
+	
+	{
+	"ID":67,
+	"Summary":"Potrafi budować pomysłowe struktury z odpowiednich materiałów (klocki, kostki, elementy układanek).",
+	"Description":"Zaliczamy, jeśli dziecko buduje:\\na) korzystając z wyobraźni (nie tylko naśladując),\\nb) z wystarczającą precyzją palców.\\nKonstrukcje powinny być czymś więcej niż zwykłym stosem klocków. Powinien być wykorzystany taki materiał, jak:\\nkota, śruby, wiązania konstrukcyjne itp.",
+	"DifficultyLevel":3
+	},
+	
+	{
+	"ID":68,
+	"Summary":"Potrafi przeskakiwać dwiema nogami np. przez sznur.",
+	"Description":"Należy posłużyć się skakanką. Dziecko powinno:\\na) obracać skakanką samo,\\nb) skakać trzymając razem obie nogi,\\nc) przynajmniej raz potrafi wykonać nie mniej niż trzy przeskoki po kolei albo ostatecznie przeskoczyć raz na 10 prób",
+	"DifficultyLevel":3
+	},
+	
+	{
+	"ID":69,
+	"Summary":"Używa stołowego noża do krojenia bez większych trudności.",
+	"Description":"Zadanie to zakłada umiejętność posługiwania się nożem do krojenia pokarmów w taki sposób, aby je można było zjeść. Nie wymaga opanowania wszelkich czynności, w których używa się noża, takich jak ćwiartowanie mięsa, krajanie drobiu itp., a odnosi się tylko do sytuacji codziennych, podstawowych.",
+	"DifficultyLevel":4
+	},
+	
+	{
+	"ID":70,
+	"Summary":"Wymaga małego nadzoru bawiąc się poza domem.",
+	"Description":"Zaliczamy, jeżeli dziecko można wysłać np. na -wspólne zabawy z innymi dziećmi, na czas jednej godziny. Zaliczamy również, gdy miejsce zabaw nic jest odległe i łatwo jest przywołać dziecko. Zaliczamy tym bardziej, jeżeli wykonuje ono zadanie nr 71.",
+	"DifficultyLevel":4
+	},
+	
+	{
+	"ID":71,
+	"Summary":"Może sobie chodzić bez nadzoru.",
+	"Description":"Zaliczamy, jeżeli dziecko można zostawić (samo albo z innymi) poza domem na dłuższy czas (cały ranek, popołudnie) bez nadzoru, żeby się bawiło. Zaliczamy tym bardziej, jeżeli dziecko zalicza zadanie 94.",
+	"DifficultyLevel":4
+	},
+	
+	{
+	"ID":72,
+	"Summary":"Regularnie dba o włosy.",
+	"Description":"Dziecko powinno dbać o włosy i umieć utrzymać je w sposób ogólnie przyjęty. Wymaga to korzystania z grzebienia, lusterka, zadbania o obcięcie, gdy są za długie. Nie jest zaś wymagane (na tym poziomie), by dziecko prezentowało się dobrze przez cały dzień, ale by potrafiło przy porannym myciu i ubieraniu się uporządkować swoje włosy.",
+	"DifficultyLevel":4
+	},
+	
+	{
+	"ID":73,
+	"Summary":"Ubiera się rano z małą pomocą.",
+	"Description":"Ubranie może leżeć w pobliżu. Dziecko musi umieć nałożyć je i pozapinać. Nic potrzebuje pomocy przy nakładaniu odzieży. Można mu pomóc w sznurowaniu, wiązaniu.",
+	"DifficultyLevel":4
+	},
+	
+	{
+	"ID":74,
+	"Summary":"Nakłada (wdziewa) zwyczajne części ubioru.",
+	"Description":"Dziecko powinno umieć znaleźć własne ubranie na wieszaku lub w szafie i nałożyć na siebie bieliznę, spodnie, marynarkę, sukienkę, płaszcz, skarpety i buty oraz pozapinać się, tak żeby porządnie wyglądać. Nic potrzebuje nadzoru tylko zachęcenia do schludności. Nie wymaga się tu, by samodzielnie wiązało sznurowadła i krawat.",
+	"DifficultyLevel":4
+	},
+	
+	{
+	"ID":75,
+	"Summary":" Potrafi wykonywać potrójny rozkaz, np.: \"połóż to..., potem..., a następnie...\"",
+	"Description":"Zadanie to wymaga nie tylko rozumienia, ale również zapamiętania polecenia. Można posłużyć się następującym poleceniem: \"Połóż książkę na stole, potem weź ołówek, a następnie idź do okna\". Zadanie powinno być wykonane w kolejności podanej w poleceniu. Nie należy dziecku podpowiadać gestem ani wzrokiem.",
+	"DifficultyLevel":4
+	},
+	
+	{
+	"ID":76,
+	"Summary":"Odróżnia \"lewy\" i \"prawy\" w odniesieniu do samego siebie (np. lewa ręka, prawe ucho).",
+	"Description":"Zaliczamy, jeśli dziecko reaguje poprawnie na 4 z następujących 5 poleceń:\\na) pokaż mi twoją prawą rękę,\\nb) pokaż mi twoją lewą nogę,\\nc) wskaż twoje prawe oko,\\nd) wyciągnij lewe ramię,\\ne) wskaż twoje lewe ucho",
+	"DifficultyLevel":4
+	},
+	
+	{
+	"ID":77,
+	"Summary":"Nazywa dni tygodnia i wszystkie dobrze rozumie.",
+	"Description":"Dziecko musi umieć nazywać 7 dni tygodnia, nie koniecznie w kolejności. Ponadto powinno przyporządkowywać określone zdarzenia określonym dniom, np. odpoczynek w niedzielę (adapt.). Powinno umieć przypisać określone czynności przynajmniej trzem dniom.",
+	"DifficultyLevel":4
+	},
+	
+	{
+	"ID":78,
+	"Summary":"Ujmuje różnice między: dzień - tydzień, minuta - godzina itp.",
+	"Description":"Dla zaliczenia wystarczy, by dziecko odpowiedziało poprawnie na pytanie: \"Co jest dłuższe, dzień czy tydzień?\" (miesiąc czy rok, minuta czy godzina?). Jeśli postrzegamy, że dziecko nie rozumie pytania, wówczas możemy je sformułować inaczej. Pytanie możemy także powtórzyć przy innej okazji. Aby zaliczyć to zadanie dziecko powinno odpowiedzieć poprawnie na 3 pytania.",
+	"DifficultyLevel":4
+	},
+	
+	{
+	"ID":79,
+	"Summary":"Potrafi policzyć mechanicznie 30 lub więcej przedmiotów.",
+	"Description":"Przy ocenianiu tego zadania bierzemy pudełko zawierające 50 patyczków i polecamy odliczyć z nich 30. Przed potwierdzeniem wykonania zadania każemy dziecku upewnić się, czy wykonało je dobrze.",
+	"DifficultyLevel":4
+	},
+	
+	{
+	"ID":80,
+	"Summary":"Potrafi radzić sobie w \"sytuacji liczb\" w granicach liczby 13 (włączając także odejmowanie)",
+	"Description":"Postępujemy podobnie jak w zadaniu 43, polecając wykonać następujące działania: 4+7, 3+4, 7+5,6+7,7+3, 10 - 4,11 - 5,12 - 7,13 - 4, 8 - 2. Zaliczamy, jeżeli dziecko wykonuje poprawnie trzy dodawania i cztery odejmowania.\\nNajbliższe 3 zadania opierają się na polskim systemie monetarnym z przyjęciem następujących zasad przeliczania:\\n0,5 pensa - 20 gr.\\n2 pensy - l zł\\n1 pens   - 50 gr.\\n5 pensów - 2 zł\\n10 pensów - 5 zł\\nUwaga: Wartość realna pieniędzy jest tu sprawą drugorzędną, choć w jakimś stopniu odpowiada sytuacji posługiwania się określonymi sumami przez osoby upośledzone umysłowo w warunkach angielskich i polskich.",
+	"DifficultyLevel":4
+	},
+	
+	{
+	"ID":81,
+	"Summary":"Potrafi rozpoznawać monety w ramach 5 zł (adapt.).",
+	"Description":"Dziecko musi rozpoznać i nazwać następujące monety: 20 gr, 50 gr, l zł, 2 zł, 5 zł.",
+	"DifficultyLevel":4
+	},
+	
+	{
+	"ID":82,
+	"Summary":"\"Drukuje\" swoje imię lub nazwisko i rozpoznaje je wśród napisanych słów.",
+	"Description":"Aby zaliczyć to zadanie dziecko musi umieć wydrukować swoje imię i nazwisko. Pisownia powinna być poprawna, a litery równo ułożone (nie jedna wyżej, a druga niżej). Ponadto powinno rozpoznać swoje imię i nazwisko w tekście składającym się z wielu słów tej samej wielkości. Dziecko powinno dwukrotnie odszukać swoje nazwisko. Adapt.: może to być zwykłe pismo, ponieważ rzadko u nas posługujemy się alfabetem samych dużych liter w pisaniu.",
+	"DifficultyLevel":4
+	},
+	
+	{
+	"ID":83,
+	"Summary":"Potrafi rozpoznać 40 lub więcej słów, np.: wejście, wyjście, bar (adapt.):",
+	"Description":"Zadanie to dotyczy zdolności rozpoznawania przez dziecko poszczególnych słów. Ocena jest łatwa, gdy podejmuje ją nauczyciel znający słownik dziecka, trudniejsza natomiast, gdy robi to ktoś nie znający dziecka. Trzeba wtedy przygotować listę około 100 słów, z których dziecko rozpoznaje przynajmniej 40, wyraźnie napisanych, używanych na co dzień.",
+	"DifficultyLevel":4
+	},
+	
+	{
+	"ID":84,
+	"Summary":" Bierze udział w grach stołowych, np. gra w pchełki, domino, węże itp.(adapt.).",
+	"Description":"Zaliczamy, jeżeli dziecko bierze udział wraz z innymi w prostych grach stołowych oraz:\\na) czeka na swoją kolejkę,\\nb) zna zasady gry tak, że nie trzeba mu wciąż mówić, co ma dalej robić.\\nc) orientuje się, do czego zmierza gra.",
+	"DifficultyLevel":4
+	},
+	{
+	"ID":85,
+	"Summary":"Można mu powierzyć pieniądze na zakupy.",
+	"Description":"Aby zaliczyć to zadanie dziecko powinno być wysłane na zakupy z pieniędzmi przynajmniej przy trzech różnych okazjach i za każdym razem oddać resztę. Zakłada to, że dziecko wie, iż pieniądze mają wartość i trzeba na nie uważać.",
+	"DifficultyLevel":3
+	},
+	{
+	"ID":86,
+	"Summary":"Chodzi do jednego sklepu i nabywa określone artykuły.",
+	"Description":"Zaliczamy, jeżeli dziecko:\\na) potrafi znaleźć drogę do pobliskiego sklepu,\\nb) pamięta polecenie (dotyczące dwóch produktów),\\nc) prosi (słownie) o dwa produkty w sklepie,\\nd) piąci i przynosi do domu produkty i otrzymana resztę. Zaliczamy tym bardziej, jeśli dziecko wykonuje zadanie 104.",
+	"DifficultyLevel":3
+	},
+	{
+	"ID":87,
+	"Summary":"Bierze na siebie mniejsze obowiązki.",
+	"Description":"Zaliczamy, jeśli dziecko bierze na siebie proste obowiązki domowe, np. takie jak w zadaniu 31:\\na) wykonując je samodzielnie, chociaż dopuszczony jest pewien nadzór,\\nb) wykonując regularnie, bez stałego przypominania (dopuszcza się przypadkowe przypominanie).",
+	"DifficultyLevel":3
+	},
+	{
+	"ID":88,
+	"Summary":"Potrafi ciąć nożycami materiał ubraniowy.",
+	"Description":"Zaliczamy, jeśli dziecko potrafi przecięć nożycami materiał ubraniowy o szer. 10 cm na dwa kawałki. Nożyce powinny być wystarczająco ostre, by prace tę można było wykonać.",
+	"DifficultyLevel":3
+	},
+	{
+	"ID":89,
+	"Summary":"Chłopcy poprawnie posługują się młotkiem, dziewczęta umieją szyć.",
+	"Description":"Aby zaliczyć to zadanie, chłopiec powinien:\\na) wbić po kolei trzy gwoździki w drewno,\\nb) przy wbijaniu nie kaleczyć się,\\nc) rozpoczynając wbijanie przytrzymywać gwóźdź drugą ręką.\\nDziewczęta muszą umieć szyć dobrze i dokładnie. Dziewczęta powinny wykonać szycie ściegiem po linii prostej wyznaczonej na materiale o długości 15 cm.",
+	"DifficultyLevel":3
+	},
+	{
+	"ID":90,
+	"Summary":"Potrafi rzucać piłką i trafić w tarczę (30 x 30 cm z odległości 130 cm).",
+	"Description":"Posługujemy się małą piłką (np. do tenisa). Zaliczamy, jeśli:\\na) pitka trafi prosto w tarczę. (Nie zaliczamy, jeżeli piłka rzucona krzywo trafi przypadkiem w tarczę),\\nb) piłka trafi w tarczę przynajmniej dwa na cztery rzuty.",
+	"DifficultyLevel":3
+	},
+	{
+	"ID":91,
+	"Summary":"Odpowiednio i bezpiecznie korzysta z miejsc zabaw: karuzeli, huśtawki itp.",
+	"Description":"Zaliczamy, jeśli dziecko:\\na) nie jest speszone i nieufne przy korzystaniu z takich urządzeń,\\nb) może, ogólnie biorąc, być dopuszczone na teren zabaw bez stałego czuwania i obawy wypadku,\\nc) ma wystarczającą sprawność fizyczną, żeby kontrolować wspomniane wyżej urządzenia, np. zmniejsza wychylenie huśtawki, gdy zaczyna wznosić się za wysoko.",
+	"DifficultyLevel":3
+	},
+	{
+	"ID":92,
+	"Summary":"Używa noża i widelca poprawnie i bez trudności",
+	"Description":"Zaliczamy, jeżeli dziecko:\\na) trzyma pewnie i w odpowiednim miejscu sztućce,\\nb) używa ich do właściwych celów, tj. kraje pokarm nożem, nabiera na widelec i podnosi do ust",
+	"DifficultyLevel":4
+	},
+	{
+	"ID":93,
+	"Summary":"Nalewa płyny (np. kawę, mleko)",
+	"Description":"Zadanie wymaga od badanego umiejętności nalewania płynów do filiżanki lub szklanki, bez rozlewania (z naczyń używanych codziennie: mleko z butelki, herbata z dzbanka itp.).",
+	"DifficultyLevel":4
+	},
+	{
+	"ID":94,
+	"Summary":"Porusza się w najbliższym sąsiedztwie bez nadzoru, ale nie przechodzi przez jezdnię.",
+	"Description":"Zaliczamy, jeżeli dziecko potrafi znaleźć drogę do dwóch lub trzech miejsc, np. sklepów, przyjaciół w sąsiedztwie, nic musi jednak samodzielnie przechodzić przez ruchliwą jezdnię. Zaliczamy tym bardziej, jeżeli badany zaliczy zadanie 110.",
+	"DifficultyLevel":4
+	},
+	{
+	"ID":95,
+	"Summary":"Myje się odpowiednio dokładnie i całkowicie bez większego dozoru.",
+	"Description":"Dziecko musi umieć wykąpać się lub umyć, używając w sposób właściwy mydła, oraz umieć wytrzeć się. Można mu pomóc przy myciu i wycieraniu uszu, włosów i pleców.",
+	"DifficultyLevel":4
+	},
+	{
+	"ID":96,
+	"Summary":"Zawiązuje sznurowadła.",
+	"Description":"Sznurowadła powinny być zawiązane tak, by starsi nie musieli poprawiać.",
+	"DifficultyLevel":4
+	},
+	{
+	"ID":97,
+	"Summary":"Potrafi rozumieć polecenia: w górę na prawo, w dół na lewo itp.",
+	"Description":"Potrzebna tu jest deska z kółkami. Dajemy dziecku następujące polecenia:\\n1) włóż kolek w górny lewy róg,\\n2) włóż kolek w dolny prawy róg,\\n3) włóż kołek w górny prawy róg,\\n4) włóż kołek w dolny lewy róg,\\n5) włóż kotki w drugim rzędzie od dołu,\\n6) włóż kołki z lewej strony z góry na dół.\\nZaliczamy, jeżeli dziecko wykona dobrze 4 spośród powyższych poleceń. Zdolność do umieszczenia kołków nie jest konieczna do zaliczenia zadania. W przypadku dziecka upośledzonego fizycznie wystarczy, jeśli potrafi wskazać właściwą pozycję.",
+	"DifficultyLevel":4
+	},
+	{
+	"ID":98,
+	"Summary":"Odróżnia kwadrans od godziny.",
+	"Description":"Należy pokazać dziecku tarcze zegara ze wskazówkami wyznaczającymi godziny: 10.00,11,15,2.30, 3.45. Zaliczamy, jeśli dziecko da 4 poprawne odpowiedzi. Jeżeli popełni jeden błąd to dajemy następny przykład, np.: jeżeli źle określi 11.15 - dajemy 12.15. Jeżeli odpowie dobrze, to zaliczamy. Nie dopuszcza się więcej niż jeden błąd.",
+	"DifficultyLevel":4
+	},
+	{
+	"ID":99,
+	"Summary":"Dajemy następujące zadanie, posługując się monetami:\\n„Ile to jest 2 zł i 1 zł\"?\\n„Ile to jest 50 gr. i l zł\"?\\n„Ile to jest 2 zł i 3 monety po l zł\"?\\n„Ile to jest 2 monety po 2 zł i 50 gr.\"?Zaliczamy, jeżeli wszystkie 4 wypowiedzi są poprawne.",
+	"Description":"",
+	"DifficultyLevel":4
+	},
+	{
+	"ID":100,
+	"Summary":"Pisze, nie „drukuje\", swoje nazwisko poprzedzając je inicjałem imienia (adapt.).",
+	"Description":"Winny być tu spełnione następujące warunki:\\na) nazwisko powinno być napisane poprawnie, bez błędów w pisowni,\\nb) winno być napisane normalnym pismem,\\nc) napisanie nazwiska jest konieczne, natomiast imię lub inicjał imienia nie są konieczne (jest to wymagane w PAC-2, zad. 17).",
+	"DifficultyLevel":4
+	},
+	{
+	"ID":101,
+	"Summary":"Czyta łatwe instrukcje, korzystając ze środków komunikacji np. w autobusie (adapt.).",
+	"Description":"Dziecko winno rozpoznać prosto napisany tekst, jak: „Palenie zabronione\" itp. Zaliczamy, jeżeli dziecko „czyta\" przynajmniej 10 takich napisów i potrafi wyjaśnić przynajmniej 5 z nich. Należałoby tę umiejętność sprawdzać nie za pomocą wypisanych kart, ale w kontekście życiowym.",
+	"DifficultyLevel":4
+	},
+	{
+	"ID":102,
+	"Summary":"Adresuje koperty wystarczająco poprawnie.",
+	"Description":"Zaliczamy, jeżeli dziecko pisze imię, nazwisko i adres na kopercie:\\na) prawidłowo,\\nb) we właściwej kolejności,\\nc) bez błędów w pisowni (łatwo zauważyć, że to zadanie jest łatwiejsze niż zad. 18 w PAC-2).",
+	"DifficultyLevel":4
+	},
+	{
+	"ID":103,
+	"Summary":"Bawi się z innymi w prostych grach piłką, np. rzucanie piłki",
+	"Description":"By zaliczyć to zadanie, dziecko musi:\\na) posiadać wystarczającą kontrolę ruchową wymaganą przez daną grę,\\nb) bawić się z innymi, np. rzucać pitkę od jednego do drugiego, chwytać piłką, bronić się itp.",
+	"DifficultyLevel":4
+	},
+	{
+	"ID":104,
+	"Summary":"Pomaga w domu przez pójście do kilku sklepów, by kupić określone artykuły.",
+	"Description":"Aby zaliczyć to zadanie dziecko musi najpierw spełniać kryteria zadania 86 w sposób zadowalający, a ponadto:\\na) robić jednorazowo zakup przynajmniej trzech artykułów,\\nb) zakupy winny być dokonane w trzech różnych sklepach, lecz niekoniecznie za jednym razem.",
+	"DifficultyLevel":4
+	},
+	{
+	"ID":105,
+	"Summary":"Wykonuje mniej zrutynizowane czynności bez dozoru, np. opróżnia kosz na śmieci,\\nprzynosi wodę, mleko, gazety.",
+	"Description":"Zadanie to możemy zaliczyć, jeśli dziecku można powierzyć przyjęcie na siebie pewnych prostych obowiązków, spełnianych bez nadzoru. Czasem może zaistnieć potrzeba przypomnienia mu o tych obowiązkach, ale na ogól samo je wykonuje. Wystarczy, jeśli dziecko wypełnia jeden obowiązek.",
+	"DifficultyLevel":4
+	},
+	{
+	"ID":106,
+	"Summary":"Potrafi bawić się układankami z papieru, grać w karty, np. w Piotrusia, zwierzęta (adapt.).",
+	"Description":"Zaliczamy, jeśli dziecko potrafi posługiwać się przynajmniej 15 kartami oraz potrafi rozłożyć talię; 15 dziecięcych kart na trzy kupki.",
+	"DifficultyLevel":4
+	},
+	{
+	"ID":107,
+	"Summary":"Używa narzędzi, np. ogrodniczych, naczyń kuchennych.",
+	"Description":"Zaliczamy, jeśli dziecko potrafi celowo i wystarczająco dobrze używać urządzeń domowych. Nie musi wykonywać regularnie, nawykowo żadnej czynności, ale musi być wystarczająco obeznane z urządzeniami i czynnościami. Wystarczy, jeśli wykonuje 2 z wymienionych czynności:\\na) posługiwanie się żelazkiem elektrycznym,\\nb) posługiwanie się odkurzaczem lub froterka,\\nc) używanie kuchenki i nastawianie garnków,\\nd) posługiwanie się śrubami, wiertarką korbową,\\ne) posługiwanie się narzędziami ogrodniczymi.",
+	"DifficultyLevel":4
+	},
+	{
+	"ID":108,
+	"Summary":"Potrafi zachować równowagę stojąc na palcach i równocześnie pochylając się do przodu.",
+	"Description":"Zaliczamy, jeśli dziecko w 3 na 5 prób potrafi, stojąc na palcach, wychylić się ku przodowi i przy tym:\\na) trzyma obie stopy razem,\\nb) ręce ma założone do tyłu,\\nc) nie stara się ratować równowagi przez poruszanie się z miejsca lub opadnięcie na pięty.",
+	"DifficultyLevel":4
+	},
+	{
+	"ID":109,
+	"Summary":"Używa noża, by obrać owoce albo pokroić chleb.",
+	"Description":"By zaliczyć to zadanie badany musi umieć kontrolować prowadzenie noża wystarczająco dobrze; by obrać jabłko czy gruszkę lub odkroić cienką kromkę z bochenka chleba.",
+	"DifficultyLevel":5
+	},
+	{
+	"ID":110,
+	"Summary":"Porusza się w najbliższym sąsiedztwie bez nadzoru i przechodzi przez jezdnię.",
+	"Description":"Zaliczamy, jeżeli badany:\\na) potrafi w sposób bezpieczny przejść ruchliwą jezdnię, uwzględniając wyznaczone przejście dla pieszych lub światła sygnalizacyjne,\\nb) spełnia kryteria zadania 94.",
+	"DifficultyLevel":5
+	},
+	{
+	"ID":111,
+	"Summary":"Przygotowuje wszystko do mycia się (np. woda w wannie, pamięta o tym, co niezbędne: mydło, ręcznik)",
+	"Description":"Zaliczamy, jeśli dziecko przygotowuje konieczne do mycia przybory, np. mydło, ręcznik, zdejmuje ubranie, a także przygotowuje łazienkę do kąpieli.",
+	"DifficultyLevel":5
+	},
+	{
+	"ID":112,
+	"Summary":"Wiąże krawat (chłopiec), włosy wiąże wstążką (dziewczyna) lub zawiązuje tasiemki fartucha.",
+	"Description":"Aby zaliczyć to zadanie, chłopiec powinien wystarczająco dobrze umieć wiązać krawat, a dziewczynka wstążkę we włosach lub tasiemki fartucha na plecach.",
+	"DifficultyLevel":5
+	},
+	{
+	"ID":113,
+	"Summary":"Potrafi bez wielkich trudności powtórzyć opowiadanie, historyjkę.",
+	"Description":"Należy posłużyć się krótką historyjką, składającą się z 10 do 20 krótkich zdań, z występującymi w niej dwoma lub trzema bohaterami. Powinna być ona prosta, a zarazem zupełnie nie znana dziecku. Gdy skończymy opowiadać i poprosimy dziecko o powtórzenie, powinno ono odtworzyć opowiadanie, ujmując sedno historyjki, następstwo faktów oraz różnice między bohaterami. Dopuszczalna jest zachęta, np. „i co było dalej\", ale nie podpowiadanie.",
+	"DifficultyLevel":5
+	},
+	{
+	"ID":114,
+	"Summary":"Podaje czas i kojarzy godziny na zegarze z różnymi czynnościami i zdarzeniami.",
+	"Description":"Należy pokazać dziecku tarczę ze wskazówkami wyznaczającymi godziny: 8.10, 1.40, 9.15, 2.45, które dziecko ma określić. Ponadto należy ustawić wskazówki zegara w taki sposób, by wskazywały czas dwóch podstawowych codziennych zajęć (np.: godz. 8.00 - początek zajęć szkolnych, 13.00 - obiad) i zapytać je: „co zwykle robisz o tej godzinie?\". Aby zaliczyć to zadanie wszystkie odpowiedzi muszą być prawidłowe.",
+	"DifficultyLevel":5
+	},
+	{
+	"ID":115,
+	"Summary":"Potrafi rozmieniać na drobniejsze w ramach 5 zł (adapt.).",
+	"Description":"Kładziemy na stole przed dzieckiem następujące monety:\\n2 po 50 gr. 2 po l zł 1 po 2zł i stawiamy następujące pytania:\\na) pokaż mi, ile ci zostanie, jeżeli z 5 zł pożyczysz komuś l zł 50 gr.,\\nb) pokaż, ile d zostanie z 5 zł, jeżeli pożyczysz komuś 2 zł i 50 gr.\\nUwaga: Jeżeli dziecko nie rozumie pytania, pokazujemy na jakimś innym przykładzie i stawiamy pytanie ponownie.\\nAby zaliczyć to zadanie, obydwa polecenia muszą być wykonane poprawnie.",
+	"DifficultyLevel":5
+	},
+	{
+	"ID":116,
+	"Summary":"Czyta proste druki, np. program telewizyjny lub radiowy.",
+	"Description":"Zaliczamy, jeżeli dziecko przy tym czytaniu wykazuje wystarczająco dobrą wymowę. Nie wymaga się, by na tym poziomie dziecko wykorzystywało tę umiejętność, ale wystarczy, by czytało mechanicznie (nie musi rozumieć czytanego tekstu).",
+	"DifficultyLevel":5
+	},
+	{
+	"ID":117,
+	"Summary":"Bierze udział w zespołowych grach bardziej zorganizowanych.",
+	"Description":"Aby zaliczyć to zadanie dziecko winno brać udział, choćby tylko przypadkowo, w grach zorganizowanych, np. piłce nożnej, siatkówce, badmintonie, koszykówce. Nie zaliczamy, jeżeli dziecko nie bierze udziału w żadnej z takich gier.",
+	"DifficultyLevel":5
+	},
+	{
+	"ID":118,
+	"Summary":"Wykonuje szereg prostych czynności bez nadzoru.",
+	"Description":"Mogą być to czynności takie, jak: czyszczenie butów, myde naczyń, składanie odzieży, wyżymanie bielizny, przyszywanie guzików, mycie samochodu. Zaliczamy, jeśli dziecko wykonuje dobrze, regularnie i bez dozoru przynajmniej trzy czynności.",
+	"DifficultyLevel":5
+	},
+	{
+	"ID":119,
+	"Summary":"Potrafi ciąć dookoła linii bardzo dokładnie.",
+	"Description":"Zaliczamy, jeśli spełnione są następujące kryteria:\\na) dziecko tnie dokładnie, uwzględniając Unie figury,\\nb) wycina różne figury nie tylko foremne i okrągłe, ale również nieregularne, np. sylwetkę człowieka, zabawki itp.",
+	"DifficultyLevel":5
+	},
+	{
+	"ID":120,
+	"Summary":"Potrafi zachować równowagę na palcach w przysiadzie.",
+	"Description":"Dziecko powinno przysiąść i utrzymać równowagę przez około 10 sęk. mając ręce wyciągnięte w bok, co ułatwi utrzymanie równowagi. Jest to zadanie dość trudne i wystarcza jedna udana próba na trzy, jeżeli pozostałe próby były bliskie sukcesu.",
+	"DifficultyLevel":5
+	}
+]

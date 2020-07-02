@@ -78,9 +78,7 @@ namespace PAC_1.Statics
 
                 if (load != null)
                     foreach (var patient in load)
-                    {
                         _patients.Add(patient);
-                    }
                 Debug.WriteLine("Patients Loaded");
             }
 
@@ -93,8 +91,11 @@ namespace PAC_1.Statics
             if (File.Exists(@"./schools.json"))
             {
                 var loadedSchools = JsonConvert.DeserializeObject<List<School>>(File.ReadAllText(@"./schools.json"));
-                foreach (var school in loadedSchools)
-                    _schools.Add(school);
+                if (loadedSchools != null)
+                {
+                    foreach (var school in loadedSchools)
+                        _schools.Add(school);
+                }
             }
         }
 

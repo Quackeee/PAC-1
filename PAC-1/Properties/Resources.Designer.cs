@@ -133,6 +133,96 @@ namespace PAC_1.Properties {
         }
         
         /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Byte[].
+        /// </summary>
+        internal static byte[] NotoSerif_Bold {
+            get {
+                object obj = ResourceManager.GetObject("NotoSerif_Bold", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Byte[].
+        /// </summary>
+        internal static byte[] NotoSerif_BoldItalic {
+            get {
+                object obj = ResourceManager.GetObject("NotoSerif_BoldItalic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Byte[].
+        /// </summary>
+        internal static byte[] NotoSerif_Condensed {
+            get {
+                object obj = ResourceManager.GetObject("NotoSerif_Condensed", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Byte[].
+        /// </summary>
+        internal static byte[] NotoSerif_CondensedBold {
+            get {
+                object obj = ResourceManager.GetObject("NotoSerif_CondensedBold", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Byte[].
+        /// </summary>
+        internal static byte[] NotoSerif_CondensedBoldItalic {
+            get {
+                object obj = ResourceManager.GetObject("NotoSerif_CondensedBoldItalic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Byte[].
+        /// </summary>
+        internal static byte[] NotoSerif_CondensedItalic {
+            get {
+                object obj = ResourceManager.GetObject("NotoSerif_CondensedItalic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Byte[].
+        /// </summary>
+        internal static byte[] NotoSerif_Light {
+            get {
+                object obj = ResourceManager.GetObject("NotoSerif_Light", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Byte[].
+        /// </summary>
+        internal static byte[] NotoSerif_LightItalic {
+            get {
+                object obj = ResourceManager.GetObject("NotoSerif_LightItalic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Byte[].
+        /// </summary>
+        internal static byte[] NotoSerif_Regular {
+            get {
+                object obj = ResourceManager.GetObject("NotoSerif_Regular", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Liczby i wielkości.
         /// </summary>
         internal static string NumbersAndSizesSubcathegoryName {
@@ -151,6 +241,16 @@ namespace PAC_1.Properties {
         }
         
         /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PAC1Diagram {
+            get {
+                object obj = ResourceManager.GetObject("PAC1Diagram", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Posługiwanie się ołówkiem i papierem.
         /// </summary>
         internal static string PencilAndPaperSkillsSubcathegoryName {
@@ -165,6 +265,16 @@ namespace PAC_1.Properties {
         internal static string PlayingSubcathegoryName {
             get {
                 return ResourceManager.GetString("PlayingSubcathegoryName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Byte[].
+        /// </summary>
+        internal static byte[] Questions {
+            get {
+                object obj = ResourceManager.GetObject("Questions", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
