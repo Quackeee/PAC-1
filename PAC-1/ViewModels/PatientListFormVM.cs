@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace PAC_1.ViewModels
 {
-    class PatientListFormVM : ViewModelBase
+    partial class PatientListFormVM : ViewModelBase
     {
         public Patient SelectedPatient { get; set; }
         public ObservableCollection<Patient> Patients { get => Data.Patients; }

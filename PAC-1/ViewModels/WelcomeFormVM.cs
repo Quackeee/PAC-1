@@ -14,6 +14,5 @@ namespace PAC_1.ViewModels
     {
         public ChangeViewCommand GotoIndividual { get => new ChangeViewCommand(arg => new SingleSelectionFormVM()); }
         public ChangeViewCommand GotoGroup { get => new ChangeViewCommand(arg => new MultipleSelectionFormVM()); }
-        public ChangeViewCommand GotoReport { get => new ChangeViewCommand(arg => new CreateReportFormVM()); }
     }
 }

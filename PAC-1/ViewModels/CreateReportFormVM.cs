@@ -24,7 +24,7 @@ using PAC_1.Properties;
 
 namespace PAC_1.ViewModels
 {
-    class CreateReportFormVM : ViewModelBase
+    partial class PatientListFormVM : ViewModelBase
     {
         private RelayCommand _createReport;
         private List<int> TableManners = new List<int> { 0, 1, 17, 18, 33, 50, 68, 91, 92, 108 };
@@ -39,12 +39,10 @@ namespace PAC_1.ViewModels
         private List<int> Housework = new List<int> { 13, 30, 46, 64, 84, 85, 86, 103, 104, 117 };
         private List<int> ManualSkills = new List<int> { 14, 15, 31, 47, 48, 65, 66, 87, 105, 118 };
         private List<int> Agility = new List<int> { 16, 32, 49, 67, 88, 89, 90, 106, 107, 119 };
-        public Patient SelectedPatient { get; set; }
         public Specialist specialist { get => new Specialist("Lucyna", "Kisiała-Majerczyk", Data.Schools[0]); }
-        public ObservableCollection<Patient> Patients { get => Data.Patients; }
         public RelayCommand CreateReport
         {
-            get 
+            get
             {
                 if (_createReport == null)
                 {
@@ -82,12 +80,12 @@ namespace PAC_1.ViewModels
 
             //Rectangle[] columns = {new Rectangle(36, 36, 254, 770),  new Rectangle(305, 36, 254, 770)};
 
-           // document.SetRenderer(new ColumnDocumentRenderer(document, columns));
+            // document.SetRenderer(new ColumnDocumentRenderer(document, columns));
 
             GenerateHeader(document, bold);
-            GenerateSection("Osoba przeprowadzająca badanie",document, boldItalic);
+            GenerateSection("Osoba przeprowadzająca badanie", document, boldItalic);
             GenerateSpecialistInfo(document, normal);
-            GenerateSection("Osoba badana",document, boldItalic);
+            GenerateSection("Osoba badana", document, boldItalic);
             GeneratePatientInfo(document, normal);
 
             document.Add(new AreaBreak(AreaBreakType.NEXT_PAGE));
@@ -146,7 +144,7 @@ namespace PAC_1.ViewModels
             document.Add(new AreaBreak(AreaBreakType.NEXT_PAGE));
             document.Add(image)
                 .SetHorizontalAlignment(HorizontalAlignment.CENTER);
-                
+
 
             document.Close();
             System.Diagnostics.Process.Start(@"D:\\" + fileName + "_Raport.pdf");
@@ -162,7 +160,7 @@ namespace PAC_1.ViewModels
             document.Add(header);
         }
 
-        public void GenerateSection(string s,Document document, PdfFont font)
+        public void GenerateSection(string s, Document document, PdfFont font)
         {
             string topic = "\n" + s;
             Paragraph Section = new Paragraph(topic)
@@ -191,7 +189,7 @@ namespace PAC_1.ViewModels
 
             document.Add(category);
         }
-        
+
         public void GenerateSpecialistInfo(Document document, PdfFont font)
         {
             string s = null;
@@ -216,8 +214,8 @@ namespace PAC_1.ViewModels
                 .SetTextAlignment(TextAlignment.LEFT)
                 .SetFont(font)
                 .SetFontSize(10);
-                
-                
+
+
             document.Add(specialistInfo);
         }
 
@@ -262,7 +260,7 @@ namespace PAC_1.ViewModels
 
         public void GenerateQuestionsInfo(Document document, PdfFont font, PdfFont font1, List<int> table)
         {
-            foreach(var element in table)
+            foreach (var element in table)
             {
                 Text question1 = new Text(Questionary.Questions[element].Summary).SetFont(font).SetFontSize(10);
 
@@ -276,7 +274,7 @@ namespace PAC_1.ViewModels
             }
 
         }
-        
+
         public string MakeAnswer(bool? result)
         {
             string answer;
@@ -292,19 +290,19 @@ namespace PAC_1.ViewModels
 
             return answer;
         }
-        
+
         public void WriteResults(Document document, PdfFont font, bool? expectedResult)
         {
             string sb = "";
-            for(int i=0; i< 120; i++)
+            for (int i = 0; i < 120; i++)
             {
-                if(SelectedPatient.QuestionResults[i] == expectedResult)
+                if (SelectedPatient.QuestionResults[i] == expectedResult)
                 {
                     sb += (i + 1) + ", ";
                 }
             }
-            
-            Paragraph writeResults = new Paragraph().Add( new Text(sb))
+
+            Paragraph writeResults = new Paragraph().Add(new Text(sb))
                 .SetTextAlignment(TextAlignment.LEFT)
                 .SetFont(font)
                 .SetFontSize(10);
