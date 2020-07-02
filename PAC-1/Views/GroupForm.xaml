@@ -8,10 +8,10 @@
              d:DesignHeight="540" d:DesignWidth="960">
     <Grid Background="#FFF6F6F6">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.15*"/>
+            <ColumnDefinition Width="0.12*"/>
             <ColumnDefinition Width="0.5*"/>
-            <ColumnDefinition Width="0.5*"/>
-            <ColumnDefinition Width="0.15*"/>
+            <ColumnDefinition Width="0.85*"/>
+            <ColumnDefinition Width="0.12*"/>
 
         </Grid.ColumnDefinitions>
 
@@ -34,7 +34,11 @@
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.ColumnSpan="1" Grid.Row="1" Margin="0,20,10,0">
-            <ListBox Height="340" ItemsSource="{Binding QuestionedPatients}" SelectedIndex="{Binding SelectedPatientIndex}">
+            <Label Content="Notatki" FontSize="18" FontFamily="Charlesworth" FontWeight="DemiBold" Margin="20,-10,0,0"/>
+            <TextBox Height="150" AcceptsReturn="True" TextWrapping="Wrap" Text="{Binding Notes}" VerticalScrollBarVisibility="Auto">
+                
+            </TextBox>
+            <ListBox Height="140" Margin="0,20,0,0" ItemsSource="{Binding QuestionedPatients}" SelectedIndex="{Binding SelectedPatientIndex}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
