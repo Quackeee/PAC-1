@@ -8,35 +8,18 @@ namespace PAC_1.Model
 {
     class Specialist
     {
-        private string firstName;
-        private string lastName;
-        public School school; //tutaj tez dalam School. Moglabym zrobic klase poradnia z takimi samymi atrybutami, ale po co?
-
         public Specialist(string firstname, string lastName, School school)
         {
-            this.firstName = firstname;
-            this.lastName = lastName;
-            this.school = school;
+            FirstName = firstname;
+            LastName = lastName;
+            School = school;
         }
 
-        public string FirstName
-        {
-            get => firstName;
-        }
+        public string FirstName { get; }
 
-        public string LastName
-        {
-            get => lastName;
-        }
+        public string LastName { get; }
 
-        public School School
-        {
-            get 
-            {
-                School specialistSchool = new School("Szkoła Podstawowa nr 3", "SP3", "43-430", "Skoczów", "Górecka", "23");
-                return specialistSchool;
-            }
-        }
+        public School School { get; }
 
         public override string ToString()
         {

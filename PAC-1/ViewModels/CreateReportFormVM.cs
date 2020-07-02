@@ -193,21 +193,21 @@ namespace PAC_1.ViewModels
         public void GenerateSpecialistInfo(Document document, PdfFont font)
         {
             string s = null;
-            if (specialist.school.SecondNumber == null)
+            if (specialist.School.SecondNumber == null)
             {
                 s = "Imię: " + specialist.FirstName +
                     "\n Nazwisko: " + specialist.LastName +
-                    "\n Placówka: " + specialist.school.Name +
-                    "\n           " + "ul. " + specialist.school.Street + " " + specialist.school.Number +
-                    "\n           " + specialist.school.ZipCode + " " + specialist.school.City;
+                    "\n Placówka: " + specialist.School.Name +
+                    "\n           " + "ul. " + specialist.School.Street + " " + specialist.School.Number +
+                    "\n           " + specialist.School.ZipCode + " " + specialist.School.City;
             }
             else
             {
                 s = "Imię: " + specialist.FirstName +
                     "\n Nazwisko: " + specialist.LastName +
-                    "\n Placówka: " + specialist.school.Name +
-                    "\n           " + "ul. " + specialist.school.Street + " " + specialist.school.Number + "\\" + specialist.school.SecondNumber +
-                    "\n           " + specialist.school.ZipCode + " " + specialist.school.City;
+                    "\n Placówka: " + specialist.School.Name +
+                    "\n           " + "ul. " + specialist.School.Street + " " + specialist.School.Number + "\\" + specialist.School.SecondNumber +
+                    "\n           " + specialist.School.ZipCode + " " + specialist.School.City;
             }
 
             Paragraph specialistInfo = new Paragraph(s)

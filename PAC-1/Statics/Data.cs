@@ -14,6 +14,11 @@ namespace PAC_1.Statics
 {
     static class Data
     {
+        public static string DataDirectory
+        { get => Environment.GetEnvironmentVariable("appdata") + @"\PAC1"; }
+        public static string UserData
+        { get => Environment.GetEnvironmentVariable("appdata") + @"\PAC1\user.json"; }
+
         private static ObservableCollection<Patient> _patients;
         private static List<School> _schools;
         private static int[] _ageOptions;
@@ -56,6 +61,7 @@ namespace PAC_1.Statics
                 return _patients;
             }
         }
+        public static Specialist User;
 
         public static void SavePatients()
         {
@@ -103,6 +109,21 @@ namespace PAC_1.Statics
         {
             string SaveJson = JsonConvert.SerializeObject(_schools);
             File.WriteAllText(@"./schools.json", SaveJson);
+        }
+
+        public static bool TryLoadUserData()
+        {
+            if (!File.Exists(UserData)) return false;
+
+            User = JsonConvert.DeserializeObject<Specialist>(File.ReadAllText(UserData));
+            return true;
+        }
+
+        public static void SaveUserData()
+        {
+            if (!Directory.Exists(DataDirectory)) Directory.CreateDirectory(DataDirectory);
+            string rawJson = JsonConvert.SerializeObject(User);
+            File.WriteAllText(UserData, rawJson);
         }
     }
 }
