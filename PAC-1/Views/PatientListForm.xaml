@@ -78,7 +78,7 @@
             <Button Grid.Row="2" Content="Usuń" Margin="-220,-30,0,0" Command="{Binding DeletePatient}" />
 
             <Button Grid.Row="2" Content="Edytuj" Margin="210,-30,0,0" Command="{Binding GotoEditPatient}" />
-            <Button Content="Generuj raport" Margin="630,-30,0,0" Command="{Binding CreateReport}" />
+            <Button Content="Generuj raport" Margin="630,-30,0,0" Command="{Binding GenerateReport}" />
 
         </StackPanel>
     </Grid>

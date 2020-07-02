@@ -113,7 +113,7 @@
     <Compile Include="Statics\Questionary.cs" />
     <Compile Include="Model\School.cs" />
     <Compile Include="Model\Specialist.cs" />
-    <Compile Include="ViewModels\CreateReportFormVM.cs" />
+    <Compile Include="Utils\ReportGenerator.cs" />
     <Compile Include="ViewModels\PatientEditorForm\AddPatientFormVM.cs" />
     <Compile Include="ViewModels\Base\ViewModelBase.cs" />
     <Compile Include="ViewModels\PatientEditorForm\Base\PatientEditorFormVM.cs" />

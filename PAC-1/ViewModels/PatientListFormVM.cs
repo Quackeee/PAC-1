@@ -15,7 +15,7 @@ namespace PAC_1.ViewModels
     partial class PatientListFormVM : ViewModelBase
     {
         private Patient _selectedPatient;
-
+        private RelayCommand _generateReport;
         public Patient SelectedPatient { get => _selectedPatient; set { _selectedPatient = value; OnPropertyChanged(nameof(PatientDetails));} }
         public ObservableCollection<Patient> Patients { get => Data.Patients; }
 
@@ -49,6 +49,23 @@ namespace PAC_1.ViewModels
             {
                 if (SelectedPatient is null) return string.Empty;
                 else return SelectedPatient.Details;
+            }
+        }
+        public RelayCommand GenerateReport
+        {
+            get
+            {
+                if (_generateReport == null)
+                {
+                    _generateReport = new RelayCommand(
+                        arg =>
+                        {
+                            new ReportGenerator().GenerateReport(SelectedPatient);
+                        },
+                        arg => SelectedPatient != null
+                        );
+                }
+                return _generateReport;
             }
         }
     }
