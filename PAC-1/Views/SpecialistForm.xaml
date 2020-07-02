@@ -119,7 +119,7 @@
         </StackPanel>
 
         <Button Grid.Column="1" Grid.ColumnSpan="2" Content="Zapisz" HorizontalAlignment="Center"
-                Command="{Binding GotoWelcome}">
+                Command="{Binding Accept}">
         </Button>
 
 

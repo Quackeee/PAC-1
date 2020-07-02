@@ -23,7 +23,7 @@ namespace PAC_1.ViewModels
         public string Number { get; set; }
         public int? SecondNumber { get; set; }
 
-        public override ChangeViewCommand GotoWelcome
+        public ChangeViewCommand Accept
         {
             get => new ChangeViewCommand(
                 arg =>
@@ -33,7 +33,10 @@ namespace PAC_1.ViewModels
                         ZipCode, City, Street, Number, SecondNumber));
                     Data.SaveUserData();
                     return new WelcomeFormVM();
-                }
+                },
+                arg => !string.IsNullOrEmpty(FirstName) && !string.IsNullOrEmpty(LastName) && !string.IsNullOrEmpty(SchoolName) 
+                && !string.IsNullOrEmpty(ShortSchoolName) && !string.IsNullOrEmpty(ZipCode) && !string.IsNullOrEmpty(City) && !string.IsNullOrEmpty(Street) && !string.IsNullOrEmpty(Number)
+
             );
         }
 

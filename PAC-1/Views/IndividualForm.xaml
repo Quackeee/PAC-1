@@ -98,7 +98,7 @@
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" Margin="0,394.8,0,0" Grid.RowSpan="2">
-            <Button Width="80" Content="3" FontFamily="Marlett" Margin="-540,20,20,0" Command="{Binding TraverseSubcathegoriesLeft}"/>
+            <Button Width="80" Content="3" FontFamily="Marlett" Margin="-540,-10,20,0" Command="{Binding TraverseSubcathegoriesLeft}"/>
 
             <Label Grid.Column="0" Grid.Row="2" Width="400" Height="30" Content="{Binding SelectedSubcathegoryName}" Margin="0,-30,0,0" FontSize="18" FontFamily="Charlesworth"  HorizontalAlignment="Center" HorizontalContentAlignment="Center" Foreground="#FF193E63" />
 
