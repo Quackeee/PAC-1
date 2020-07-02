@@ -25,7 +25,7 @@ namespace PAC_1.Views.CustomControls
         }
 
         public static readonly DependencyProperty SelectedItemsListProperty =
-            DependencyProperty.Register(nameof(SelectedItemsList), typeof(IList), typeof(MultiSelectListBox), new PropertyMetadata(null));
+            DependencyProperty.Register(nameof(SelectedItemsList), typeof(IList), typeof(MultiSelectListView), new PropertyMetadata(null));
 
         public MultiSelectListView() { }
 
@@ -33,6 +33,7 @@ namespace PAC_1.Views.CustomControls
         {
             base.OnSelectionChanged(e);
             SelectedItemsList = SelectedItems;
+            
         }
     }
 }
