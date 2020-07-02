@@ -36,12 +36,13 @@ namespace PAC_1.ViewModels
                 if (value != -1)
                 {
                     _selectedPatientIndex = value;
+                    OnPropertyChanged(nameof(Notes));
                     foreach (var question in Questions)
                         question.RaiseSelectedPatientChanged();
                 }
             }
         }
         public Patient[] QuestionedPatients { get => _questionedPatients; }
-        
+        public string Notes { get => SelectedPatient.Notes; set => SelectedPatient.Notes = value; }
     }
 }
