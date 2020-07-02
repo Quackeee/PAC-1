@@ -55,18 +55,16 @@
         </StackPanel>
 
         <StackPanel  Grid.Column="1" Grid.ColumnSpan="1" Grid.Row="1" Height="340"  VerticalAlignment="Top" Margin="0,20,10,0">
-            <ListBox Height="340" ItemsSource="{Binding Patients}" SelectedItem="{Binding SelectedPatient}">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Horizontal">
-                            <Label Content="{Binding FirstName}"/>
-                            <Label Content="{Binding LastName}"/>
-                            <Label Content="{Binding Age}"/>
-                            <Label Content="{Binding School}"/>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
+            <ListView Height="340" ItemsSource="{Binding Patients}" SelectedItem="{Binding SelectedPatient}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn  Header="Imię" Width="85" DisplayMemberBinding="{Binding FirstName}"/>
+                        <GridViewColumn   Header="Imię" Width="85"  DisplayMemberBinding="{Binding LastName}"/>
+                        <GridViewColumn  Header="Wiek" Width="85"  DisplayMemberBinding="{Binding Age}"/>
+                        <GridViewColumn  Header="Szkoła" Width="85"  DisplayMemberBinding="{Binding School}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
         </StackPanel>
         <StackPanel Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="1" Height="340"  VerticalAlignment="Top"  Margin="10,20,0,0">
             <TextBox Focusable="False" Height="340" Text="{Binding PatientDetails, Mode=OneWay}" TextWrapping="Wrap"/>
