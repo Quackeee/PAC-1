@@ -13,15 +13,15 @@ namespace PAC_1.ViewModels
 {
     class SpecialistFormVM : ViewModelBase
     {
-        public string FirstName;
-        public string LastName;
-        public string SchoolName;
-        public string ShortSchoolName;
-        public string ZipCode;
-        public string City;
-        public string Street;
-        public string Number;
-        public int? SecondNumber;
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string SchoolName { get; set; }
+        public string ShortSchoolName { get; set; }
+        public string ZipCode { get; set; }
+        public string City { get; set; }
+        public string Street { get; set; }
+        public string Number { get; set; }
+        public int? SecondNumber { get; set; }
 
         public override ChangeViewCommand GotoWelcome
         {

@@ -15,11 +15,11 @@ namespace PAC_1.Model
             School = school;
         }
 
-        public string FirstName { get; }
+        public string FirstName { get; set; }
 
-        public string LastName { get; }
+        public string LastName { get; set; }
 
-        public School School { get; }
+        public School School { get; set; }
 
         public override string ToString()
         {

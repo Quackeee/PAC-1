@@ -61,7 +61,7 @@ namespace PAC_1.Statics
                 return _patients;
             }
         }
-        public static Specialist User;
+        public static Specialist User { get; set; }
 
         public static void SavePatients()
         {
@@ -116,6 +116,7 @@ namespace PAC_1.Statics
             if (!File.Exists(UserData)) return false;
 
             User = JsonConvert.DeserializeObject<Specialist>(File.ReadAllText(UserData));
+            Debug.WriteLine("Userdata loaded");
             return true;
         }
 
