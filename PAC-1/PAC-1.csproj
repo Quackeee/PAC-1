@@ -128,6 +128,7 @@
     <Compile Include="ViewModels\QuestionaryForms\Base\QuestionaryFormVM.cs" />
     <Compile Include="ViewModels\QuestionVM.cs" />
     <Compile Include="ViewModels\SchoolFormVM.cs" />
+    <Compile Include="ViewModels\SpecialistFormVM.cs" />
     <Compile Include="ViewModels\WelcomeFormVM.cs" />
     <Compile Include="Views\AddEditPatientForm.xaml.cs">
       <DependentUpon>AddEditPatientForm.xaml</DependentUpon>
@@ -151,6 +152,9 @@
       <DependentUpon>SchoolForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\CustomControls\MultiselectListBox.cs" />
+    <Compile Include="Views\SpecialistForm.xaml.cs">
+      <DependentUpon>SpecialistForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\WelcomeForm.xaml.cs">
       <DependentUpon>WelcomeForm.xaml</DependentUpon>
     </Compile>
@@ -191,6 +195,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\SchoolForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SpecialistForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
