@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace PAC_1.ViewModels
 {
-    abstract class PatientEditorFormVM : ViewModelBase
+    abstract class PatientEditorFormVM : ContainedFormVM
     {
         public static PatientEditorFormVM CachedPatientEditor;
         protected bool _dataOk() =>

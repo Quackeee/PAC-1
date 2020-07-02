@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PAC_1.ViewModels.PatientListFormVM" Collapsed="true">
+    <Position X="5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CABAIBAAAAAAAAAAAAAACACAAACAAAAgBAAAAAACAAA=</HashCode>
+      <FileName>ViewModels\PatientListFormVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAC_1.ViewModels.QuestionVM" Collapsed="true">
+    <Position X="8.5" Y="6.75" Width="1.5" />
+    <InheritanceLine Type="PAC_1.ViewModels.VMBase.ViewModelBase" FixedToPoint="true">
+      <Path>
+        <Point X="7.5" Y="2.812" />
+        <Point X="7.5" Y="7.125" />
+        <Point X="8.5" Y="7.125" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AECAAAAEFAgggAAAgAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\QuestionVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAC_1.ViewModels.SchoolFormVM" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAYAAAAAAIAEAAAAQAAAAAAIABAAIAAAAAAAA=</HashCode>
+      <FileName>ViewModels\SchoolFormVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAC_1.ViewModels.SpecialistFormVM" Collapsed="true">
+    <Position X="5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAIAkAAIAAAAAAIAEAAAAAAAAAAAAABAAIAAAAAAAg=</HashCode>
+      <FileName>ViewModels\SpecialistFormVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAC_1.ViewModels.WelcomeFormVM" Collapsed="true">
+    <Position X="8.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\WelcomeFormVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAC_1.ViewModels.IndividualFormVM" Collapsed="true">
+    <Position X="10" Y="9.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>CQAgEAAQIAgAAAAAAAAABAABAAAAAAAAAAAAgAQCAAA=</HashCode>
+      <FileName>ViewModels\QuestionaryForms\IndividualFormVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAC_1.ViewModels.GroupFormVM" Collapsed="true">
+    <Position X="12" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAggAAAAAAAAAAACAAAAAAAAAAACAAAEAEAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\QuestionaryForms\GroupFormVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAC_1.ViewModels.MultipleSelectionFormVM" Collapsed="true">
+    <Position X="5.5" Y="9.5" Width="2" />
+    <InheritanceLine Type="PAC_1.ViewModels.PatientSelectionFormVM" FixedFromPoint="true">
+      <Path>
+        <Point X="7.5" Y="8.691" />
+        <Point X="7.5" Y="9.125" />
+        <Point X="6.5" Y="9.125" />
+        <Point X="6.5" Y="9.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>ViewModels\PatientSelectionForms\MultipleSelectionFormVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAC_1.ViewModels.SingleSelectionFormVM" Collapsed="true">
+    <Position X="7.75" Y="9.5" Width="2" />
+    <InheritanceLine Type="PAC_1.ViewModels.PatientSelectionFormVM" FixedFromPoint="true">
+      <Path>
+        <Point X="7.5" Y="8.691" />
+        <Point X="7.5" Y="9.125" />
+        <Point X="8.75" Y="9.125" />
+        <Point X="8.75" Y="9.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>ViewModels\PatientSelectionForms\SingleSelectionFormVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAC_1.ViewModels.PatientSelectionFormVM" Collapsed="true">
+    <Position X="6.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBAAEAAAAwAA=</HashCode>
+      <FileName>ViewModels\PatientSelectionForms\Base\PatientSelectionFormVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAC_1.ViewModels.AddPatientFormVM" Collapsed="true">
+    <Position X="3.25" Y="9.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\PatientEditorForm\AddPatientFormVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAC_1.ViewModels.EditPatientFormVM" Collapsed="true">
+    <Position X="1.25" Y="9.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAgAQAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\PatientEditorForm\EditPatientFormVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAC_1.ViewModels.PatientEditorFormVM" Collapsed="true">
+    <Position X="2.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BKAACEAAAAAgAAAAAEIBUAAAAAQAAAACQAAgAAAAAAg=</HashCode>
+      <FileName>ViewModels\PatientEditorForm\Base\PatientEditorFormVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAC_1.ViewModels.MainWindowVM" Collapsed="true">
+    <Position X="6.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Base\MainWindowVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAC_1.ViewModels.VMBase.ViewModelBase" Collapsed="true">
+    <Position X="6.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAABAIAAAAACAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Base\ViewModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="1.134" />
+  </Class>
+  <Class Name="PAC_1.ViewModels.QuestionaryFormVM" Collapsed="true">
+    <Position X="11" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\QuestionaryForms\Base\QuestionaryFormVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAC_1.ViewModels.ContainedFormVM" Collapsed="true">
+    <Position X="3.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Base\ContainedFormVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

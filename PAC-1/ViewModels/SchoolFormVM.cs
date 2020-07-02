@@ -11,7 +11,7 @@ using System.Windows.Media.Animation;
 
 namespace PAC_1.ViewModels
 {
-    class SchoolFormVM : ViewModelBase
+    class SchoolFormVM : ContainedFormVM
     {
         public string Name { get; set; } //pelna nazwa placowki
         public string ShortName { get; set; } //skrotowa nazwa

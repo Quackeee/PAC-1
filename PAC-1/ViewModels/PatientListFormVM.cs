@@ -12,7 +12,7 @@ using System.Diagnostics;
 
 namespace PAC_1.ViewModels
 {
-    partial class PatientListFormVM : ViewModelBase
+    partial class PatientListFormVM : ContainedFormVM
     {
         private Patient _selectedPatient;
         private RelayCommand _generateReport;

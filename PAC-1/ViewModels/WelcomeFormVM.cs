@@ -10,7 +10,7 @@ using System.Windows.Input;
 
 namespace PAC_1.ViewModels
 {
-    class WelcomeFormVM : ViewModelBase
+    class WelcomeFormVM : ContainedFormVM
     {
         public ChangeViewCommand GotoIndividual { get => new ChangeViewCommand(arg => new SingleSelectionFormVM()); }
         public ChangeViewCommand GotoGroup { get => new ChangeViewCommand(arg => new MultipleSelectionFormVM()); }

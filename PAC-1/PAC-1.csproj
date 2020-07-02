@@ -114,6 +114,7 @@
     <Compile Include="Model\School.cs" />
     <Compile Include="Model\Specialist.cs" />
     <Compile Include="Utils\ReportGenerator.cs" />
+    <Compile Include="ViewModels\Base\ContainedFormVM.cs" />
     <Compile Include="ViewModels\PatientEditorForm\AddPatientFormVM.cs" />
     <Compile Include="ViewModels\Base\ViewModelBase.cs" />
     <Compile Include="ViewModels\PatientEditorForm\Base\PatientEditorFormVM.cs" />
@@ -230,6 +231,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Resources\Fonts\NotoSerif-Bold.ttf" />
     <None Include="Properties\Resources\Fonts\NotoSerif-BoldItalic.ttf" />

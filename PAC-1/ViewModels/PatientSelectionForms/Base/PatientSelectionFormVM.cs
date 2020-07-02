@@ -16,7 +16,7 @@ using System.Windows.Input;
 
 namespace PAC_1.ViewModels
 {
-    abstract class PatientSelectionFormVM : ViewModelBase
+    abstract class PatientSelectionFormVM : ContainedFormVM
     {
         protected ChangeViewCommand _gotoQuestionary;
         public SelectionMode Selection { get; protected set; }

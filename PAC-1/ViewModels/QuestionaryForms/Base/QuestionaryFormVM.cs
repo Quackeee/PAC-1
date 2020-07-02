@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace PAC_1.ViewModels
 {
-    abstract class QuestionaryFormVM : ViewModelBase
+    abstract class QuestionaryFormVM : ContainedFormVM
     {
         public abstract Patient SelectedPatient { get; }
 

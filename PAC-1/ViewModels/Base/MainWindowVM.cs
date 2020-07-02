@@ -14,9 +14,9 @@ namespace PAC_1.ViewModels
 {
 	public class MainWindowVM : ViewModelBase
 	{
-		private ViewModelBase _selectedViewModel;
+		private ContainedFormVM _selectedViewModel;
 
-		public ViewModelBase SelectedViewModel
+		public ContainedFormVM SelectedViewModel
 		{
 			get { return _selectedViewModel; }
 			set 

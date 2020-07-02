@@ -16,10 +16,10 @@ namespace PAC_1.Commands
     public class ChangeViewCommand : ICommand
     {
         public static MainWindowVM mainWindowVM;
-        private Func<object, ViewModelBase> _getVM;
+        private Func<object, ContainedFormVM> _getVM;
         private Predicate<object> _canExecute;
 
-        public ChangeViewCommand(Func<object, ViewModelBase> getVM, Predicate<object> canExecute = null)
+        public ChangeViewCommand(Func<object, ContainedFormVM> getVM, Predicate<object> canExecute = null)
         {
             _getVM = getVM;
             _canExecute = canExecute;

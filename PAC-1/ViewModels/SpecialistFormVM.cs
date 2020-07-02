@@ -11,7 +11,7 @@ using System.Windows.Navigation;
 
 namespace PAC_1.ViewModels
 {
-    class SpecialistFormVM : ViewModelBase
+    class SpecialistFormVM : ContainedFormVM
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
