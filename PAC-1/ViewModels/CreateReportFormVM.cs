@@ -238,7 +238,9 @@ namespace PAC_1.ViewModels
 
                 Text answer1 = new Text(MakeAnswer(SelectedPatient.QuestionResults[element])).SetFont(font1).SetFontSize(10);
 
-                Paragraph questionAndAnswer = new Paragraph().Add(question1).Add(" ").Add(answer1);
+                Text number = new Text((element + 1).ToString()).SetFont(font).SetFontSize(10);
+
+                Paragraph questionAndAnswer = new Paragraph().Add(number).Add(") ").Add(question1).Add(" ").Add(answer1);
 
                 document.Add(questionAndAnswer);
             }
