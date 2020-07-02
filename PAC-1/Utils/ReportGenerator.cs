@@ -24,9 +24,9 @@ using PAC_1.Properties;
 
 namespace PAC_1.ViewModels
 {
-    partial class PatientListFormVM : ViewModelBase
+    class ReportGenerator
     {
-        private RelayCommand _createReport;
+        
         private List<int> TableManners = new List<int> { 0, 1, 17, 18, 33, 50, 68, 91, 92, 108 };
         private List<int> MotorSkills = new List<int> { 2, 3, 19, 34, 35, 51, 69, 70, 93, 109 };
         private List<int> ToiletAndWashing = new List<int> { 4, 20, 21, 36, 37, 52, 53, 71, 94, 110 };
@@ -40,28 +40,12 @@ namespace PAC_1.ViewModels
         private List<int> ManualSkills = new List<int> { 14, 15, 31, 47, 48, 65, 66, 87, 105, 118 };
         private List<int> Agility = new List<int> { 16, 32, 49, 67, 88, 89, 90, 106, 107, 119 };
         public Specialist specialist { get => Data.User; }
-        public RelayCommand CreateReport
-        {
-            get
-            {
-                if (_createReport == null)
-                {
-                    _createReport = new RelayCommand(
-                        arg =>
-                        {
-                            GenerateReport(SelectedPatient);
-                        },
-                        arg => SelectedPatient != null
-                        );
-                }
-                return _createReport;
-            }
-        }
+
 
         public void GenerateReport(Patient patient)
         {
 
-            string fileName = SelectedPatient.FirstName + "_" + SelectedPatient.LastName;
+            string fileName = patient.FirstName + "_" + patient.LastName;
             PdfWriter writer = new PdfWriter("D:\\" + fileName + "_Raport.pdf");
 
             ImageData data = ImageDataFactory.Create(Resources.PAC1Diagram, null);
@@ -86,7 +70,7 @@ namespace PAC_1.ViewModels
             GenerateSection("Osoba przeprowadzająca badanie", document, boldItalic);
             GenerateSpecialistInfo(document, normal);
             GenerateSection("Osoba badana", document, boldItalic);
-            GeneratePatientInfo(document, normal);
+            GeneratePatientInfo(document, normal,patient);
 
             document.Add(new AreaBreak(AreaBreakType.NEXT_PAGE));
             GenerateSection("Odpowiedzi na pytania", document, boldItalic);
@@ -94,54 +78,56 @@ namespace PAC_1.ViewModels
             /*************************************************************/
             GenerateSubsection("1.Obsługiwanie siebie", document, widebold);
             GenerateCategory("Zachowanie przy stole", document, bold);
-            GenerateQuestionsInfo(document, light, normal, TableManners);
+            GenerateQuestionsInfo(document, light, normal, TableManners, patient);
             GenerateCategory("Sprawność motoryczna", document, bold);
-            GenerateQuestionsInfo(document, light, normal, MotorSkills);
+            GenerateQuestionsInfo(document, light, normal, MotorSkills, patient);
             GenerateCategory("Ubieranie się", document, bold);
-            GenerateQuestionsInfo(document, light, normal, DressingUp);
+            GenerateQuestionsInfo(document, light, normal, DressingUp, patient);
             GenerateCategory("Toaleta i mycie", document, bold);
-            GenerateQuestionsInfo(document, light, normal, ToiletAndWashing);
+            GenerateQuestionsInfo(document, light, normal, ToiletAndWashing, patient);
 
             /*************************************************************/
             document.Add(new AreaBreak(AreaBreakType.NEXT_PAGE));
             GenerateSubsection("2.Komunikowanie się", document, widebold);
             GenerateCategory("Język", document, bold);
-            GenerateQuestionsInfo(document, light, normal, Language);
+            GenerateQuestionsInfo(document, light, normal, Language, patient);
             GenerateCategory("Ujmowanie różnic", document, bold);
-            GenerateQuestionsInfo(document, light, normal, Differentiation);
+            GenerateQuestionsInfo(document, light, normal, Differentiation, patient);
             document.Add(new AreaBreak(AreaBreakType.NEXT_PAGE));
             GenerateCategory("Liczby i wielkości", document, bold);
-            GenerateQuestionsInfo(document, light, normal, NumbersAndSizes);
+            GenerateQuestionsInfo(document, light, normal, NumbersAndSizes, patient);
             GenerateCategory("Posługiwanie się ołówkiem i papierem", document, bold);
-            GenerateQuestionsInfo(document, light, normal, PencilAndPaperSkills);
+            GenerateQuestionsInfo(document, light, normal, PencilAndPaperSkills, patient);
 
             /*************************************************************/
             document.Add(new AreaBreak(AreaBreakType.NEXT_PAGE));
             GenerateSubsection("3.Uspołecznienie", document, widebold);
             GenerateCategory("Udział w zabawie", document, bold);
-            GenerateQuestionsInfo(document, light, normal, Playing);
+            GenerateQuestionsInfo(document, light, normal, Playing, patient);
             GenerateCategory("Czynności domowe", document, bold);
-            GenerateQuestionsInfo(document, light, normal, Housework);
+            GenerateQuestionsInfo(document, light, normal, Housework, patient);
 
             /*************************************************************/
             document.Add(new AreaBreak(AreaBreakType.NEXT_PAGE));
             GenerateSubsection("4.Zajęcia", document, widebold);
             GenerateCategory("Sprawność manualna (ruchy palców)", document, bold);
-            GenerateQuestionsInfo(document, light, normal, ManualSkills);
+            GenerateQuestionsInfo(document, light, normal, ManualSkills, patient);
             GenerateCategory("Zręczność (kontrola motoryki)", document, bold);
-            GenerateQuestionsInfo(document, light, normal, Agility);
+            GenerateQuestionsInfo(document, light, normal, Agility, patient);
 
             /*************************************************************/
             document.Add(new AreaBreak(AreaBreakType.NEXT_PAGE));
             GenerateSection("Diagram", document, bold);
             GenerateSubsection("Zadania z pozytywnym:", document, widebold);
-            WriteResults(document, normal, true);
+            WriteResults(document, normal, true, patient);
             GenerateSubsection("\nZadania z negatywnym rezultatem:", document, widebold);
-            WriteResults(document, normal, false);
+            WriteResults(document, normal, false, patient);
             GenerateSubsection("\nNiewykonane zadania:", document, widebold);
-            WriteResults(document, normal, null);
+            WriteResults(document, normal, null, patient);
             GenerateSection("Notatki", document, bold);
-            WriteNotes(document, normal);
+
+            if (!string.IsNullOrEmpty(patient.Notes))
+                WriteNotes(document, normal, patient);
 
             document.Add(new AreaBreak(AreaBreakType.NEXT_PAGE));
             document.Add(image)
@@ -221,36 +207,36 @@ namespace PAC_1.ViewModels
             document.Add(specialistInfo);
         }
 
-        public void GeneratePatientInfo(Document document, PdfFont font)
+        public void GeneratePatientInfo(Document document, PdfFont font, Patient patient)
         {
             string s = null;
-            if (SelectedPatient.School.SecondNumber == null)
+            if (patient.School.SecondNumber == null)
             {
-                s = "Imię: " + SelectedPatient.FirstName +
-                    "\n Nazwisko: " + SelectedPatient.LastName +
-                    "\n Wiek: " + SelectedPatient.Age.ToString() +
-                    "\n Miejsce urodzenia: " + SelectedPatient.BirthPlace +
-                    "\n IQ: " + SelectedPatient.Iq.ToString() +
-                    "\n Mierzone w skali: " + SelectedPatient.Scale +
-                    "\n Środowisko: " + SelectedPatient.Background +
-                    "\n Inne: " + SelectedPatient.Other +
-                    "\n Placówka: " + SelectedPatient.School.Name +
-                    "\n           " + "ul. " + SelectedPatient.School.Street + " " + SelectedPatient.School.Number +
-                    "\n           " + SelectedPatient.School.ZipCode + " " + SelectedPatient.School.City;
+                s = "Imię: " + patient.FirstName +
+                    "\n Nazwisko: " + patient.LastName +
+                    "\n Wiek: " + patient.Age.ToString() +
+                    "\n Miejsce urodzenia: " + patient.BirthPlace +
+                    "\n IQ: " + patient.Iq.ToString() +
+                    "\n Mierzone w skali: " + patient.Scale +
+                    "\n Środowisko: " + patient.Background +
+                    "\n Inne: " + patient.Other +
+                    "\n Placówka: " + patient.School.Name +
+                    "\n           " + "ul. " + patient.School.Street + " " + patient.School.Number +
+                    "\n           " + patient.School.ZipCode + " " + patient.School.City;
             }
             else
             {
-                s = "Imię: " + SelectedPatient.FirstName +
-                   "\n Nazwisko: " + SelectedPatient.LastName +
-                   "\n Wiek: " + SelectedPatient.Age.ToString() +
-                   "\n Miejsce urodzenia: " + SelectedPatient.BirthPlace +
-                   "\n IQ: " + SelectedPatient.Iq.ToString() +
-                   "\n Mierzone w skali: " + SelectedPatient.Scale +
-                   "\n Środowisko: " + SelectedPatient.Background +
-                   "\n Inne: " + SelectedPatient.Other +
-                   "\n Placówka: " + SelectedPatient.School.Name +
-                   "\n           " + "ul. " + SelectedPatient.School.Street + " " + SelectedPatient.School.Number + "\\" + SelectedPatient.School.SecondNumber +
-                   "\n           " + SelectedPatient.School.ZipCode + " " + SelectedPatient.School.City;
+                s = "Imię: " + patient.FirstName +
+                   "\n Nazwisko: " + patient.LastName +
+                   "\n Wiek: " + patient.Age.ToString() +
+                   "\n Miejsce urodzenia: " + patient.BirthPlace +
+                   "\n IQ: " + patient.Iq.ToString() +
+                   "\n Mierzone w skali: " + patient.Scale +
+                   "\n Środowisko: " + patient.Background +
+                   "\n Inne: " + patient.Other +
+                   "\n Placówka: " + patient.School.Name +
+                   "\n           " + "ul. " + patient.School.Street + " " + patient.School.Number + "\\" + patient.School.SecondNumber +
+                   "\n           " + patient.School.ZipCode + " " + patient.School.City;
             }
 
             Paragraph specialistInfo = new Paragraph(s)
@@ -260,13 +246,13 @@ namespace PAC_1.ViewModels
             document.Add(specialistInfo);
         }
 
-        public void GenerateQuestionsInfo(Document document, PdfFont font, PdfFont font1, List<int> table)
+        public void GenerateQuestionsInfo(Document document, PdfFont font, PdfFont font1, List<int> table, Patient patient)
         {
             foreach (var element in table)
             {
                 Text question1 = new Text(Questionary.Questions[element].Summary).SetFont(font).SetFontSize(10);
 
-                Text answer1 = new Text(MakeAnswer(SelectedPatient.QuestionResults[element])).SetFont(font1).SetFontSize(10);
+                Text answer1 = new Text(MakeAnswer(patient.QuestionResults[element])).SetFont(font1).SetFontSize(10);
 
                 Text number = new Text((element + 1).ToString()).SetFont(font).SetFontSize(10);
 
@@ -293,12 +279,12 @@ namespace PAC_1.ViewModels
             return answer;
         }
 
-        public void WriteResults(Document document, PdfFont font, bool? expectedResult)
+        public void WriteResults(Document document, PdfFont font, bool? expectedResult, Patient patient)
         {
             string sb = "";
             for (int i = 0; i < 120; i++)
             {
-                if (SelectedPatient.QuestionResults[i] == expectedResult)
+                if (patient.QuestionResults[i] == expectedResult)
                 {
                     sb += (i + 1) + ", ";
                 }
@@ -313,9 +299,9 @@ namespace PAC_1.ViewModels
 
         }
 
-        public void WriteNotes(Document document, PdfFont font)
+        public void WriteNotes(Document document, PdfFont font, Patient patient)
         {
-            Text notes = new Text(SelectedPatient.Notes);
+            Text notes = new Text(patient.Notes);
 
             Paragraph writeNotes = new Paragraph().Add(notes)
                 .SetTextAlignment(TextAlignment.LEFT)

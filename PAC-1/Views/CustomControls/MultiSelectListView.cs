@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,18 +16,18 @@ using System.Windows.Shapes;
 
 namespace PAC_1.Views.CustomControls
 {
-    public class MultiSelectListBox : ListBox
+    public class MultiSelectListView : ListView
     {
         public IList SelectedItemsList
         {
-            get { return (IList) GetValue(SelectedItemsListProperty); }
+            get { return (IList)GetValue(SelectedItemsListProperty); }
             set { SetValue(SelectedItemsListProperty, value); }
         }
 
         public static readonly DependencyProperty SelectedItemsListProperty =
             DependencyProperty.Register(nameof(SelectedItemsList), typeof(IList), typeof(MultiSelectListBox), new PropertyMetadata(null));
 
-        public MultiSelectListBox() { }
+        public MultiSelectListView() { }
 
         protected override void OnSelectionChanged(SelectionChangedEventArgs e)
         {
