@@ -69,7 +69,7 @@
             </ListBox>
         </StackPanel>
         <StackPanel Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="1" Height="340"  VerticalAlignment="Top"  Margin="10,20,0,0">
-            <TextBox Height="340" Focusable="False" Text="{Binding PatientDetails, Mode=OneWay}"/>
+            <TextBox Focusable="False" Height="340" Text="{Binding PatientDetails, Mode=OneWay}" TextWrapping="Wrap"/>
         </StackPanel>
 
             <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4">

@@ -16,7 +16,7 @@ namespace PAC_1.ViewModels
     {
         private Patient _selectedPatient;
 
-        public Patient SelectedPatient { get => _selectedPatient; set { _selectedPatient = value; OnPropertyChanged(PatientDetails); Debug.WriteLine(PatientDetails); } }
+        public Patient SelectedPatient { get => _selectedPatient; set { _selectedPatient = value; OnPropertyChanged(nameof(PatientDetails));} }
         public ObservableCollection<Patient> Patients { get => Data.Patients; }
 
         override public ChangeViewCommand GotoAddPatient { get => new ChangeViewCommand(arg => new AddPatientFormVM()); }
