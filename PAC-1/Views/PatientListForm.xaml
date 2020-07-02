@@ -49,13 +49,13 @@
             </StackPanel.Background>
 
             <Label Content="Lista pacjentów" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="26" FontWeight="SemiBold" Margin="15" Foreground="#FFEEEAEA"/>
-            <Button Content="PAC-1" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold" Background="Transparent" Margin="55,-55"
+            <Button Content="Menu" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold" Background="Transparent" Margin="55,-55"
                     Foreground="#FFEEEAEA" BorderThickness="0" Command="{Binding GotoWelcome}"/>
 
         </StackPanel>
 
         <StackPanel  Grid.Column="1" Grid.ColumnSpan="1" Grid.Row="1" Height="340"  VerticalAlignment="Top" Margin="0,20,10,0">
-            <ListView Height="340" ItemsSource="{Binding Patients}" SelectedItem="{Binding SelectedPatient}">
+            <ListView Height="340" ItemsSource="{Binding Patients}" SelectedItem="{Binding SelectedPatient}" FontSize="12">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn  Header="Imię" Width="85" DisplayMemberBinding="{Binding FirstName}"/>
