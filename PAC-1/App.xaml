@@ -27,8 +27,5 @@
         <DataTemplate DataType="{x:Type viewmodels:PatientSelectionFormVM}">
             <views:ChoosePatientsForm/>
         </DataTemplate>
-        <DataTemplate DataType="{x:Type viewmodels:CreateReportFormVM}">
-            <views:CreateReportForm/>
-        </DataTemplate>
     </Application.Resources>
 </Application>

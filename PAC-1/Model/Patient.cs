@@ -26,6 +26,20 @@ namespace PAC_1.Model
         public string Other { get; set; }
         public bool?[] QuestionResults { get; set; } = new bool?[120];
         public string Notes { get; set; }
+        public string Details
+        {
+            get
+            {
+                string details = $"{FirstName} {LastName}\n" +
+                    $"Wiek: {Age}\nMiejsce urodzenia: {BirthPlace}\n" +
+                    $"Szkoła: {School.Name}\nIQ: {Iq} mierzone skalą {Scale}\n" +
+                    $"Środowisko: {Background}";
+
+                if (!string.IsNullOrEmpty(Other)) details += $"Inne: {Other}";
+
+                return details;
+            }
+        }
 
         // Trzeba stworzyć pole na datę i czas badania, ale to później 
 

@@ -8,12 +8,15 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace PAC_1.ViewModels
 {
     partial class PatientListFormVM : ViewModelBase
     {
-        public Patient SelectedPatient { get; set; }
+        private Patient _selectedPatient;
+
+        public Patient SelectedPatient { get => _selectedPatient; set { _selectedPatient = value; OnPropertyChanged(PatientDetails); Debug.WriteLine(PatientDetails); } }
         public ObservableCollection<Patient> Patients { get => Data.Patients; }
 
         override public ChangeViewCommand GotoAddPatient { get => new ChangeViewCommand(arg => new AddPatientFormVM()); }
@@ -40,6 +43,12 @@ namespace PAC_1.ViewModels
                         ) ;
                 }
                 return _deletePatient;
+            }
+        }
+        public string PatientDetails { get
+            {
+                if (SelectedPatient is null) return string.Empty;
+                else return SelectedPatient.Details;
             }
         }
     }
