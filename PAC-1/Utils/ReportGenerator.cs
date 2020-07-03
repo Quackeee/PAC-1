@@ -67,64 +67,64 @@ namespace PAC_1.ViewModels
             // document.SetRenderer(new ColumnDocumentRenderer(document, columns));
 
             GenerateHeader(document, bold);
-            GenerateSection("Osoba przeprowadzająca badanie", document, boldItalic);
+            GenerateSection(Resources.Specialist, document, boldItalic);
             GenerateSpecialistInfo(document, normal);
-            GenerateSection("Osoba badana", document, boldItalic);
+            GenerateSection(Resources.Patient, document, boldItalic);
             GeneratePatientInfo(document, normal,patient);
 
             document.Add(new AreaBreak(AreaBreakType.NEXT_PAGE));
-            GenerateSection("Odpowiedzi na pytania", document, boldItalic);
+            GenerateSection(Resources.Answers, document, boldItalic);
 
             /*************************************************************/
-            GenerateSubsection("1.Obsługiwanie siebie", document, widebold);
-            GenerateCategory("Zachowanie przy stole", document, bold);
+            GenerateSubsection(Resources.SelfHelp1, document, widebold);
+            GenerateCategory(Resources.TableMannersSubcathegoryName, document, bold);
             GenerateQuestionsInfo(document, light, normal, TableManners, patient);
-            GenerateCategory("Sprawność motoryczna", document, bold);
+            GenerateCategory(Resources.MotorSkillsSubcathegoryName, document, bold);
             GenerateQuestionsInfo(document, light, normal, MotorSkills, patient);
-            GenerateCategory("Ubieranie się", document, bold);
+            GenerateCategory(Resources.DressingUpSubcathegoryName, document, bold);
             GenerateQuestionsInfo(document, light, normal, DressingUp, patient);
-            GenerateCategory("Toaleta i mycie", document, bold);
+            GenerateCategory(Resources.ToiletAndWashingSubcathegoryName, document, bold);
             GenerateQuestionsInfo(document, light, normal, ToiletAndWashing, patient);
 
             /*************************************************************/
             document.Add(new AreaBreak(AreaBreakType.NEXT_PAGE));
-            GenerateSubsection("2.Komunikowanie się", document, widebold);
-            GenerateCategory("Język", document, bold);
+            GenerateSubsection(Resources.Communication2, document, widebold);
+            GenerateCategory(Resources.LanguageSubcathegoryName, document, bold);
             GenerateQuestionsInfo(document, light, normal, Language, patient);
-            GenerateCategory("Ujmowanie różnic", document, bold);
+            GenerateCategory(Resources.DifferentiationSubcathegoryName, document, bold);
             GenerateQuestionsInfo(document, light, normal, Differentiation, patient);
             document.Add(new AreaBreak(AreaBreakType.NEXT_PAGE));
-            GenerateCategory("Liczby i wielkości", document, bold);
+            GenerateCategory(Resources.NumbersAndSizesSubcathegoryName, document, bold);
             GenerateQuestionsInfo(document, light, normal, NumbersAndSizes, patient);
-            GenerateCategory("Posługiwanie się ołówkiem i papierem", document, bold);
+            GenerateCategory(Resources.PencilAndPaperSkillsSubcathegoryName, document, bold);
             GenerateQuestionsInfo(document, light, normal, PencilAndPaperSkills, patient);
 
             /*************************************************************/
             document.Add(new AreaBreak(AreaBreakType.NEXT_PAGE));
-            GenerateSubsection("3.Uspołecznienie", document, widebold);
-            GenerateCategory("Udział w zabawie", document, bold);
+            GenerateSubsection(Resources.Socialisation3, document, widebold);
+            GenerateCategory(Resources.PlayingSubcathegoryName, document, bold);
             GenerateQuestionsInfo(document, light, normal, Playing, patient);
-            GenerateCategory("Czynności domowe", document, bold);
+            GenerateCategory(Resources.HouseworkSubcathegoryName, document, bold);
             GenerateQuestionsInfo(document, light, normal, Housework, patient);
 
             /*************************************************************/
             document.Add(new AreaBreak(AreaBreakType.NEXT_PAGE));
-            GenerateSubsection("4.Zajęcia", document, widebold);
-            GenerateCategory("Sprawność manualna (ruchy palców)", document, bold);
+            GenerateSubsection(Resources.Occupation4, document, widebold);
+            GenerateCategory(Resources.ManualSkillsSubcathegoryName, document, bold);
             GenerateQuestionsInfo(document, light, normal, ManualSkills, patient);
-            GenerateCategory("Zręczność (kontrola motoryki)", document, bold);
+            GenerateCategory(Resources.AgilitySubcathegoryName, document, bold);
             GenerateQuestionsInfo(document, light, normal, Agility, patient);
 
             /*************************************************************/
             document.Add(new AreaBreak(AreaBreakType.NEXT_PAGE));
-            GenerateSection("Diagram", document, bold);
-            GenerateSubsection("Zadania z pozytywnym:", document, widebold);
+            GenerateSection(Resources.Diagram, document, bold);
+            GenerateSubsection(Resources.PositiveResults, document, widebold);
             WriteResults(document, normal, true, patient);
-            GenerateSubsection("\nZadania z negatywnym rezultatem:", document, widebold);
+            GenerateSubsection(Resources.NegativeResults, document, widebold);
             WriteResults(document, normal, false, patient);
-            GenerateSubsection("\nNiewykonane zadania:", document, widebold);
+            GenerateSubsection(Resources.NoAnswer, document, widebold);
             WriteResults(document, normal, null, patient);
-            GenerateSection("Notatki", document, bold);
+            GenerateSection(Resources.Notes, document, bold);
 
             if (!string.IsNullOrEmpty(patient.Notes))
                 WriteNotes(document, normal, patient);
@@ -140,7 +140,7 @@ namespace PAC_1.ViewModels
 
         public void GenerateHeader(Document document, PdfFont font)
         {
-            string s = "Inwentarz PAC-1";
+            string s = Resources.PAC1Inventory;
             Paragraph header = new Paragraph(s)
                 .SetTextAlignment(TextAlignment.CENTER)
                 .SetFont(font)
@@ -183,18 +183,18 @@ namespace PAC_1.ViewModels
             string s = null;
             if (specialist.School.SecondNumber == null)
             {
-                s = "Imię: " + specialist.FirstName +
-                    "\n Nazwisko: " + specialist.LastName +
-                    "\n Placówka: " + specialist.School.Name +
-                    "\n           " + "ul. " + specialist.School.Street + " " + specialist.School.Number +
+                s = Resources.FirstName +" " + specialist.FirstName +
+                    "\n" + Resources.LastName + " " + specialist.LastName +
+                    "\n" + Resources.School + " " + specialist.School.Name +
+                    "\n           " + Resources.St + " " + specialist.School.Street + " " + specialist.School.Number +
                     "\n           " + specialist.School.ZipCode + " " + specialist.School.City;
             }
             else
             {
-                s = "Imię: " + specialist.FirstName +
-                    "\n Nazwisko: " + specialist.LastName +
-                    "\n Placówka: " + specialist.School.Name +
-                    "\n           " + "ul. " + specialist.School.Street + " " + specialist.School.Number + "\\" + specialist.School.SecondNumber +
+                s = Resources.FirstName + " " + specialist.FirstName +
+                    "\n" + Resources.LastName + " " + specialist.LastName +
+                    "\n" + Resources.School + " " + specialist.School.Name +
+                    "\n           " +  Resources.St + " " + specialist.School.Street + " " + specialist.School.Number + "\\" + specialist.School.SecondNumber +
                     "\n           " + specialist.School.ZipCode + " " + specialist.School.City;
             }
 
@@ -212,30 +212,30 @@ namespace PAC_1.ViewModels
             string s = null;
             if (patient.School.SecondNumber == null)
             {
-                s = "Imię: " + patient.FirstName +
-                    "\n Nazwisko: " + patient.LastName +
-                    "\n Wiek: " + patient.Age.ToString() +
-                    "\n Miejsce urodzenia: " + patient.BirthPlace +
-                    "\n IQ: " + patient.Iq.ToString() +
-                    "\n Mierzone w skali: " + patient.Scale +
-                    "\n Środowisko: " + patient.Background +
-                    "\n Inne: " + patient.Other +
-                    "\n Placówka: " + patient.School.Name +
-                    "\n           " + "ul. " + patient.School.Street + " " + patient.School.Number +
+                s =  Resources.FirstName + " " + patient.FirstName +
+                    "\n" + Resources.LastName + " " + patient.LastName +
+                    "\n" + Resources.Age + " " + patient.Age.ToString() +
+                    "\n" + Resources.BirthPlace + " " + patient.BirthPlace +
+                    "\n" + Resources.IQ + " " + patient.Iq.ToString() +
+                    "\n" + Resources.MeasureScale + " " + patient.Scale +
+                    "\n" + Resources.Background + " " + patient.Background +
+                    "\n" + Resources.Other + " " + patient.Other +
+                    "\n" + Resources.School + " " + patient.School.Name +
+                    "\n           " + Resources.St + " " + patient.School.Street + " " + patient.School.Number +
                     "\n           " + patient.School.ZipCode + " " + patient.School.City;
             }
             else
             {
-                s = "Imię: " + patient.FirstName +
-                   "\n Nazwisko: " + patient.LastName +
-                   "\n Wiek: " + patient.Age.ToString() +
-                   "\n Miejsce urodzenia: " + patient.BirthPlace +
-                   "\n IQ: " + patient.Iq.ToString() +
-                   "\n Mierzone w skali: " + patient.Scale +
-                   "\n Środowisko: " + patient.Background +
-                   "\n Inne: " + patient.Other +
-                   "\n Placówka: " + patient.School.Name +
-                   "\n           " + "ul. " + patient.School.Street + " " + patient.School.Number + "\\" + patient.School.SecondNumber +
+                s = Resources.FirstName + " " + patient.FirstName +
+                    "\n" + Resources.LastName + " " + patient.LastName +
+                    "\n" + Resources.Age + " " + patient.Age.ToString() +
+                    "\n" + Resources.BirthPlace + " " + patient.BirthPlace +
+                    "\n" + Resources.IQ + " " + patient.Iq.ToString() +
+                    "\n" + Resources.MeasureScale + " " + patient.Scale +
+                    "\n" + Resources.Background + " " + patient.Background +
+                    "\n" + Resources.Other + " " + patient.Other +
+                    "\n" + Resources.School + " " + patient.School.Name +
+                    "\n           " + Resources.St + " " + patient.School.Street + " " + patient.School.Number + "\\" + patient.School.SecondNumber +
                    "\n           " + patient.School.ZipCode + " " + patient.School.City;
             }
 
@@ -268,13 +268,13 @@ namespace PAC_1.ViewModels
             string answer;
 
             if (result == null)
-                answer = "Brak odpowiedzi";
+                answer = Resources.EmptyAnswer;
 
             else if (result == true)
-                answer = "Tak";
+                answer = Resources.Yes;
 
             else
-                answer = "Nie";
+                answer = Resources.No ;
 
             return answer;
         }

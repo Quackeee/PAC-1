@@ -27,12 +27,10 @@ namespace PAC_1.ViewModels
         {
             get
             {
-                Debug.WriteLine($"{ID} => Status was {_status}");
                 return _status ?? false;
             }
             set
             {
-                Debug.WriteLine($"{ID} => Status has been set");
                 if (value == false && _status == true) _status = null;
                 else _status = value;
                 OnPropertyChanged(nameof(YesOptionChecked), nameof(NoOptionChecked));

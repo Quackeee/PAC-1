@@ -135,6 +135,9 @@
   <data name="AgilitySubcathegoryName" xml:space="preserve">
     <value>Zręczność (kontrola motoryki)</value>
   </data>
+  <data name="Answers" xml:space="preserve">
+    <value>Odpowiedzi na pytania</value>
+  </data>
   <data name="Background" xml:space="preserve">
     <value>Środowisko:</value>
   </data>
@@ -147,11 +150,17 @@
   <data name="City" xml:space="preserve">
     <value>Miasto:</value>
   </data>
+  <data name="Communication2" xml:space="preserve">
+    <value>2.Komunikacja</value>
+  </data>
   <data name="CommunicationCathegoryName" xml:space="preserve">
     <value>Komunikacja</value>
   </data>
   <data name="Delete" xml:space="preserve">
     <value>Usuń</value>
+  </data>
+  <data name="Diagram" xml:space="preserve">
+    <value>Diagram</value>
   </data>
   <data name="DifferentiationSubcathegoryName" xml:space="preserve">
     <value>Ujmowanie różnic</value>
@@ -161,6 +170,9 @@
   </data>
   <data name="Edit" xml:space="preserve">
     <value>Edytuj</value>
+  </data>
+  <data name="EmptyAnswer" xml:space="preserve">
+    <value>Brak odpowiedzi</value>
   </data>
   <data name="FirstName" xml:space="preserve">
     <value>Imię:</value>
@@ -198,14 +210,26 @@
   <data name="ManualSkillsSubcathegoryName" xml:space="preserve">
     <value>Sprawność manualna (ruchy palców)</value>
   </data>
+  <data name="MeasureScale" xml:space="preserve">
+    <value>Mierzone w skali:</value>
+  </data>
   <data name="Menu" xml:space="preserve">
     <value>Menu</value>
   </data>
   <data name="MotorSkillsSubcathegoryName" xml:space="preserve">
     <value>Sprawność motoryczna</value>
   </data>
+  <data name="NegativeResults" xml:space="preserve">
+    <value>Zadania z negatywnym rezultatem:</value>
+  </data>
   <data name="Next" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nie</value>
+  </data>
+  <data name="NoAnswer" xml:space="preserve">
+    <value>Niewykonane zadania: </value>
   </data>
   <data name="Notes" xml:space="preserve">
     <value>Notatki</value>
@@ -244,6 +268,9 @@
   <data name="NumbersAndSizesSubcathegoryName" xml:space="preserve">
     <value>Liczby i wielkości</value>
   </data>
+  <data name="Occupation4" xml:space="preserve">
+    <value>4.Zajęcia</value>
+  </data>
   <data name="OccupationCathegoryName" xml:space="preserve">
     <value>Zajęcia</value>
   </data>
@@ -256,6 +283,12 @@
   <data name="PAC1Diagram" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Graphics\PAC1Diagram.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PAC1Inventory" xml:space="preserve">
+    <value>Inwentarz PAC-1</value>
+  </data>
+  <data name="Patient" xml:space="preserve">
+    <value>Osoba badana</value>
+  </data>
   <data name="PatientList" xml:space="preserve">
     <value>Lista pacjentów</value>
   </data>
@@ -267,6 +300,9 @@
   </data>
   <data name="PlayingSubcathegoryName" xml:space="preserve">
     <value>Udział w zabawie</value>
+  </data>
+  <data name="PositiveResults" xml:space="preserve">
+    <value>Zadania z pozytywnym rezultatem:</value>
   </data>
   <data name="Previous" xml:space="preserve">
     <value>3</value>
@@ -295,14 +331,26 @@
   <data name="SecondNumber" xml:space="preserve">
     <value>Numer lokalu:</value>
   </data>
+  <data name="SelfHelp1" xml:space="preserve">
+    <value>1.Obsługiwanie siebie</value>
+  </data>
   <data name="SelfHelpCathegoryName" xml:space="preserve">
     <value>Obsługiwanie Siebie</value>
   </data>
   <data name="ShortNameOfSchool" xml:space="preserve">
     <value>Skrót placówki:</value>
   </data>
+  <data name="Socialisation3" xml:space="preserve">
+    <value>3.Uspołecznienie</value>
+  </data>
   <data name="SocialisationCathegotyName" xml:space="preserve">
     <value>Uspołecznienie</value>
+  </data>
+  <data name="Specialist" xml:space="preserve">
+    <value>Osoba przeprowadzająca badanie</value>
+  </data>
+  <data name="St" xml:space="preserve">
+    <value>Street</value>
   </data>
   <data name="Street" xml:space="preserve">
     <value>Ulica:</value>
@@ -312,6 +360,9 @@
   </data>
   <data name="ToiletAndWashingSubcathegoryName" xml:space="preserve">
     <value>Toaleta i mycie</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Tak</value>
   </data>
   <data name="YourData" xml:space="preserve">
     <value>Twoje dane</value>
