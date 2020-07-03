@@ -350,7 +350,7 @@
     <value>Osoba przeprowadzająca badanie</value>
   </data>
   <data name="St" xml:space="preserve">
-    <value>Street</value>
+    <value>Ul.</value>
   </data>
   <data name="Street" xml:space="preserve">
     <value>Ulica:</value>

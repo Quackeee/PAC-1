@@ -765,7 +765,7 @@ namespace PAC_1.Properties {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Street.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Ul..
         /// </summary>
         public static string St {
             get {
