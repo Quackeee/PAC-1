@@ -38,6 +38,7 @@ namespace PAC_1.ViewModels
                         {
                             Data.Patients.RemoveAt(Data.Patients.IndexOf(SelectedPatient));
                             OnPropertyChanged(nameof(Patients));
+                            Data.SavePatients();
                         },
                         arg => SelectedPatient != null
                         ) ;

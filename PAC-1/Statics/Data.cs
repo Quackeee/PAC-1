@@ -14,10 +14,10 @@ namespace PAC_1.Statics
 {
     static class Data
     {
-        public static string DataDirectory
-        { get => Environment.GetEnvironmentVariable("appdata") + @"\PAC1"; }
-        public static string UserData
-        { get => Environment.GetEnvironmentVariable("appdata") + @"\PAC1\user.json"; }
+        public static string DataDirectory;
+        public static string UserDataDir;
+        public static string SavedSchoolsDir;
+        public static string SavedPatientsDir;
 
         private static ObservableCollection<Patient> _patients;
         private static List<School> _schools;
@@ -63,6 +63,14 @@ namespace PAC_1.Statics
         }
         public static Specialist User { get; set; }
 
+        static Data()
+        {
+            DataDirectory = Environment.GetEnvironmentVariable("appdata") + "\\PAC1";
+            UserDataDir = DataDirectory + "\\user.json";
+            SavedSchoolsDir = DataDirectory + "\\schools.json";
+            SavedPatientsDir = DataDirectory + "\\patients.json";
+        }
+
         public static void SavePatients()
         {
             var patients = new List<Patient>();
@@ -70,7 +78,7 @@ namespace PAC_1.Statics
                 patients.Add(patient);
 
             string SaveJson = JsonConvert.SerializeObject(patients);
-            File.WriteAllText(@"./patients.json", SaveJson);
+            File.WriteAllText(SavedPatientsDir, SaveJson);
             Debug.WriteLine("Patients saved");
         }
 
@@ -78,9 +86,9 @@ namespace PAC_1.Statics
         {
             _patients = new ObservableCollection<Patient>();
 
-            if (File.Exists(@"./patients.json"))
+            if (File.Exists(SavedPatientsDir))
             {
-                List<Patient> load = JsonConvert.DeserializeObject<List<Patient>>(File.ReadAllText(@"./patients.json"));
+                List<Patient> load = JsonConvert.DeserializeObject<List<Patient>>(File.ReadAllText(SavedPatientsDir));
 
                 if (load != null)
                     foreach (var patient in load)
@@ -94,9 +102,9 @@ namespace PAC_1.Statics
         {
             _schools = new List<School>();
 
-            if (File.Exists(@"./schools.json"))
+            if (File.Exists(SavedSchoolsDir))
             {
-                var loadedSchools = JsonConvert.DeserializeObject<List<School>>(File.ReadAllText(@"./schools.json"));
+                var loadedSchools = JsonConvert.DeserializeObject<List<School>>(File.ReadAllText(SavedSchoolsDir));
                 if (loadedSchools != null)
                 {
                     foreach (var school in loadedSchools)
@@ -108,14 +116,14 @@ namespace PAC_1.Statics
         public static void SaveSchools()
         {
             string SaveJson = JsonConvert.SerializeObject(_schools);
-            File.WriteAllText(@"./schools.json", SaveJson);
+            File.WriteAllText(SavedSchoolsDir, SaveJson);
         }
 
         public static bool TryLoadUserData()
         {
-            if (!File.Exists(UserData)) return false;
+            if (!File.Exists(UserDataDir)) return false;
 
-            User = JsonConvert.DeserializeObject<Specialist>(File.ReadAllText(UserData));
+            User = JsonConvert.DeserializeObject<Specialist>(File.ReadAllText(UserDataDir));
             Debug.WriteLine("Userdata loaded");
             return true;
         }
@@ -124,7 +132,7 @@ namespace PAC_1.Statics
         {
             if (!Directory.Exists(DataDirectory)) Directory.CreateDirectory(DataDirectory);
             string rawJson = JsonConvert.SerializeObject(User);
-            File.WriteAllText(UserData, rawJson);
+            File.WriteAllText(UserDataDir, rawJson);
         }
     }
 }
