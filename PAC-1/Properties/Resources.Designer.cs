@@ -22,7 +22,7 @@ namespace PAC_1.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace PAC_1.Properties {
         /// Zwraca buforowane wystąpienie ResourceManager używane przez tę klasę.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PAC_1.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace PAC_1.Properties {
         ///   przypadków przeszukiwania zasobów za pomocą tej klasy zasobów wymagającej zdefiniowania typu.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,27 +61,117 @@ namespace PAC_1.Properties {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Dodaj.
+        /// </summary>
+        public static string Add {
+            get {
+                return ResourceManager.GetString("Add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Zarządzaj pacjentami.
+        /// </summary>
+        public static string AddEditPatients {
+            get {
+                return ResourceManager.GetString("AddEditPatients", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Dodaj szkołę.
+        /// </summary>
+        public static string AddSchool {
+            get {
+                return ResourceManager.GetString("AddSchool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Wiek:.
+        /// </summary>
+        public static string Age {
+            get {
+                return ResourceManager.GetString("Age", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Wiek.
+        /// </summary>
+        public static string Age1 {
+            get {
+                return ResourceManager.GetString("Age1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Zręczność (kontrola motoryki).
         /// </summary>
-        internal static string AgilitySubcathegoryName {
+        public static string AgilitySubcathegoryName {
             get {
                 return ResourceManager.GetString("AgilitySubcathegoryName", resourceCulture);
             }
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Środowisko:.
+        /// </summary>
+        public static string Background {
+            get {
+                return ResourceManager.GetString("Background", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Miejsce urodzenia:.
+        /// </summary>
+        public static string BirthPlace {
+            get {
+                return ResourceManager.GetString("BirthPlace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Anuluj.
+        /// </summary>
+        public static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Miasto:.
+        /// </summary>
+        public static string City {
+            get {
+                return ResourceManager.GetString("City", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Komunikacja.
         /// </summary>
-        internal static string CommunicationCathegoryName {
+        public static string CommunicationCathegoryName {
             get {
                 return ResourceManager.GetString("CommunicationCathegoryName", resourceCulture);
             }
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Usuń.
+        /// </summary>
+        public static string Delete {
+            get {
+                return ResourceManager.GetString("Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Ujmowanie różnic.
         /// </summary>
-        internal static string DifferentiationSubcathegoryName {
+        public static string DifferentiationSubcathegoryName {
             get {
                 return ResourceManager.GetString("DifferentiationSubcathegoryName", resourceCulture);
             }
@@ -90,52 +180,169 @@ namespace PAC_1.Properties {
         /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Ubieranie się.
         /// </summary>
-        internal static string DressingUpSubcathegoryName {
+        public static string DressingUpSubcathegoryName {
             get {
                 return ResourceManager.GetString("DressingUpSubcathegoryName", resourceCulture);
             }
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Edytuj.
+        /// </summary>
+        public static string Edit {
+            get {
+                return ResourceManager.GetString("Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Imię:.
+        /// </summary>
+        public static string FirstName {
+            get {
+                return ResourceManager.GetString("FirstName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Imię.
+        /// </summary>
+        public static string FirstName1 {
+            get {
+                return ResourceManager.GetString("FirstName1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Generuj raport.
+        /// </summary>
+        public static string GenerateReport {
+            get {
+                return ResourceManager.GetString("GenerateReport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Zajęcia grupowe.
+        /// </summary>
+        public static string GroupForm {
+            get {
+                return ResourceManager.GetString("GroupForm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Czynnści domowe.
         /// </summary>
-        internal static string HouseworkSubcathegoryName {
+        public static string HouseworkSubcathegoryName {
             get {
                 return ResourceManager.GetString("HouseworkSubcathegoryName", resourceCulture);
             }
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Zajęcia indywidualne.
+        /// </summary>
+        public static string IndividualForm {
+            get {
+                return ResourceManager.GetString("IndividualForm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu IQ:.
+        /// </summary>
+        public static string IQ {
+            get {
+                return ResourceManager.GetString("IQ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Język.
         /// </summary>
-        internal static string LanguageSubcathegoryName {
+        public static string LanguageSubcathegoryName {
             get {
                 return ResourceManager.GetString("LanguageSubcathegoryName", resourceCulture);
             }
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Nazwisko:.
+        /// </summary>
+        public static string LastName {
+            get {
+                return ResourceManager.GetString("LastName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Nazwisko.
+        /// </summary>
+        public static string LastName1 {
+            get {
+                return ResourceManager.GetString("LastName1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Strona Główna.
+        /// </summary>
+        public static string MainPage {
+            get {
+                return ResourceManager.GetString("MainPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Sprawność manualna (ruchy palców).
         /// </summary>
-        internal static string ManualSkillsSubcathegoryName {
+        public static string ManualSkillsSubcathegoryName {
             get {
                 return ResourceManager.GetString("ManualSkillsSubcathegoryName", resourceCulture);
             }
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Menu.
+        /// </summary>
+        public static string Menu {
+            get {
+                return ResourceManager.GetString("Menu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Sprawność motoryczna.
         /// </summary>
-        internal static string MotorSkillsSubcathegoryName {
+        public static string MotorSkillsSubcathegoryName {
             get {
                 return ResourceManager.GetString("MotorSkillsSubcathegoryName", resourceCulture);
             }
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu 4.
+        /// </summary>
+        public static string Next {
+            get {
+                return ResourceManager.GetString("Next", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Notatki.
+        /// </summary>
+        public static string Notes {
+            get {
+                return ResourceManager.GetString("Notes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Byte[].
         /// </summary>
-        internal static byte[] NotoSerif_Bold {
+        public static byte[] NotoSerif_Bold {
             get {
                 object obj = ResourceManager.GetObject("NotoSerif_Bold", resourceCulture);
                 return ((byte[])(obj));
@@ -145,7 +352,7 @@ namespace PAC_1.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Byte[].
         /// </summary>
-        internal static byte[] NotoSerif_BoldItalic {
+        public static byte[] NotoSerif_BoldItalic {
             get {
                 object obj = ResourceManager.GetObject("NotoSerif_BoldItalic", resourceCulture);
                 return ((byte[])(obj));
@@ -155,7 +362,7 @@ namespace PAC_1.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Byte[].
         /// </summary>
-        internal static byte[] NotoSerif_Condensed {
+        public static byte[] NotoSerif_Condensed {
             get {
                 object obj = ResourceManager.GetObject("NotoSerif_Condensed", resourceCulture);
                 return ((byte[])(obj));
@@ -165,7 +372,7 @@ namespace PAC_1.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Byte[].
         /// </summary>
-        internal static byte[] NotoSerif_CondensedBold {
+        public static byte[] NotoSerif_CondensedBold {
             get {
                 object obj = ResourceManager.GetObject("NotoSerif_CondensedBold", resourceCulture);
                 return ((byte[])(obj));
@@ -175,7 +382,7 @@ namespace PAC_1.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Byte[].
         /// </summary>
-        internal static byte[] NotoSerif_CondensedBoldItalic {
+        public static byte[] NotoSerif_CondensedBoldItalic {
             get {
                 object obj = ResourceManager.GetObject("NotoSerif_CondensedBoldItalic", resourceCulture);
                 return ((byte[])(obj));
@@ -185,7 +392,7 @@ namespace PAC_1.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Byte[].
         /// </summary>
-        internal static byte[] NotoSerif_CondensedItalic {
+        public static byte[] NotoSerif_CondensedItalic {
             get {
                 object obj = ResourceManager.GetObject("NotoSerif_CondensedItalic", resourceCulture);
                 return ((byte[])(obj));
@@ -195,7 +402,7 @@ namespace PAC_1.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Byte[].
         /// </summary>
-        internal static byte[] NotoSerif_Light {
+        public static byte[] NotoSerif_Light {
             get {
                 object obj = ResourceManager.GetObject("NotoSerif_Light", resourceCulture);
                 return ((byte[])(obj));
@@ -205,7 +412,7 @@ namespace PAC_1.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Byte[].
         /// </summary>
-        internal static byte[] NotoSerif_LightItalic {
+        public static byte[] NotoSerif_LightItalic {
             get {
                 object obj = ResourceManager.GetObject("NotoSerif_LightItalic", resourceCulture);
                 return ((byte[])(obj));
@@ -215,7 +422,7 @@ namespace PAC_1.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Byte[].
         /// </summary>
-        internal static byte[] NotoSerif_Regular {
+        public static byte[] NotoSerif_Regular {
             get {
                 object obj = ResourceManager.GetObject("NotoSerif_Regular", resourceCulture);
                 return ((byte[])(obj));
@@ -223,9 +430,18 @@ namespace PAC_1.Properties {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Numer budynku:.
+        /// </summary>
+        public static string Number {
+            get {
+                return ResourceManager.GetString("Number", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Liczby i wielkości.
         /// </summary>
-        internal static string NumbersAndSizesSubcathegoryName {
+        public static string NumbersAndSizesSubcathegoryName {
             get {
                 return ResourceManager.GetString("NumbersAndSizesSubcathegoryName", resourceCulture);
             }
@@ -234,16 +450,34 @@ namespace PAC_1.Properties {
         /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Zajęcia.
         /// </summary>
-        internal static string OccupationCathegoryName {
+        public static string OccupationCathegoryName {
             get {
                 return ResourceManager.GetString("OccupationCathegoryName", resourceCulture);
             }
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Inne:.
+        /// </summary>
+        public static string Other {
+            get {
+                return ResourceManager.GetString("Other", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu PAC-1.
+        /// </summary>
+        public static string PAC_1 {
+            get {
+                return ResourceManager.GetString("PAC-1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap PAC1Diagram {
+        public static System.Drawing.Bitmap PAC1Diagram {
             get {
                 object obj = ResourceManager.GetObject("PAC1Diagram", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -251,9 +485,27 @@ namespace PAC_1.Properties {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Lista pacjentów.
+        /// </summary>
+        public static string PatientList {
+            get {
+                return ResourceManager.GetString("PatientList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Dane Pacjenta.
+        /// </summary>
+        public static string PatientsData {
+            get {
+                return ResourceManager.GetString("PatientsData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Posługiwanie się ołówkiem i papierem.
         /// </summary>
-        internal static string PencilAndPaperSkillsSubcathegoryName {
+        public static string PencilAndPaperSkillsSubcathegoryName {
             get {
                 return ResourceManager.GetString("PencilAndPaperSkillsSubcathegoryName", resourceCulture);
             }
@@ -262,16 +514,25 @@ namespace PAC_1.Properties {
         /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Udział w zabawie.
         /// </summary>
-        internal static string PlayingSubcathegoryName {
+        public static string PlayingSubcathegoryName {
             get {
                 return ResourceManager.GetString("PlayingSubcathegoryName", resourceCulture);
             }
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu 3.
+        /// </summary>
+        public static string Previous {
+            get {
+                return ResourceManager.GetString("Previous", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Byte[].
         /// </summary>
-        internal static byte[] Questions {
+        public static byte[] Questions {
             get {
                 object obj = ResourceManager.GetObject("Questions", resourceCulture);
                 return ((byte[])(obj));
@@ -281,34 +542,106 @@ namespace PAC_1.Properties {
         /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu ./Questions.json.
         /// </summary>
-        internal static string QuestionsSource {
+        public static string QuestionsSource {
             get {
                 return ResourceManager.GetString("QuestionsSource", resourceCulture);
             }
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Raporty.
+        /// </summary>
+        public static string Reports {
+            get {
+                return ResourceManager.GetString("Reports", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Zapisz.
+        /// </summary>
+        public static string Save {
+            get {
+                return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Skala:.
+        /// </summary>
+        public static string Scale {
+            get {
+                return ResourceManager.GetString("Scale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Placówka:.
+        /// </summary>
+        public static string School {
+            get {
+                return ResourceManager.GetString("School", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Szkoła.
+        /// </summary>
+        public static string School1 {
+            get {
+                return ResourceManager.GetString("School1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Numer lokalu:.
+        /// </summary>
+        public static string SecondNumber {
+            get {
+                return ResourceManager.GetString("SecondNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Obsługiwanie Siebie.
         /// </summary>
-        internal static string SelfHelpCathegoryName {
+        public static string SelfHelpCathegoryName {
             get {
                 return ResourceManager.GetString("SelfHelpCathegoryName", resourceCulture);
             }
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Skrót placówki:.
+        /// </summary>
+        public static string ShortNameOfSchool {
+            get {
+                return ResourceManager.GetString("ShortNameOfSchool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Uspołecznienie.
         /// </summary>
-        internal static string SocialisationCathegotyName {
+        public static string SocialisationCathegotyName {
             get {
                 return ResourceManager.GetString("SocialisationCathegotyName", resourceCulture);
             }
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Ulica:.
+        /// </summary>
+        public static string Street {
+            get {
+                return ResourceManager.GetString("Street", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Zachowanie przy stole.
         /// </summary>
-        internal static string TableMannersSubcathegoryName {
+        public static string TableMannersSubcathegoryName {
             get {
                 return ResourceManager.GetString("TableMannersSubcathegoryName", resourceCulture);
             }
@@ -317,9 +650,27 @@ namespace PAC_1.Properties {
         /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Toaleta i mycie.
         /// </summary>
-        internal static string ToiletAndWashingSubcathegoryName {
+        public static string ToiletAndWashingSubcathegoryName {
             get {
                 return ResourceManager.GetString("ToiletAndWashingSubcathegoryName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Twoje dane.
+        /// </summary>
+        public static string YourData {
+            get {
+                return ResourceManager.GetString("YourData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Kod pocztowy:.
+        /// </summary>
+        public static string ZipCode {
+            get {
+                return ResourceManager.GetString("ZipCode", resourceCulture);
             }
         }
     }

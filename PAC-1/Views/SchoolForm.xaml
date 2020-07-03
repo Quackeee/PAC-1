@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PAC_1.Views"
+             xmlns:resx="clr-namespace:PAC_1.Properties"
              mc:Ignorable="d" 
              d:DesignHeight="540" d:DesignWidth="960">
 
@@ -67,20 +68,20 @@
                 </LinearGradientBrush>
             </StackPanel.Background>
 
-            <Label Content="Dane pacjenta" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="15" Foreground="#FFEEEAEA"/>
-            <Button Content="Menu" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold" Margin="55,-55" Background="Transparent" BorderThickness="0" Foreground="#FFEEEAEA" Command="{Binding UpdateViewCommand}" CommandParameter="WelcomeForm" />
+            <Label Content="{Binding Source={x:Static resx:Resources.PatientsData}}" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="15" Foreground="#FFEEEAEA"/>
+            <Button Content="{Binding Source={x:Static resx:Resources.Menu}}" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold" Margin="55,-55" Background="Transparent" BorderThickness="0" Foreground="#FFEEEAEA" Command="{Binding UpdateViewCommand}" CommandParameter="WelcomeForm" />
 
         </StackPanel>
 
 
         <StackPanel  HorizontalAlignment="Right" Margin="0,30.2,20,45.6" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
-            <Label Content="Placówka:" Margin="30,0,0,0" />
-            <Label Content="Skrót placówki:" Margin="10,7,0,0" />
-            <Label Content="Kod pocztowy:" Margin="10,8,0,0" />
-            <Label Content="Miasto:" Margin="10,9,0,0" />
-            <Label Content="Ulica:" Margin="10,8,0,0" />
-            <Label Content="Numer budynku:" Margin="10,9,0,0" />
-            <Label Content="Numer lokalu:" Margin="10,8,0,0" />
+            <Label Content="{Binding Source={x:Static resx:Resources.School}}" Margin="30,0,0,0" />
+            <Label Content="{Binding Source={x:Static resx:Resources.ShortNameOfSchool}}" Margin="10,7,0,0" />
+            <Label Content="{Binding Source={x:Static resx:Resources.ZipCode}}" Margin="10,8,0,0" />
+            <Label Content="{Binding Source={x:Static resx:Resources.City}}" Margin="10,9,0,0" />
+            <Label Content="{Binding Source={x:Static resx:Resources.Street}}" Margin="10,8,0,0" />
+            <Label Content="{Binding Source={x:Static resx:Resources.Number}}" Margin="10,9,0,0" />
+            <Label Content="{Binding Source={x:Static resx:Resources.SecondNumber}}" Margin="10,8,0,0" />
 
         </StackPanel>
         <StackPanel Grid.Column="2" Grid.ColumnSpan="2"  HorizontalAlignment="Left" Margin="0.2,0.2,0,45.6" Width="300" Grid.Row="1" Grid.RowSpan="2">
@@ -94,9 +95,9 @@
 
         </StackPanel>
         
-        <Button Grid.Column="4"  Grid.Row="2" Content="Zapisz" HorizontalAlignment="Left" Command="{Binding Accept}" />
+        <Button Grid.Column="4"  Grid.Row="2" Content="{Binding Source={x:Static resx:Resources.Save}}" HorizontalAlignment="Left" Command="{Binding Accept}" />
 
-        <Button Grid.Column="0" Grid.Row="2" Content="3" HorizontalAlignment="Right" FontFamily="Marlett" Command="{Binding Cancel}"/>
+        <Button Grid.Column="0" Grid.Row="2" Content="{Binding Source={x:Static resx:Resources.Previous}}" HorizontalAlignment="Right" FontFamily="Marlett" Command="{Binding Cancel}"/>
 
     </Grid>
 </UserControl>

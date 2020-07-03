@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PAC_1.Views"
+             xmlns:resx="clr-namespace:PAC_1.Properties"
              mc:Ignorable="d" 
              d:DesignHeight="540" d:DesignWidth="960">
 
@@ -47,16 +48,16 @@
                 </LinearGradientBrush>
             </StackPanel.Background>
 
-            <Label Content="Strona główna" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="15" Foreground="#FFEEEAEA"/>
-            <Label Content="PAC-1" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="55,-55" Foreground="#FFEEEAEA" />
+            <Label Content="{Binding Source={x:Static resx:Resources.MainPage}}" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="15" Foreground="#FFEEEAEA"/>
+            <Label Content="{Binding Source={x:Static resx:Resources.PAC_1}}" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="55,-55" Foreground="#FFEEEAEA" />
 
         </StackPanel>
 
-        <Button Content="Zarządzaj pacjentami" Margin="240,65.8,240,268.6" Command="{Binding GotoPatientList}" Grid.Row="1" />
+        <Button Content="{Binding Source={x:Static resx:Resources.AddEditPatients}}" Margin="240,65.8,240,268.6" Command="{Binding GotoPatientList}" Grid.Row="1" />
 
-        <Button Content="Zajęcia indywidualne" Margin="240,123.8,240,210.6" Command="{Binding GotoIndividual}" Grid.Row="1" />
+        <Button Content="{Binding Source={x:Static resx:Resources.IndividualForm}}" Margin="240,123.8,240,210.6" Command="{Binding GotoIndividual}" Grid.Row="1" />
 
-        <Button Content="Zajęcia grupowe" Margin="240,184.8,240,149.6" Command="{Binding GotoGroup}" Grid.Row="1"/>
+        <Button Content="{Binding Source={x:Static resx:Resources.GroupForm}}" Margin="240,184.8,240,149.6" Command="{Binding GotoGroup}" Grid.Row="1"/>
 
     </Grid>
 </UserControl>

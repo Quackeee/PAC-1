@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:resx="clr-namespace:PAC_1.Properties"
              xmlns:local="clr-namespace:PAC_1.Views"
              mc:Ignorable="d" 
              d:DesignHeight="540" d:DesignWidth="960">
@@ -46,23 +47,23 @@
                 </LinearGradientBrush>
             </StackPanel.Background>
 
-            <Label Content="Udział w zabawie" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="15" Foreground="#FFEEEAEA"/>
-            <Button Content="Menu" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="55,-55" Background="Transparent" BorderThickness="0" Foreground="#FFEEEAEA" Command="{Binding GotoWelcome}" />
+            <Label Content="{Binding Source={x:Static resx:Resources.PlayingSubcathegoryName}}" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="15" Foreground="#FFEEEAEA"/>
+            <Button Content="{Binding Source={x:Static resx:Resources.Menu}}" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="55,-55" Background="Transparent" BorderThickness="0" Foreground="#FFEEEAEA" Command="{Binding GotoWelcome}" />
 
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.ColumnSpan="1" Grid.Row="1" Margin="0,20,10,0">
-            <Label Content="Notatki" FontSize="18" FontFamily="Charlesworth" FontWeight="DemiBold" Margin="20,-10,0,0"/>
+            <Label Content="{Binding Source={x:Static resx:Resources.Notes}}" FontSize="18" FontFamily="Charlesworth" FontWeight="DemiBold" Margin="20,-10,0,0"/>
             <TextBox Height="150" AcceptsReturn="True" TextWrapping="Wrap" Text="{Binding Notes}" VerticalScrollBarVisibility="Auto">
                 
             </TextBox>
             <ListView Height="140" Margin="0,20,0,0" ItemsSource="{Binding QuestionedPatients}" SelectedIndex="{Binding SelectedPatientIndex}" FontSize="12">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn  Header="Imię" Width="70" DisplayMemberBinding="{Binding FirstName}"/>
-                        <GridViewColumn   Header="Imię" Width="70"  DisplayMemberBinding="{Binding LastName}"/>
-                        <GridViewColumn  Header="Wiek" Width="70"  DisplayMemberBinding="{Binding Age}"/>
-                        <GridViewColumn  Header="Szkoła" Width="67"  DisplayMemberBinding="{Binding School}"/>
+                        <GridViewColumn  Header="{Binding Source={x:Static resx:Resources.FirstName1}}" Width="70" DisplayMemberBinding="{Binding FirstName}"/>
+                        <GridViewColumn   Header="{Binding Source={x:Static resx:Resources.LastName1}}" Width="70"  DisplayMemberBinding="{Binding LastName}"/>
+                        <GridViewColumn  Header="{Binding Source={x:Static resx:Resources.Age1}}" Width="70"  DisplayMemberBinding="{Binding Age}"/>
+                        <GridViewColumn  Header="{Binding Source={x:Static resx:Resources.School1}}" Width="67"  DisplayMemberBinding="{Binding School}"/>
                     </GridView>
                 </ListView.View>
             </ListView>

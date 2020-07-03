@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:resx="clr-namespace:PAC_1.Properties"
              xmlns:local="clr-namespace:PAC_1.Views"
              xmlns:s="clr-namespace:PAC_1.Statics"
              mc:Ignorable="d" 
@@ -53,7 +54,7 @@
             </StackPanel.Background>
 
             <Label Content="{Binding SelectedPatientFullName}" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="15" Foreground="#FFEEEAEA"/>
-            <Button Content="Menu" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="55,-55" Background="Transparent" BorderThickness="0" Foreground="#FFEEEAEA" Command="{Binding GotoWelcome}" />
+            <Button Content="{Binding Source={x:Static resx:Resources.Menu}}" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="55,-55" Background="Transparent" BorderThickness="0" Foreground="#FFEEEAEA" Command="{Binding GotoWelcome}" />
 
         </StackPanel>
 
@@ -85,24 +86,24 @@
             </ListBox>
         </StackPanel>
         <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Margin="0,9.8,0,0.4">
-            <Label Content="Notatki" FontSize="18" FontFamily="Charlesworth" FontWeight="DemiBold" Margin="40,0,0,0"/>
+            <Label Content="{Binding Source={x:Static resx:Resources.Notes}}" FontSize="18" FontFamily="Charlesworth" FontWeight="DemiBold" Margin="40,0,0,0"/>
             <TextBox Width="300" Height="150" TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding Notes}" VerticalScrollBarVisibility="Auto" />
-            <Button Content="Obsługiwanie siebie" Margin="0,20,20,0" Command="{Binding ChangeSelectedCathegory}" CommandParameter="{x:Static s:Questionary.SelfHelp}"/>
+            <Button Content="{Binding Source={x:Static resx:Resources.SelfHelpCathegoryName}}" Margin="0,20,20,0" Command="{Binding ChangeSelectedCathegory}" CommandParameter="{x:Static s:Questionary.SelfHelp}"/>
 
-            <Button Content="Komunikowanie się" Margin="0,10,20,0" Command="{Binding ChangeSelectedCathegory}" CommandParameter="{x:Static s:Questionary.Communication}"/>
+            <Button Content="{Binding Source={x:Static resx:Resources.CommunicationCathegoryName}}" Margin="0,10,20,0" Command="{Binding ChangeSelectedCathegory}" CommandParameter="{x:Static s:Questionary.Communication}"/>
 
-            <Button Content="Uspołecznienie" Margin="0,10,20,0" Command="{Binding ChangeSelectedCathegory}" CommandParameter="{x:Static s:Questionary.Socialization}"/>
+            <Button Content="{Binding Source={x:Static resx:Resources.SocialisationCathegotyName}}" Margin="0,10,20,0" Command="{Binding ChangeSelectedCathegory}" CommandParameter="{x:Static s:Questionary.Socialization}"/>
 
-            <Button Content="Zajęcia" Margin="0,10,20,0" Command="{Binding ChangeSelectedCathegory}" CommandParameter="{x:Static s:Questionary.Occupation}"/>
+            <Button Content="{Binding Source={x:Static resx:Resources.OccupationCathegoryName}}" Margin="0,10,20,0" Command="{Binding ChangeSelectedCathegory}" CommandParameter="{x:Static s:Questionary.Occupation}"/>
 
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" Margin="0,394.8,0,0" Grid.RowSpan="2">
-            <Button Width="80" Content="3" FontFamily="Marlett" Margin="-540,-10,20,0" Command="{Binding TraverseSubcathegoriesLeft}"/>
+            <Button Width="80" Content="{Binding Source={x:Static resx:Resources.Previous}}" FontFamily="Marlett" Margin="-540,-10,20,0" Command="{Binding TraverseSubcathegoriesLeft}"/>
 
             <Label Grid.Column="0" Grid.Row="2" Width="400" Height="30" Content="{Binding SelectedSubcathegoryName}" Margin="0,-30,0,0" FontSize="18" FontFamily="Charlesworth"  HorizontalAlignment="Center" HorizontalContentAlignment="Center" Foreground="#FF193E63" />
 
-            <Button Grid.Column="0" Grid.Row="2" Width="80" Content="4" Margin="560,-30,0,0" FontFamily="Marlett" Command="{Binding TraverseSubcathegoriesRight}"/>
+            <Button Grid.Column="0" Grid.Row="2" Width="80" Content="{Binding Source={x:Static resx:Resources.Next}}" Margin="560,-30,0,0" FontFamily="Marlett" Command="{Binding TraverseSubcathegoriesRight}"/>
 
         </StackPanel>
     </Grid>

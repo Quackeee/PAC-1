@@ -2,7 +2,8 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:resx="clr-namespace:PAC_1.Properties"
              xmlns:local="clr-namespace:PAC_1.Views"
              mc:Ignorable="d" 
              d:DesignHeight="540" d:DesignWidth="960" Foreground="#FFFFF5F5">
@@ -48,8 +49,8 @@
                 </LinearGradientBrush>
             </StackPanel.Background>
 
-            <Label Content="Lista pacjentów" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="26" FontWeight="SemiBold" Margin="15" Foreground="#FFEEEAEA"/>
-            <Button Content="Menu" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold" Background="Transparent" Margin="55,-55"
+            <Label Content="{Binding Source={x:Static resx:Resources.PatientList}}" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="26" FontWeight="SemiBold" Margin="15" Foreground="#FFEEEAEA"/>
+            <Button Content="{Binding Source={x:Static resx:Resources.Menu}}" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold" Background="Transparent" Margin="55,-55"
                     Foreground="#FFEEEAEA" BorderThickness="0" Command="{Binding GotoWelcome}"/>
 
         </StackPanel>
@@ -58,10 +59,10 @@
             <ListView Height="340" ItemsSource="{Binding Patients}" SelectedItem="{Binding SelectedPatient}" FontSize="12">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn  Header="Imię" Width="85" DisplayMemberBinding="{Binding FirstName}"/>
-                        <GridViewColumn   Header="Imię" Width="85"  DisplayMemberBinding="{Binding LastName}"/>
-                        <GridViewColumn  Header="Wiek" Width="85"  DisplayMemberBinding="{Binding Age}"/>
-                        <GridViewColumn  Header="Szkoła" Width="85"  DisplayMemberBinding="{Binding School}"/>
+                        <GridViewColumn  Header="{Binding Source={x:Static resx:Resources.FirstName1}}" Width="85" DisplayMemberBinding="{Binding FirstName}"/>
+                        <GridViewColumn   Header="{Binding Source={x:Static resx:Resources.LastName1}}" Width="85"  DisplayMemberBinding="{Binding LastName}"/>
+                        <GridViewColumn  Header="{Binding Source={x:Static resx:Resources.Age1}}" Width="85"  DisplayMemberBinding="{Binding Age}"/>
+                        <GridViewColumn  Header="{Binding Source={x:Static resx:Resources.School1}}" Width="85"  DisplayMemberBinding="{Binding School}"/>
                     </GridView>
                 </ListView.View>
             </ListView>
@@ -71,12 +72,12 @@
         </StackPanel>
 
             <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4">
-            <Button Content="Dodaj" Margin="-630,20,20,0" Command="{Binding GotoAddPatient}"/>
+            <Button Content="{Binding Source={x:Static resx:Resources.Add}}" Margin="-630,20,20,0" Command="{Binding GotoAddPatient}"/>
 
-            <Button Grid.Row="2" Content="Usuń" Margin="-220,-30,0,0" Command="{Binding DeletePatient}" />
+            <Button Grid.Row="2" Content="{Binding Source={x:Static resx:Resources.Delete}}" Margin="-220,-30,0,0" Command="{Binding DeletePatient}" />
 
-            <Button Grid.Row="2" Content="Edytuj" Margin="210,-30,0,0" Command="{Binding GotoEditPatient}" />
-            <Button Content="Generuj raport" Margin="630,-30,0,0" Command="{Binding GenerateReport}" />
+            <Button Grid.Row="2" Content="{Binding Source={x:Static resx:Resources.Edit}}" Margin="210,-30,0,0" Command="{Binding GotoEditPatient}" />
+            <Button Content="{Binding Source={x:Static resx:Resources.GenerateReport}}" Margin="630,-30,0,0" Command="{Binding GenerateReport}" />
 
         </StackPanel>
     </Grid>

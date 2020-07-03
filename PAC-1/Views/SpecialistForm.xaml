@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:resx="clr-namespace:PAC_1.Properties"
              xmlns:local="clr-namespace:PAC_1.Views"
              xmlns:vm="clr-namespace:PAC_1.ViewModels"
              mc:Ignorable="d" 
@@ -88,21 +89,21 @@
                 </LinearGradientBrush>
             </StackPanel.Background>
 
-            <Label Content="Twoje dane" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="15" Foreground="#FFEEEAEA"/>
-            <Label Content="PAC-1" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth"  Foreground="#FFEEEAEA" Margin="0,-55,55,-55" Background="Transparent" 
+            <Label Content="{Binding Source={x:Static resx:Resources.YourData}}" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="15" Foreground="#FFEEEAEA"/>
+            <Label Content="{Binding Source={x:Static resx:Resources.PAC_1}}" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth"  Foreground="#FFEEEAEA" Margin="0,-55,55,-55" Background="Transparent" 
                     BorderThickness="0" Height="40" />
         </StackPanel>
         <StackPanel  HorizontalAlignment="Right" Margin="0.2,40,0,63.6" Grid.Row="1" Grid.ColumnSpan="1" Grid.Column="1" Grid.RowSpan="2" Width="193">
 
-            <Label Content="Imię:" Margin="30,0,0,0" />
-            <Label Content="Nazwisko:" Margin="10,0,0,0" />
-            <Label Content="Placówka:" Margin="10,0,0,0" />
-            <Label Content="Skrót placówki:" Margin="10,0,0,0" />
-            <Label Content="Kod pocztowy:" Margin="10,0,0,0" />
-            <Label Content="Miasto :" Margin="10,0,0,0" />
-            <Label Content="Ulica:" Margin="10,0,0,0" />
-            <Label Content="Numer budynku:" Margin="10,0,0,0" />
-            <Label Content="Numer lokalu:" Margin="10,0,0,0" />
+            <Label Content="{Binding Source={x:Static resx:Resources.FirstName}}" Margin="30,0,0,0" />
+            <Label Content="{Binding Source={x:Static resx:Resources.LastName}}" Margin="10,0,0,0" />
+            <Label Content="{Binding Source={x:Static resx:Resources.School}}" Margin="10,0,0,0" />
+            <Label Content="{Binding Source={x:Static resx:Resources.ShortNameOfSchool}}" Margin="10,0,0,0" />
+            <Label Content="{Binding Source={x:Static resx:Resources.ZipCode}}" Margin="10,0,0,0" />
+            <Label Content="{Binding Source={x:Static resx:Resources.City}}" Margin="10,0,0,0" />
+            <Label Content="{Binding Source={x:Static resx:Resources.Street}}" Margin="10,0,0,0" />
+            <Label Content="{Binding Source={x:Static resx:Resources.Number}}" Margin="10,0,0,0" />
+            <Label Content="{Binding Source={x:Static resx:Resources.SecondNumber}}" Margin="10,0,0,0" />
 
         </StackPanel>
         <StackPanel Grid.Column="2" Grid.ColumnSpan="2" Margin="0,40,30,45.6" HorizontalAlignment="Left" Width="300" Grid.RowSpan="2" Grid.Row="1">

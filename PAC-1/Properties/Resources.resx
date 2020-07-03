@@ -117,11 +117,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Add" xml:space="preserve">
+    <value>Dodaj</value>
+  </data>
+  <data name="AddEditPatients" xml:space="preserve">
+    <value>Zarządzaj pacjentami</value>
+  </data>
+  <data name="AddSchool" xml:space="preserve">
+    <value>Dodaj szkołę</value>
+  </data>
+  <data name="Age" xml:space="preserve">
+    <value>Wiek:</value>
+  </data>
+  <data name="Age1" xml:space="preserve">
+    <value>Wiek</value>
+  </data>
   <data name="AgilitySubcathegoryName" xml:space="preserve">
     <value>Zręczność (kontrola motoryki)</value>
   </data>
+  <data name="Background" xml:space="preserve">
+    <value>Środowisko:</value>
+  </data>
+  <data name="BirthPlace" xml:space="preserve">
+    <value>Miejsce urodzenia:</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Anuluj</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Miasto:</value>
+  </data>
   <data name="CommunicationCathegoryName" xml:space="preserve">
     <value>Komunikacja</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Usuń</value>
   </data>
   <data name="DifferentiationSubcathegoryName" xml:space="preserve">
     <value>Ujmowanie różnic</value>
@@ -129,17 +159,56 @@
   <data name="DressingUpSubcathegoryName" xml:space="preserve">
     <value>Ubieranie się</value>
   </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edytuj</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Imię:</value>
+  </data>
+  <data name="FirstName1" xml:space="preserve">
+    <value>Imię</value>
+  </data>
+  <data name="GenerateReport" xml:space="preserve">
+    <value>Generuj raport</value>
+  </data>
+  <data name="GroupForm" xml:space="preserve">
+    <value>Zajęcia grupowe</value>
+  </data>
   <data name="HouseworkSubcathegoryName" xml:space="preserve">
     <value>Czynnści domowe</value>
+  </data>
+  <data name="IndividualForm" xml:space="preserve">
+    <value>Zajęcia indywidualne</value>
+  </data>
+  <data name="IQ" xml:space="preserve">
+    <value>IQ:</value>
   </data>
   <data name="LanguageSubcathegoryName" xml:space="preserve">
     <value>Język</value>
   </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Nazwisko:</value>
+  </data>
+  <data name="LastName1" xml:space="preserve">
+    <value>Nazwisko</value>
+  </data>
+  <data name="MainPage" xml:space="preserve">
+    <value>Strona Główna</value>
+  </data>
   <data name="ManualSkillsSubcathegoryName" xml:space="preserve">
     <value>Sprawność manualna (ruchy palców)</value>
   </data>
+  <data name="Menu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
   <data name="MotorSkillsSubcathegoryName" xml:space="preserve">
     <value>Sprawność motoryczna</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Notes" xml:space="preserve">
+    <value>Notatki</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="NotoSerif_Bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -169,14 +238,29 @@
   <data name="NotoSerif_Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Fonts\NotoSerif-Regular.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Number" xml:space="preserve">
+    <value>Numer budynku:</value>
+  </data>
   <data name="NumbersAndSizesSubcathegoryName" xml:space="preserve">
     <value>Liczby i wielkości</value>
   </data>
   <data name="OccupationCathegoryName" xml:space="preserve">
     <value>Zajęcia</value>
   </data>
+  <data name="Other" xml:space="preserve">
+    <value>Inne:</value>
+  </data>
+  <data name="PAC-1" xml:space="preserve">
+    <value>PAC-1</value>
+  </data>
   <data name="PAC1Diagram" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Graphics\PAC1Diagram.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PatientList" xml:space="preserve">
+    <value>Lista pacjentów</value>
+  </data>
+  <data name="PatientsData" xml:space="preserve">
+    <value>Dane Pacjenta</value>
   </data>
   <data name="PencilAndPaperSkillsSubcathegoryName" xml:space="preserve">
     <value>Posługiwanie się ołówkiem i papierem</value>
@@ -184,22 +268,55 @@
   <data name="PlayingSubcathegoryName" xml:space="preserve">
     <value>Udział w zabawie</value>
   </data>
+  <data name="Previous" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="Questions" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Questions\QuestionsPL.json;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="QuestionsSource" xml:space="preserve">
     <value>./Questions.json</value>
   </data>
+  <data name="Reports" xml:space="preserve">
+    <value>Raporty</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Zapisz</value>
+  </data>
+  <data name="Scale" xml:space="preserve">
+    <value>Skala:</value>
+  </data>
+  <data name="School" xml:space="preserve">
+    <value>Placówka:</value>
+  </data>
+  <data name="School1" xml:space="preserve">
+    <value>Szkoła</value>
+  </data>
+  <data name="SecondNumber" xml:space="preserve">
+    <value>Numer lokalu:</value>
+  </data>
   <data name="SelfHelpCathegoryName" xml:space="preserve">
     <value>Obsługiwanie Siebie</value>
   </data>
+  <data name="ShortNameOfSchool" xml:space="preserve">
+    <value>Skrót placówki:</value>
+  </data>
   <data name="SocialisationCathegotyName" xml:space="preserve">
     <value>Uspołecznienie</value>
+  </data>
+  <data name="Street" xml:space="preserve">
+    <value>Ulica:</value>
   </data>
   <data name="TableMannersSubcathegoryName" xml:space="preserve">
     <value>Zachowanie przy stole</value>
   </data>
   <data name="ToiletAndWashingSubcathegoryName" xml:space="preserve">
     <value>Toaleta i mycie</value>
+  </data>
+  <data name="YourData" xml:space="preserve">
+    <value>Twoje dane</value>
+  </data>
+  <data name="ZipCode" xml:space="preserve">
+    <value>Kod pocztowy:</value>
   </data>
 </root>
