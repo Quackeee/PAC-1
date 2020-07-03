@@ -38,7 +38,7 @@
             <Label Content="{Binding Source={x:Static resx:Resources.PatientList}}" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="26" FontWeight="SemiBold" FontFamily="Charlesworth" Margin="15" Foreground="#FFEEEAEA"/>
             <Button Content="{Binding Source={x:Static resx:Resources.Menu}}" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="26" FontWeight="SemiBold"
                     FontFamily="Charlesworth" Margin="0,-55,55,-55" Background="Transparent" BorderThickness="0" Foreground="#FFEEEAEA"
-                    Command="{Binding GotoWelcome}" Height="40"/>
+                    Command="{Binding GotoWelcome}" Height="40" Width="80"/>
 
         </StackPanel>
 
